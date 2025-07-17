@@ -635,6 +635,13 @@
       }
    )
    (dx_refesh_songs
+      ;sort by difficulty so we have a super small chance of hitting headers
+      {set $dx_pas_sort_changed TRUE}
+      {song_select_filter_panel filter_enter}
+      {{music_library get view_settings_provider} select_setting 1}
+      {{music_library get view_settings_provider} select_setting_option 3}
+      {music_library report_sort_and_filters}
+      {song_select_filter_panel filter_exit}
       ;we actually roll for songs 30 times for each line
       ;boy i hope we find one with the instrument you use
       {set $numtimes ()}
@@ -682,16 +689,32 @@
          ;populate found metadata
          {set $random_genre FALSE}
          {set $random_subgenre FALSE}
+         #ifdef RB3E
+         {set $random_genre {{song_mgr get_meta_data $random_genre_song} genre}}
+         {set $random_subgenre {{song_mgr get_meta_data $random_genre_song} genre}}
+         #else
          {song_select_panel dx_authorpoll $random_genre_song}
          {set $random_genre $genrevar}
          {set $random_subgenre $subgenrevar}
+         #endif
          {set $random_year {int {{song_mgr get_meta_data $random_year_song} year_released}}}
          {set $random_length {{song_mgr get_meta_data $random_length_song} length_ms}}
          {set $random_song_title {{song_mgr get_meta_data $random_song} title}}
          {set $random_tempo {{song_mgr get_meta_data $random_tempo_song} anim_tempo}}
          {set $random_diff FALSE}
-         {song_select_panel dx_authorpoll $random_diff_song}
-         {set $random_diff $bandrankvar}
+         {set $random_diff_inst FALSE}
+         {song_select_panel dx_set_diff $random_diff_song}
+         {set $random_diff_inst {random_elem $dx_play_a_show_active_instruments}}
+         {switch $random_diff_inst
+            (guitar {set $random_diff {{song_select_panel find "guitar.idd"} get difficulty}})
+            (real_guitar {set $random_diff {{song_select_panel find "guitar_pro.idd"} get difficulty}})
+            (bass {set $random_diff {{song_select_panel find "bass.idd"} get difficulty}})
+            (real_bass {set $random_diff {{song_select_panel find "bass_pro.idd"} get difficulty}})
+            ((drum real_drum) {set $random_diff {{song_select_panel find "drum.idd"} get difficulty}})
+            (keys {set $random_diff {{song_select_panel find "keys.idd"} get difficulty}})
+            (real_keys {set $random_diff {{song_select_panel find "keys_pro.idd"} get difficulty}})
+            (vocals {set $random_diff {{song_select_panel find "vocals.idd"} get difficulty}})
+         }
          {set $random_artist FALSE}
          {song_select_panel dx_authorpoll $random_artist_song}
          {set $random_artist $artistvar}
@@ -907,18 +930,21 @@
                ({! $play_a_show_found_diff_part}
                   {set $dx_play_a_show_line {localize play_a_show_missing_inst}}
                )
+               {if {== {sprint $random_diff_inst} "drum"}
+                  {set $random_diff_inst drums}
+               }
                {if_else $random_diff
                   {switch $random_diff
-                     (0 {set $dx_play_a_show_line {sprintf {localize play_a_show_diff} {localize generic_tier1}}})
-                     (1 {set $dx_play_a_show_line {sprintf {localize play_a_show_diff_an} {localize generic_tier2}}})
-                     (2 {set $dx_play_a_show_line {sprintf {localize play_a_show_diff} {localize generic_tier3}}})
-                     (3 {set $dx_play_a_show_line {sprintf {localize play_a_show_diff} {localize generic_tier4}}})
-                     (4 {set $dx_play_a_show_line {sprintf {localize play_a_show_diff} {localize generic_tier6}}})
-                     (5 {set $dx_play_a_show_line {sprintf {localize play_a_show_diff} {localize generic_tier8}}})
-                     (6 {set $dx_play_a_show_line {sprintf {localize play_a_show_diff_an} {localize generic_tier9}}})
-                     {set $dx_play_a_show_line {sprintf {localize play_a_show_diff} {localize unknown}}}
+                     (0 {set $dx_play_a_show_line {sprintf {localize play_a_show_diff} {localize generic_tier1} {localize $random_diff_inst}}})
+                     (1 {set $dx_play_a_show_line {sprintf {localize play_a_show_diff_an} {localize generic_tier2} {localize $random_diff_inst}}})
+                     (2 {set $dx_play_a_show_line {sprintf {localize play_a_show_diff} {localize generic_tier3} {localize $random_diff_inst}}})
+                     (3 {set $dx_play_a_show_line {sprintf {localize play_a_show_diff} {localize generic_tier4} {localize $random_diff_inst}}})
+                     (4 {set $dx_play_a_show_line {sprintf {localize play_a_show_diff} {localize generic_tier6} {localize $random_diff_inst}}})
+                     (5 {set $dx_play_a_show_line {sprintf {localize play_a_show_diff} {localize generic_tier8} {localize $random_diff_inst}}})
+                     (6 {set $dx_play_a_show_line {sprintf {localize play_a_show_diff_an} {localize generic_tier9} {localize $random_diff_inst}}})
+                     {set $dx_play_a_show_line {sprintf {localize play_a_show_diff} {localize unknown} {localize $random_diff_inst}}}
                   }
-                  {set $dx_play_a_show_line {sprintf {localize play_a_show_diff} {localize generic_tier1}}}
+                  {set $dx_play_a_show_line {sprintf {localize play_a_show_diff} {localize generic_tier1} {localize $random_diff_inst}}}
                }
             }
          )
@@ -952,7 +978,7 @@
       ;}
    )
    (dx_pick_a_show
-      {set $availarray (genre year ugc song album artist diff length)}
+      {set $availarray (year ugc song album artist length diff genre)}
       {set $avail2array ()}
       {set $avail3array ()}
       {set $avail4array ()}
@@ -997,7 +1023,9 @@
       {$this set_line $line4eval 4}
       {$this set_line $line5eval 5}
       {$this set_line $line6eval 6}
+      #ifndef HX_WII
       {$this print_song_option_data}
+      #endif
    )
    (handle_album_art
       {if {! $current_voted_song}
@@ -1054,9 +1082,10 @@
          {play_header.lbl set text_token {sprint " "}}
       }
       {set $votingallowed TRUE}
-      {set $dx_play_a_show_required_votes 0}
+      #ifdef _SHIP
       {overshell begin_override_flow kOverrideFlow_None}
       {overshell begin_override_flow kOverrideFlow_SongSettings}
+      #endif
    )
    (calc_highest_vote
       {set $vote_check_array ()}
@@ -1146,10 +1175,10 @@
       )
    )
    (hold_up
+      {$this dx_play_a_show_is_loading}
       {if {session_mgr is_leader_local}
          {$this update_preview_song $current_voted_song "dx/custom_textures/_additional_textures/blank_album_art_keep.png" 0}
       }
-      {song_preview.lbl set text_token {localize play_a_show_refreshing}}
       {set $votingallowed FALSE}
       {set $current_voted_song FALSE}
       {play_countdown_text.lbl set_showing TRUE}
@@ -1170,22 +1199,26 @@
          }
       }
    )
+   (dx_play_a_show_is_loading
+      {song_preview.lbl set text_token {localize play_a_show_pick_songs}}
+      {line1.lbl set text_token {localize loading}}
+      {line2.lbl set text_token {localize loading}}
+      {line3.lbl set text_token {localize loading}}
+      {line4.lbl set text_token {localize loading}}
+      {line5.lbl set text_token {localize loading}}
+      {line6.lbl set text_token {localize loading}}
+   )
    (dx_play_a_show_send_voted
+      {$this dx_play_a_show_is_loading}
       {$this format_vote band}
       {play_header.lbl set text_token {sprint " "}}
       {$this update_preview_song $current_voted_song "dx/custom_textures/_additional_textures/blank_album_art_keep.png" 0}
-      {song_preview.lbl set text_token {localize play_a_show_pick_songs}}
       {switch $dx_play_a_show_vote
          (1 {switch $line1eval DX_PLAY_SONG_PICKER})
          (2 {switch $line2eval DX_PLAY_SONG_PICKER})
          (3 {switch $line3eval DX_PLAY_SONG_PICKER})
          (4 {switch $line4eval DX_PLAY_SONG_PICKER})
          (5 {switch $line5eval DX_PLAY_SONG_PICKER})
-         (6
-            {$this dx_refesh_songs}
-            {$this update_preview_song $current_voted_song "dx/custom_textures/_additional_textures/blank_album_art_keep.png" 0}
-            {song_preview.lbl set text_token {localize play_a_show_refreshing}}
-         )
       }
       {set $dx_playlist_array {array $dx_playlist_array}}
       {set $votingallowed FALSE}
@@ -1193,6 +1226,7 @@
          {delete dx_send_vote}
       }
       {$this dx_play_countdown_set_time {localize play_a_show_submitting} ""}
+      {$this dx_play_a_show_is_loading}
       {script_task kTaskSeconds (name dx_send_vote) (delay 1)
          (script
             {$this dx_play_countdown_set_time {localize play_a_show_submitting} 0}
@@ -1269,15 +1303,18 @@
       }
    )
    (dx_play_a_show_recieve_song
-      {if_else {> {size $dx_playlist_array} 0}
-         {do
-            {set $dx_in_show_flow FALSE}
-            {meta_performer set_songs $dx_playlist_array}
-            {set $dx_playing_a_show TRUE}
-            {ui sync_screen {music_library get_next_screen} 0}
-         }
-         {do
-            {dx_passive_messenger_symbol "no songs queued"}
+      {if_else $dx_leaveashow
+         {set $dx_leaveashow FALSE}
+         {if_else {> {size $dx_playlist_array} 0}
+            {do
+               {set $dx_in_show_flow FALSE}
+               {meta_performer set_songs $dx_playlist_array}
+               {set $dx_playing_a_show TRUE}
+               {ui sync_screen {music_library get_next_screen} 0}
+            }
+            {do
+               {dx_passive_messenger_symbol "no songs queued"}
+            }
          }
       }
    )

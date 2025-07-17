@@ -40,6 +40,7 @@ else:
 ninja = ninja_syntax.Writer(open("build.ninja", "w+"))
 
 # configure tools
+# TODO: clean this up
 ark_dir = Path("obj", args.platform, "ark")
 match sys.platform:
     case "win32":
@@ -47,8 +48,16 @@ match sys.platform:
         ninja.rule("copy", "cmd /c copy $in $out $silence", description="COPY $in")
         ninja.rule("bswap", "dependencies\\windows\\swap_art_bytes.exe $in $out", description="BSWAP $in")
         ninja.rule("version", "python dependencies\\python\\gen_version.py $out", description="Writing version info")
+        ninja.rule("song_update_hash", "python dependencies\\python\\gen_song_update_hash.py $out", description="Writing song hash")
         ninja.rule("png_list", "python dependencies\\python\\png_list.py $dir $out", description="PNGLIST $dir")
-        ninja.variable("superfreq", "dependencies\\windows\\superfreq.exe")
+        ninja.rule("generate_theme_data", "python dependencies\\python\\generate_theme_data.py $dir $out", description="THEMEDATA $dir")
+        match args.platform:
+            case "ps3":
+                ninja.variable("superfreq", "dependencies\\windows\\superfreq.exe")
+            case "xbox":
+                ninja.variable("superfreq", "dependencies\\windows\\superfreq.exe")
+            case "wii":
+                ninja.variable("superfreq", "dependencies\\windows\\superfreq_wii.exe")
         ninja.variable("arkhelper", "dependencies\\windows\\arkhelper.exe")
         ninja.variable("dtab", "dependencies\\windows\\dtab.exe")
         ninja.variable("dtacheck", "dependencies\\windows\\dtacheck.exe")
@@ -57,19 +66,34 @@ match sys.platform:
         ninja.rule("copy", "cp $in $out", description="COPY $in")
         ninja.rule("bswap", "python3 dependencies/python/swap_rb_art_bytes.py $in $out", description="BSWAP $in")
         ninja.rule("version", "python3 dependencies/python/gen_version.py $out", description="Writing version info")
+        ninja.rule("song_update_hash", "python3 dependencies/python/gen_song_update_hash.py $out", description="Writing song hash")
         ninja.rule("png_list", "python3 dependencies/python/png_list.py $dir $out", description="PNGLIST $dir")
-        ninja.variable("superfreq", "dependencies/macos/superfreq")
+        ninja.rule("generate_theme_data", "python3 dependencies/python/generate_theme_data.py $dir $out", description="THEMEDATA $dir")
+        match args.platform:
+            case "ps3":
+                ninja.variable("superfreq", "dependencies/macos/superfreq")
+            case "xbox":
+                ninja.variable("superfreq", "dependencies/macos/superfreq")
+            case "wii":
+                ninja.variable("superfreq", "dependencies/macos/superfreq_wii")
         ninja.variable("arkhelper", "dependencies/macos/arkhelper")
         ninja.variable("dtab", "dependencies/macos/dtab")
-        # dtacheck needs to be compiled for mac
-        ninja.variable("dtacheck", "true")
+        ninja.variable("dtacheck", "dependencies/macos/dtacheck")
     case "linux":
         ninja.variable("silence", "> /dev/null")
         ninja.rule("copy", "cp --reflink=auto $in $out",description="COPY $in")
         ninja.rule("bswap", "dependencies/linux/swap_art_bytes $in $out", "BSWAP $in")
         ninja.rule("version", "python dependencies/python/gen_version.py $out", description="Writing version info")
+        ninja.rule("song_update_hash", "python dependencies/python/gen_song_update_hash.py $out", description="Writing song hash")
         ninja.rule("png_list", "python dependencies/python/png_list.py $dir $out", description="PNGLIST $dir")
-        ninja.variable("superfreq", "dependencies/linux/superfreq")
+        ninja.rule("generate_theme_data", "python dependencies/python/generate_theme_data.py $dir $out", description="THEMEDATA $dir")
+        match args.platform:
+            case "ps3":
+                ninja.variable("superfreq", "dependencies/linux/superfreq")
+            case "xbox":
+                ninja.variable("superfreq", "dependencies/linux/superfreq")
+            case "wii":
+                ninja.variable("superfreq", "dependencies/linux/superfreq_wii")
         ninja.variable("arkhelper", "dependencies/linux/arkhelper")
         ninja.variable("dtab", "dependencies/linux/dtab")
         ninja.variable("dtacheck", "dependencies/linux/dtacheck")
@@ -99,7 +123,7 @@ match args.platform:
 
 ninja.rule(
     "sfreq",
-    "$superfreq png2tex -l error --miloVersion 26 --platform $platform $in $out",
+    "$superfreq png2tex -l error --miloVersion 26 --platform $platform $in $out $flags",
     description="SFREQ $in"
 )
 
@@ -120,6 +144,9 @@ if args.platform != "wii":
 
 
 def ark_file_filter(file: Path):
+    # macos fucking sucks actually
+    if ".DS_Store" in file.parts:
+        return False
     if file.is_dir():
         return False
     if file.suffix.endswith("_ps3") and args.platform != "ps3":
@@ -138,14 +165,36 @@ def ark_file_filter(file: Path):
 # build ark files
 ark_files = []
 
+mip_entries = {
+    #Path("_ark", "dx", "custom_textures", "gems"): 4,
+    Path("_ark", "dx", "custom_textures", "_additional_textures", "countdown_circle.png"): 4,
+    Path("_ark", "dx", "custom_textures", "_additional_textures", "countdown_circle_meter_wipe.png"): 4,
+}
+
+# (dark): i love O(n*m) complexity
+def find_mip_entry(path: Path):
+    for key, value in mip_entries.items():
+        if path.is_relative_to(key):
+            return value
+
+    return None
+
 for f in filter(ark_file_filter, Path("_ark").rglob("*")):
     match f.suffixes:
         case [".png"]:
             output_directory = Path("obj", args.platform, "ark").joinpath(
                 *f.parent.parts[1:]
             )
+
+            variables = {}
+            mip_level = find_mip_entry(f)
+
+            if mip_level != None:
+                variables["flags"] = "--mipmaps %d" % mip_level
+
             match args.platform:
                 case "ps3":
+                    variables["platform"] = "x360"
                     target_filename = Path("gen", f.stem + ".png_ps3")
                     xbox_filename = Path("gen", f.stem + ".png_xbox")
                     xbox_directory = Path("obj", args.platform, "raw").joinpath(
@@ -153,24 +202,26 @@ for f in filter(ark_file_filter, Path("_ark").rglob("*")):
                     )
                     xbox_output = xbox_directory.joinpath(xbox_filename)
                     ps3_output = output_directory.joinpath(target_filename)
-                    ninja.build(str(xbox_output), "sfreq", str(f), variables={"platform": "x360"})
+                    ninja.build(str(xbox_output), "sfreq", str(f), variables=variables)
                     ninja.build(str(ps3_output), "bswap", str(xbox_output))
                     ark_files.append(str(ps3_output))
                 case "xbox":
+                    variables["platform"] = "x360"
                     target_filename = Path("gen", f.stem + ".png_xbox")
                     xbox_directory = Path("obj", args.platform, "ark").joinpath(
                         *f.parent.parts[1:]
                     )
                     xbox_output = xbox_directory.joinpath(target_filename)
-                    ninja.build(str(xbox_output), "sfreq", str(f), variables={"platform": "x360"})
+                    ninja.build(str(xbox_output), "sfreq", str(f), variables=variables)
                     ark_files.append(str(xbox_output))
                 case "wii":
+                    variables = {"platform": "wii"}
                     target_filename = Path("gen", f.stem + ".png_wii")
                     wii_directory = Path("obj", args.platform, "ark").joinpath(
                         *f.parent.parts[1:]
                     )
                     wii_output = wii_directory.joinpath(target_filename)
-                    ninja.build(str(wii_output), "sfreq", str(f), variables={"platform": "wii"})
+                    ninja.build(str(wii_output), "sfreq", str(f), variables=variables)
                     ark_files.append(str(wii_output))
 
         case [".dta"]:
@@ -214,6 +265,17 @@ ninja.build(str(enc), "dtab_encrypt", str(dtb))
 
 ark_files.append(str(enc))
 
+# generate song update hash
+dta = Path("obj", args.platform, "raw", "dx", "dx_song_update_hash.dta")
+dtb = Path("obj", args.platform, "raw", "dx", "gen", "dx_song_update_hash.dtb")
+enc = Path("obj", args.platform, "ark", "dx", "gen", "dx_song_update_hash.dtb")
+
+ninja.build(str(dta), "song_update_hash", implicit="_always")
+ninja.build(str(dtb), "dtab_serialize", str(dta))
+ninja.build(str(enc), "dtab_encrypt", str(dtb))
+
+ark_files.append(str(enc))
+
 # generate texture lists
 def generate_file_list(input_path: Path):
     base = input_path.parts[1:]
@@ -221,6 +283,15 @@ def generate_file_list(input_path: Path):
     dtb = Path("obj", args.platform, "raw").joinpath(*base).joinpath("gen", "_list.dtb")
     enc = Path("obj", args.platform, "ark").joinpath(*base).joinpath("gen", "_list.dtb")
     ninja.build(str(dta), "png_list", variables={"dir": str(input_path)}, implicit="_always")
+    ninja.build(str(dtb), "dtab_serialize", str(dta))
+    ninja.build(str(enc), "dtab_encrypt", str(dtb))
+
+def generate_theme_data(input_path: Path):
+    base = input_path.parts[1:]
+    dta = Path("obj", args.platform, "raw").joinpath(*base).joinpath("_themedata.dta")
+    dtb = Path("obj", args.platform, "raw").joinpath(*base).joinpath("gen", "_themedata.dtb")
+    enc = Path("obj", args.platform, "ark").joinpath(*base).joinpath("gen", "_themedata.dtb")
+    ninja.build(str(dta), "generate_theme_data", variables={"dir": str(input_path)}, implicit="_always")
     ninja.build(str(dtb), "dtab_serialize", str(dta))
     ninja.build(str(enc), "dtab_encrypt", str(dtb))
 
@@ -248,6 +319,9 @@ generate_file_list(Path("_ark", "dx", "custom_textures", "vocal_highway", "vocal
 generate_file_list(Path("_ark", "dx", "custom_textures", "vocal_arrows", "vocal_arrow"))
 generate_file_list(Path("_ark", "dx", "custom_textures", "vocal_note", "vocal_note_tube"))
 generate_file_list(Path("_ark", "dx", "custom_textures", "vocal_overdrive", "vocal_overdrive_now_bar"))
+
+generate_file_list(Path("_ark", "dx", "models", "gems"))
+generate_theme_data(Path("_ark", "dx", "models", "gems"))
 
 # build ark
 match args.platform:

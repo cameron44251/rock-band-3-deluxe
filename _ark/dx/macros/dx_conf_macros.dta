@@ -164,28 +164,6 @@
    (kFilterSource ugc2)
    (kFilterSource ugc_plus)
 )
-
-#define DX_GOAL_CATA
-(
-   (acc_cat_guitar_dx
-      (group acc_grp_guitar))
-   (acc_cat_bass_dx
-      (group acc_grp_bass))
-   (acc_cat_band_trackpack
-      (group acc_grp_band))
-   (acc_cat_band_dx
-      (group acc_grp_band))
-   (acc_cat_vox_dx
-      (group acc_grp_vox))
-   (acc_cat_prodrums_dx
-      (group acc_grp_prodrums))
-   (acc_cat_prokeys_dx
-      (group acc_grp_prokeys))
-   (acc_cat_drums_dx
-      (group acc_grp_drums))
-   (acc_cat_harmonyvox_dx
-      (group acc_grp_harmonyvox))
-)  
 #define DX_GOAL_SONG_RBTPV1
 (allthesmallthings buddyholly callingdrlove crushcrushcrush dieallright gimmethreesteps interstatelovesong jokerandthe littlesister liveforever marchofthepigs moonagedaydream morethanafeeling movealong siva synchronicity2 teenagelobotomy thekill truckin wecarealot)
 
@@ -198,61 +176,31 @@
 (29fingers sayitaintso inbloom ithinkimparanoid timewehad missqueen hereitgoesagain creep blooddoll waveofmutilation shouldistay maps gimmeshelter brainpower sabotage blitzkriegbop celebrityskin imsosick whenyouwereyoung blackholesun wanteddeadoralive learntofly seven orangecrush mainoffender thehandthatfeeds daylatedollarshort epic suffragettecity ballroomblitz deadonarrival pleasure trainkeptarollin areyougonnabemygirl paranoid timmy welcomehome gowiththeflow danicalifornia nightmare dontfearthereaper reptilia electricversion vasoline detroitrockcity cantletgo nexttoyou cherubrock tomsawyer entersandman greengrass outside highwaystar foreplaylongtime flirtinwithdisaster igetby runtothehills wontgetfooled)
 #define DX_SET_RB2
 (eyeofthetiger myownworstenemy iwaswrong sowhatchawant epro hungrylikethewolf pretendweredead rebelgirl nineintheafternoon floaton drainyou pda maninthebox coolforcats hellothere today thatswhatyouget spiritinthesky wegotthebeat newkidinschool feelthepain pumpitup onestepcloser welcometothe whitewedding psychokiller lump conventionallover deluxe shootingstar giveitaway themiddle americanwoman livinonaprayer onewayoranother ajaggedgorgeouswinter goyourownway kidsinamerica girlsnotgrey lazyeye comeoutandplay mountainsong wheredyougo alexchilton rocknme tangledupinblue alive roundandround yououghtaknow alabamagetaway testify supremegirl pinballwizard ourtruth uncontrollableurge badreputation nightlies anywayyouwantit teenageriot shacklersrevenge letthereberock thetrees aqualung downwiththesickness chopsuey everlong masterexploder giveitall carryonwaywardson robtheprezodent spoonman aceofspades almosteasy ramblinman getclean peacesells colonyofbirchmen soulsofblack bodhisattva shouldertotheplow battery visions panicattack painkiller)
-
-#define DX_ROLL_INTERVAL_COMMON
+#define DX_INS_DIFF_MAP
 (
-   {if_else {modifier_mgr is_modifier_active mod_nolanes}
-      -100
-      0
-   }
-   {if_else {modifier_mgr is_modifier_active mod_nolanes}
-      -100
-      0
-   }
-   {if_else {modifier_mgr is_modifier_active mod_nolanes}
-      -100
-      {if_else {modifier_mgr is_modifier_active mod_rb4lanes}
-         190
-         165
-      }
-   }
-   {if_else {modifier_mgr is_modifier_active mod_nolanes}
-      -100
-      {if_else {modifier_mgr is_modifier_active mod_rb4lanes}
-         190
-         165
-      }
-   }
+   (0 dx_diff_0)
+   (1 dx_diff_1)
+   (2 dx_diff_2)
+   (3 dx_diff_3)
+   (4 dx_diff_4)
+   (5 dx_diff_5)
+   (6 dx_diff_6)
+   (7 dx_diff_7)
 )
 #define DX_QUICK_CHAT_PHRASES
 (
-   "Hello!" "Welcome!" "Nice to meet you" "Let's rock!"
-   "Nice job!" "So close!" "Well played" "GG" "That was great!" "Banger"
-   "GG EZ" "That was fun!" "I choked" "That was hard!" "smh my head" "-1..." "Overhit!!!" "sadge" ":tim:"
-   "Step it up!" "Someone's having an off day" "You should try a lower difficulty" "Have you tried Practice Mode?" "Don't miss"
-   "Be right back!" "I'm back!" "Just a moment" "Ready!" "$#@*!"
-   "Lag made me miss!!!" "Activate!" "Great activation!"
-   "Nice Job!" "Not Nice Job!" "Nice theme!"
-   "Happens" "Really?" "Oh lordy" "Dawg."
-   "Let's wait for more players" "Let's start with who we have" "Let's go for FBFCs!"
-   "Can I switch to Guitar?" "Can I switch to Bass?" "Can I switch to Keys?" "Can I switch to Drums?" "Can I switch to Vocals?"
-   "Can I switch to Pro Guitar?" "Can I switch to Pro Bass?" "Can I switch to Pro Keys?" "Can I switch to Pro Drums?" "Switch instrument"
-   "Filter Pro Guitar support please!" "Filter Keys support please!"
-   "Can we play shorter setlists?" "Can we play longer setlists?" "Can we play easier songs?" "Can we play harder songs?"
-   "Don't pick 2x kick!" "Down for RBN songs?" "I don't want disc songs!" "Let's play disc songs!"
-   "Yes" "No thanks" "I'd rather not" "I'm fine with whatever" "OK!"
-   "Thank you" "Sorry..." "My bad..." "No problem"
-   "What a save!" "I'm using tilt controls!" "I'm using lanes!" "I'm not using lanes!" "You need Jesus" "Hey bud listen up"
-   "Please get more DLC" "Skill issue" "Zzzz..."
-)
-#define DX_INS_DIFF_MAP
-(
-   (0 "<alt>B</alt>")
-   (1 "<alt>G</alt>")
-   (2 "<alt>D</alt>")
-   (3 "<alt>V</alt>")
-   (4 "<alt>K</alt>")
-   (5 "<alt>2</alt>")
-   (6 "<alt>3</alt>")
-   (7 "<alt>k</alt>")
+   dx_chat1 dx_chat2 dx_chat3 dx_chat4 dx_chat5 dx_chat6
+   dx_chat7 dx_chat8 dx_chat9 dx_chat10 dx_chat11 dx_chat12
+   dx_chat13 dx_chat14 dx_chat15 dx_chat16 dx_chat17 dx_chat18
+   dx_chat19 dx_chat20 dx_chat21 dx_chat22 dx_chat23 dx_chat24
+   dx_chat25 dx_chat26 dx_chat27 dx_chat28 dx_chat29 dx_chat30
+   dx_chat31 dx_chat32 dx_chat33 dx_chat34 dx_chat35 dx_chat36
+   dx_chat37 dx_chat38 dx_chat39 dx_chat40 dx_chat41 dx_chat42
+   dx_chat43 dx_chat44 dx_chat45 dx_chat46 dx_chat47 dx_chat48
+   dx_chat49 dx_chat50 dx_chat51 dx_chat52 dx_chat53 dx_chat54
+   dx_chat55 dx_chat56 dx_chat57 dx_chat58 dx_chat59 dx_chat60
+   dx_chat61 dx_chat62 dx_chat63 dx_chat64 dx_chat65 dx_chat66
+   dx_chat67 dx_chat68 dx_chat69 dx_chat70 dx_chat71 dx_chat72
+   dx_chat73 dx_chat74 dx_chat75 dx_chat76 dx_chat77 dx_chat78
+   dx_chat79
 )

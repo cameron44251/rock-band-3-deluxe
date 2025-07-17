@@ -293,20 +293,6 @@
    (real_guitar_tuning (0 0 0 0 0 0))
    (real_bass_tuning (0 0 0 0))
    (strings_author "Ruggy")
-)(highwaystar
-   (upgrade_version 1) 
-   (rank
-      ('drum' 430)
-      ('guitar' 385)
-      ('bass' 385)
-      ('vocals' 290)
-      ('band' 440)
-      (real_guitar 442)
-      (real_bass 430)
-   )
-   (real_guitar_tuning (0 0 0 0 0 0))
-   (real_bass_tuning (0 0 0 0))
-   (strings_author "RK")
 )
 (igetby
    (upgrade_version 1) 
@@ -435,20 +421,6 @@
    (real_guitar_tuning (0 0 0 0 0 0))
    (real_bass_tuning (0 0 0 0))
    (strings_author "RK")
-)(outside
-   (upgrade_version 1)
-   (rank
-      (drum 450)
-      (guitar 280)
-      (bass 129)
-      (vocals 220)
-      (band 360)
-      (real_guitar 355)
-      (real_bass 315)
-   )
-   (real_guitar_tuning (0 0 0 0 0 0))
-   (real_bass_tuning (0 0 0 0))
-   (strings_author "RK, Carl Mylo")
 )(paranoid
    (upgrade_version 1) 
    (rank
@@ -752,6 +724,22 @@
    (real_guitar_tuning (0 0 0 0 0 0))
    (real_bass_tuning (0 0 0 0))
    (strings_author "RK")
+)(bodhisattva
+   (upgrade_version 1)
+   (rank
+      (drum 374)
+      (guitar 474)
+      (bass 424)
+      (vocals 148)
+      (keys 402)
+      (real_guitar 488)
+      (real_bass 464)
+      (real_keys 441)
+      (band 500)
+   )
+   (real_guitar_tuning (0 0 0 0 0 0))
+   (real_bass_tuning (0 0 0 0))
+   (strings_author "jawnintendoSH, ALBATROSS, RK")
 )(colonyofbirchmen
    (upgrade_version 1)
    (rank
@@ -1048,22 +1036,6 @@
    (real_guitar_tuning (0 0 0 0 0 0))
    (real_bass_tuning (0 0 0 0))
    (strings_author "RK")
-)(ourtruth
-   (upgrade_version 1) 
-   (rank
-      (drum 326)
-      (guitar 185)
-      (bass 374)
-      (vocals 365)
-      (keys 0)
-      (real_keys 0)
-      (band 355)
-      (real_guitar 222)
-      (real_bass 282)
-   )
-   (real_guitar_tuning (0 0 0 0 0 0))
-   (real_bass_tuning (0 0 0 0))
-   (strings_author "RK")
 )(painkiller
    (upgrade_version 1) 
    (rank
@@ -1128,22 +1100,6 @@
    (real_guitar_tuning (0 0 0 0 0 0))
    (real_bass_tuning (0 0 0 0))
    (strings_author "RK")
-)(pumpitup
-   (upgrade_version 1) 
-   (rank
-      (drum 221)
-      (guitar 232)
-      (bass 210)
-      (vocals 169)
-      (keys 0)
-      (real_keys 0)
-      (band 209)
-      (real_guitar 250)
-      (real_bass 330)
-   )
-   (real_guitar_tuning (0 0 0 0 0 0))
-   (real_bass_tuning (0 0 0 0))
-   (strings_author "RK")
 )(ramblinman
    (upgrade_version 1) 
    (rank
@@ -1176,22 +1132,6 @@
    (real_guitar_tuning (0 0 0 0 0 0))
    (real_bass_tuning (0 0 0 0))
    (strings_author "RK")
-)(robtheprezodent
-   (upgrade_version 1)
-   (rank
-      (drum 383)
-      (guitar 331)
-      (bass 370)
-      (vocals 265)
-      (keys 0)
-      (real_guitar 400)
-      (real_bass 350)
-      (real_keys 0)
-      (band 440)
-   )
-   (real_guitar_tuning (0 0 0 0 0 0))
-   (real_bass_tuning (0 0 0 0))
-   (strings_author "MatthNerd")
 )(rocknme
    (upgrade_version 1)
    (rank
@@ -1254,38 +1194,6 @@
    (real_guitar_tuning (0 0 0 0 0 0))
    (real_bass_tuning (0 0 0 0))
    (strings_author "RK")
-)(supremegirl
-   (upgrade_version 1)
-   (rank
-      (drum 322)
-      (guitar 300)
-      (bass 274)
-      (vocals 258)
-      (keys 0)
-      (real_keys 0)
-      (band 345)
-      (real_guitar 405)
-      (real_bass 448)
-   )
-   (real_guitar_tuning (0 0 0 0 0 0))
-   (real_bass_tuning (0 0 0 0))
-   (strings_author "RK")
-)(tangledupinblue
-   (upgrade_version 1) 
-   (rank
-      (drum 124)
-      (guitar 278)
-      (bass 223)
-      (vocals 450)
-      (keys 0)
-      (real_keys 0)
-      (band 318)
-      (real_guitar 175)
-      (real_bass 125)
-   )
-   (real_guitar_tuning (0 0 0 0 0 0))
-   (real_bass_tuning (0 0 0 0))
-   (strings_author "RK")
 )(testify
    (upgrade_version 1) 
    (rank
@@ -1318,22 +1226,6 @@
    (real_guitar_tuning (-2 0 0 0 0 0))
    (real_bass_tuning (0 0 0 0))
    (strings_author "Ruggy")
-)(themiddle
-   (upgrade_version 1) 
-   (rank
-      (drum 271)
-      (guitar 291)
-      (bass 245)
-      (vocals 226)
-      (keys 0)
-      (real_keys 0)
-      (band 255)
-      (real_guitar 153)
-      (real_bass 53)
-   )
-   (real_guitar_tuning (-2 0 0 0 0 0))
-   (real_bass_tuning (-2 0 0 0))
-   (strings_author "Ziggy")
 )(welcometothe
    (upgrade_version 1)
    (rank
@@ -1765,6 +1657,22 @@
    (real_guitar_tuning (-2 0 0 0 0 0))
    (real_bass_tuning (-2 0 0 0))
    (strings_author "Ziggy")
+)(dancedance
+   (upgrade_version 1)
+   (rank
+      (drum 288)
+      (guitar 267)
+      (bass 289)
+      (vocals 279)
+      (keys 123)
+      (real_guitar 331)
+      (real_bass 267)
+      (real_keys 131)
+      (band 251)
+   )
+   (real_guitar_tuning (0 0 0 0 0 0))
+   (real_bass_tuning (0 0 0 0))
+   (strings_author "WarGod, Carl Mylo")
 )(darlingdear
    (upgrade_version 1) 
    (rank
@@ -2322,6 +2230,22 @@
    (real_guitar_tuning (0 0 0 0 0 0))
    (real_bass_tuning (0 0 0 0))
    (strings_author "RK")
+)(sanctified
+   (upgrade_version 1) 
+   (rank
+      (drum 309)
+      (guitar 179)
+      (bass 120)
+      (vocals 191)
+      (keys 160)
+      (real_guitar 227)
+      (real_bass 307)
+      (real_keys 227)
+      (band 205)
+   )
+   (real_guitar_tuning (0 0 0 0 0 0))
+   (real_bass_tuning (0 0 0 0))
+   (strings_author "Carl Mylo, RK")
 )(school
    (upgrade_version 1)
    (rank
@@ -2453,6 +2377,22 @@
    (real_guitar_tuning (0 0 0 0 0 0))
    (real_bass_tuning (0 0 0 0))
    (strings_author "RK")
+)(terriblelie
+   (upgrade_version 1)
+   (rank
+      (drum 220)
+      (guitar 75)
+      (bass 110)
+      (vocals 240)
+      (keys 304)
+      (real_guitar 75)
+      (real_bass 50)
+      (real_keys 373)
+      (band 192)
+   )
+   (real_guitar_tuning (0 0 0 0 0 0))
+   (real_bass_tuning (0 0 0 0))
+   (strings_author "VreyIsGrey")
 )(thegreetingsong
    (upgrade_version 1) 
    (rank

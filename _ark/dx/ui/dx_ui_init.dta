@@ -1,3 +1,6 @@
+{set $dx_song_update_hash_old "nothing"}
+#include ../dx_song_update_hash.dta
+
 #ifndef HX_WII {if {file_exists DX_EVENT_FILE_PATH} {dx_event_dta_reader}} #endif
 
 {unless $dx_only_populate_once_holders
@@ -6,6 +9,13 @@
    {set $dx_mtv_holder {array ()}}
    {set $dx_state_tracker {array ()}}
 }
+{set $dx_button_list (kPad_L2 kPad_R2 kPad_L1 kPad_R1 kPad_Tri kPad_Circle kPad_X kPad_Square kPad_Select kPad_L3 kPad_R3 kPad_Start kPad_DUp kPad_DRight kPad_DDown kPad_DLeft)}
+#ifdef HX_WII
+{set $dx_window_offset 83.41675008341676}  ; ngc input offset
+#else
+{set $dx_window_offset 16.683350016683352}  ; xenon & ps3 input offset
+#endif
+; that is a neversoft reference btw
 
 #ifndef HX_WII
 ;needs font on wii
@@ -15,6 +25,7 @@
 {set $dx_high_score_report TRUE}
 {set $highscore_tracker ()}
 {resize $highscore_tracker 0}
+{set $last_tracked_state dxState_enter}
 #ifdef _SHIP
 DX_LOG_CLEAR
 DX_JSON_CLEAR
@@ -48,34 +59,49 @@ DX_CURRENT_SONG_CLEAR
 {set $dx_icon_real_guitar "g"}
 {set $dx_icon_real_bass "b"}
 {set $dx_icon_drum_pro "d"}
+
+{set $dx_linear_join_order FALSE}
+
+{set $dx_instruments_slot_1 (guitar real_guitar keys)}
+{set $dx_instruments_slot_2 (drum)}
+{set $dx_instruments_slot_3 (vocals)}
+{set $dx_instruments_slot_4 (guitar real_guitar keys)}
+
+{set $dx_instruments_aim_slot_1 (guitar real_guitar keys drum vocals)}
+{set $dx_instruments_aim_slot_2 (guitar real_guitar keys drum vocals)}
+{set $dx_instruments_aim_slot_3 (guitar real_guitar keys drum vocals)}
+{set $dx_instruments_aim_slot_4 (guitar real_guitar keys drum vocals)}
+
 {set $dx_current_free_cam "Free camera: off"}
 {set $overshell_showing TRUE}
-{set $dx_forced_outro_vignette FALSE}
+{set $dx_stored_outro_vignette FALSE}
 {if_else $dx_event_mode
    {do
       {set $dx_sv8_dx_vers TRUE}
-      {set $dx_forced_main_menu_bg ("sv8_a")}
+      {set $dx_stored_main_menu_bg ("sv8_a")}
    }
-   {set $dx_forced_main_menu_bg FALSE}
+   {set $dx_stored_main_menu_bg ()}
 }
-{set $dx_forced_song_select_bg FALSE}
+{set $dx_default_main_menu TRUE}
+{set $dx_black_main_menu FALSE}
 
-{if_else $dx_event_mode
-   {set $dx_confirm_song_count FALSE}
-   {set $dx_confirm_song_count TRUE}
-}
+{set $dx_stored_song_select_bg ()}
+{set $dx_default_song_select TRUE}
+{set $dx_black_song_select FALSE}
+
+{set $dx_stored_practice_bg ()}
+{set $dx_default_practice TRUE}
+{set $dx_black_practice FALSE}
+;{if_else $dx_event_mode
+;   {set $dx_confirm_song_count FALSE}
+;   {set $dx_confirm_song_count TRUE}
+;}
 
 {set $dx_time_remaining_pos_top FALSE}
 
-{set $dx_brutal_initialized 0} ;tracks how many beats from the beginning of the song we have ran the brutal mode script to overdo setting it
-{set $dx_brutal0_init FALSE}
-{set $dx_brutal1_init FALSE}
-{set $dx_brutal2_init FALSE}
-{set $dx_brutal3_init FALSE}
-{set $brutal_number_0 -26}
-{set $brutal_number_1 -26}
-{set $brutal_number_2 -26}
-{set $brutal_number_3 -26}
+{set $dx_brutal_slot_init (FALSE FALSE FALSE FALSE)}
+{set $dx_brutal_distance (-26 -26 -26 -26)}
+{set $dx_health_slot (0.75 0.75 0.75 0.75)} ; whats the default again?
 
 ;song timer/total time defaults
 {set $dx_time_remaining_direction up}
@@ -144,7 +170,9 @@ DX_CURRENT_SONG_CLEAR
 {foreach_int $i 0 3
    {set_var {sprint "dx_perfects_count_" $i} 0}
 }
-
+{set $dx_list_pos 0}
+{set $dx_list_item_selected FALSE}
+{set $dx_pos_remapper_array_number 3}
 {set $dx_track_username TRUE}
 {set $dx_track_username_size 2}
 {set $dx_track_username_font pentatonic_outline}
@@ -157,13 +185,11 @@ DX_CURRENT_SONG_CLEAR
 {set $dx_track_username_g 1}
 {set $dx_track_username_b 1}
 
-#ifndef HX_WII
 {set $dx_song_progress_bar TRUE}
 {set $dx_overdrive_progress TRUE}
 {set $dx_solo_progress TRUE}
 {set $dx_bre_progress TRUE}
 {set $dx_icon_progress TRUE}
-#endif
 
 {set $dx_hud_time_remaining_text TRUE}
 {set $dx_hud_time_remaining_text_size 1}
@@ -317,35 +343,57 @@ DX_CURRENT_SONG_CLEAR
    }
 }
 {if_else $dx_ps3hw
-   {set $dx_detected_platform platform_ps3}
-   {set $dx_detected_platform platform_rpcs3}
+   {do
+      {set $dx_detected_platform platform_ps3}
+      {set $dx_hardware TRUE}
+      {set $dx_emulator FALSE}
+   }
+   {do
+      {set $dx_detected_platform platform_rpcs3}
+      {set $dx_hardware FALSE}
+      {set $dx_emulator TRUE}
+   }
 }
 #endif
 
 #ifdef HX_XBOX
 #ifdef RB3E
 {set $dx_detected_platform platform_xbox_rb3e}
+{set $dx_hardware TRUE}
+{set $dx_emulator FALSE}
 #else
 {set $dx_detected_platform platform_xbox}
+{set $dx_hardware TRUE}
+{set $dx_emulator FALSE}
 #endif
 #ifdef RB3E_EMULATOR 
 {set $dx_detected_platform platform_xenia_rb3e}
+{set $dx_hardware FALSE}
+{set $dx_emulator TRUE}
 #endif
 #endif
 
 #ifdef HX_WII
 #ifdef RB3E
 {set $dx_detected_platform platform_wii_rb3e}
+{set $dx_hardware TRUE}
+{set $dx_emulator FALSE}
 #else
 {set $dx_detected_platform platform_wii}
+{set $dx_hardware TRUE}
+{set $dx_emulator FALSE}
 #endif
 #ifdef RB3E_EMULATOR
 {set $dx_detected_platform platform_dolphin_rb3e}
+{set $dx_hardware TRUE}
+{set $dx_emulator TRUE}
 #endif
 #endif
 
 {unless $dx_detected_platform
    {set $dx_detected_platform platform_unknown}
+   {set $dx_hardware TRUE} ; assume hardware for safety
+   {set $dx_emulator FALSE}
 }
 
 {dx_log_writer default {localize $dx_detected_platform}}
@@ -364,7 +412,9 @@ DX_CURRENT_SONG_CLEAR
    {set $dx_vsync FALSE}
    {set $dx_vsync TRUE}
 }
-
+{if {== $dx_detected_platform platform_rpcs3}
+   {set $dx_ultra_shadows TRUE}
+}
 ;#ifndef HX_WII
 ;author finder setup
 ;{unless $dx_ps3hw
@@ -377,11 +427,13 @@ DX_CURRENT_SONG_CLEAR
 }
 #endif
 
+#ifndef RB3E
 #ifndef HX_WII
 {if_else {== $dx_detected_platform platform_rpcs3}
    {set $dx_more_info_toggle FALSE}
    {set $dx_more_info_toggle TRUE}
 }
+#endif
 #endif
 
 ;set mtv vars, trainer doesn't like these empty on boot
@@ -424,56 +476,22 @@ DX_CURRENT_SONG_CLEAR
 {resize $dx_state_tracker 0} ;resize the array
 {push_back $dx_state_tracker (kStateNone none)} ;push_back a new state into the array
 
-;highways
-;sets default guitar highway
-{set $dx_highway_guitar none}
+;sets default highways, spotlights, & emissives
 
-;sets default bass highway
-{set $dx_highway_bass none}
-
-;sets default drum highway
-{set $dx_highway_drum none}
-
-;sets default keys highway
-{set $dx_highway_keys none}
-
-;spotlights
-;sets default guitar spotlight
-{set $dx_streak_guitar none}
-
-;sets default bass spotlight
-{set $dx_streak_bass none}
-
-;sets default drums spotlight
-{set $dx_streak_drum none}
-
-;sets default keys spotlight
-{set $dx_streak_keys none}
-{set $dx_streak_prokeys none}
-
-;emissives
-;sets default guitar emissive. same as above.
-{set $dx_overdrive_guitar none}
-
-;sets default bass emissive. same as above.
-{set $dx_overdrive_bass none}
-
-;sets default drums emissive. same as above.
-{set $dx_overdrive_drum none}
-
-;sets default keys emissive. same as above.
-{set $dx_overdrive_keys none}
-
-{set $dx_overdrive_prokeys none}
-
-;sets default keyboard track colors.
-{set $dx_keyboard none}
+{foreach $elem (guitar bass drum keys real_guitar real_bass real_keys)
+   {set_var {sprint "dx_highway_" $elem} none}
+   {set_var {sprint "dx_streak_" $elem} none}
+   {set_var {sprint "dx_overdrive_" $elem} none}
+}
 
 ;sets default smasher track textures.
 {set $dx_smasher none}
 
 ;sets default gem track textures.
 {set $dx_gem none}
+
+;set default gem model theme
+{set $dx_current_gem_model_theme default}
 
 ;sets default sustain track textures.
 {set $dx_sustain rb3}
@@ -565,6 +583,15 @@ DX_CURRENT_SONG_CLEAR
 {set $remote_trackspeed_real_guitar FALSE}
 {set $remote_trackspeed_real_bass FALSE}
 
+;same but for track length
+{set $tracklength_guitar 1.0}
+{set $tracklength_bass 1.0}
+{set $tracklength_drum 1.0}
+{set $tracklength_keys 1.0}
+{set $tracklength_real_keys 1.0}
+{set $tracklength_real_guitar 1.0}
+{set $tracklength_real_bass 1.0}
+
 {set $dx_dim_remote_players TRUE}
 
 ;sets default song speed 1.15 is 115%, 1.30 is 130% and so on.
@@ -602,9 +629,7 @@ DX_CURRENT_SONG_CLEAR
    }
 }
 
-{if $dx_event_mode
-   {set $dx_character_swap TRUE}
-}
+{set $dx_rotate_backup_band FALSE}
 
 ;set default colors for notes
 ;5 is overdrive (white)
@@ -689,16 +714,21 @@ DX_CURRENT_SONG_CLEAR
 {set $dx_gamemode init}
 
 ;in game hud
-{set $dx_crowd_meter_state dx_on}
+{set $dx_lyric_display_enabled TRUE}
+{set $dx_crowd_meter_hud dx_on}
 {set $dx_score_meter_visibility TRUE}
 {set $dx_fail_flash TRUE}
+
+{set $dx_lyric_highlight_r 0.0}
+{set $dx_lyric_highlight_g 0.98}
+{set $dx_lyric_highlight_b 0.69}
 
 
 ;currentsong formatting defauts
 {set $dx_mtv_visibility always}
 {set $dx_mtv_line_song_title TRUE}
 {set $dx_mtv_line_artist TRUE}
-{set $dx_mtv_line_year FALSE}
+{set $dx_mtv_year TRUE}
 ;{set $dx_year_on_one_mtv_line TRUE}
 {set $dx_mtv_line_album FALSE}
 {set $dx_mtv_line_genre FALSE}
@@ -714,7 +744,14 @@ DX_CURRENT_SONG_CLEAR
 {set $dx_joypad_type_keys kControllerKeys}
 {set $dx_joypad_type_vocals kControllerVocals}
 {set $dx_joypad_pad_mapping joypad}
-
+{set $dx_joypad_pad_remap_0 kPad_L2}
+{set $dx_joypad_pad_remap_1 kPad_L1}
+{set $dx_joypad_pad_remap_2 kPad_R1}
+{set $dx_joypad_pad_remap_3 kPad_R2}
+{set $dx_joypad_pad_remap_4 kPad_X}
+{set $dx_joypad_pad_remap_5 kPad_Select}
+{set $dx_default_transitions TRUE}
+{set $dx_black_song_transition FALSE}
 ;mtv overlay position for event mode
 ;{if $dx_event_mode
 ;   {set $mtvpos_0 -85}
@@ -724,6 +761,7 @@ DX_CURRENT_SONG_CLEAR
 ;game hud default ui positioning
 {set $scoreboardpos_0 8} {set $scoreboardpos_1 0} {set $scoreboardpos_2 -16}
 {set $star_displaypos_0 0} {set $star_displaypos_1 0} {set $star_displaypos_2 0}
+{set $dx_score_base_0 0} {set $dx_score_base_1 0} {set $dx_score_base_2 0}
 
 ;practice mode default ui positioning
 {set $speed_controlpos_0 46} {set $speed_controlpos_1 0} {set $speed_controlpos_2 -5}
@@ -761,6 +799,7 @@ DX_CURRENT_SONG_CLEAR
       {set $dx_splash_screen TRUE}
    }
 }
+{set $dx_anim_genres FALSE}
 {set $dx_seasonal_logos TRUE}
 {set $dx_season standard}
 {set $dx_additional_parts TRUE}
@@ -799,6 +838,8 @@ DX_CURRENT_SONG_CLEAR
 {if $dx_event_mode
    {modifier_mgr toggle_modifier_enabled mod_nopause}
 }
+{set $dx_command_ran 0}
+{set $dx_admin_mode FALSE}
 
 {set $dx_instrument_icons rb3}
 
@@ -831,6 +872,11 @@ DX_CURRENT_SONG_CLEAR
    }
 }
 #endif
+
+{if {&& {== $dx_detected_platform platform_rpcs3} $dx_admin_mode}
+   {set $dx_command_ran 0}
+   {write_file {sprint "GD:/dev_hdd0/game/" DX_TITLE_ID "/USRDIR/ace_admin.dta"} ""}
+}
 
 {if_else {== $dx_detected_platform platform_rpcs3}
    {do
@@ -887,6 +933,11 @@ DX_CURRENT_SONG_CLEAR
 }
 #endif
 
+; don't show cache warning on first time
+{if {== $dx_song_update_hash_old "nothing"}
+   {set $dx_song_update_hash_old $dx_song_update_hash}
+}
+
 ;for overshell reasons
 {if_else {>= $emulatefps 35}
    {set $dx_60fps TRUE}
@@ -897,14 +948,96 @@ DX_CURRENT_SONG_CLEAR
 ;{if $dx_ps3hw
 ;   {set $dx_author_finder_is_enabled FALSE}
 ;}
-{set $dx_forced_outro_vignette ()}
-{resize $dx_forced_outro_vignette 0}
+{set $dx_stored_outro_vignette ()}
+{resize $dx_stored_outro_vignette 0}
 
-{if $dx_forced_main_menu_bg
-   {set_elem {find $syscfg vignettes backdrops sv3} 1 $dx_forced_main_menu_bg}
+
+;holy shit rewrite this and the same thing in the overshell venue states
+;we should probably make an array of vars, iterate through it, and get/set_var
+;im just too lazy rn, sue me
+
+;fix improper transition sets
+{if {== {size $dx_stored_outro_vignette} 0}
+   {if $dx_black_song_transition {set $dx_default_transitions FALSE}}
+   {if $dx_default_transitions {set $dx_black_song_transition FALSE}}
+   {if {&& {! $dx_default_transitions} {! $dx_black_song_transition}}
+      {set $dx_default_transitions TRUE}
+   }
 }
-{if $dx_forced_song_select_bg
-   {set_elem {find $syscfg vignettes backdrops sv4} 1 $dx_forced_song_select_bg}
+{if {> {size $dx_stored_outro_vignette} 0}
+   {set $dx_default_transitions FALSE}
+   {set $dx_black_song_transition FALSE}
+}
+
+;fix improper transition sets
+{if {== {size $dx_stored_song_select_bg} 0}
+   {if $dx_black_song_select {set $dx_default_song_select FALSE}}
+   {if $dx_default_song_select {set $dx_black_song_select FALSE}}
+   {if {&& {! $dx_default_song_select} {! $dx_black_song_select}}
+      {set $dx_default_song_select TRUE}
+   }
+}
+{if {> {size $dx_stored_song_select_bg} 0}
+   {set $dx_default_song_select FALSE}
+   {set $dx_black_song_select FALSE}
+}
+
+;fix improper transition sets
+{if {== {size $dx_stored_main_menu_bg} 0}
+   {if $dx_black_main_menu {set $dx_default_main_menu FALSE}}
+   {if $dx_default_main_menu {set $dx_black_main_menu FALSE}}
+   {if {&& {! $dx_default_main_menu} {! $dx_black_main_menu}}
+      {set $dx_default_main_menu TRUE}
+   }
+}
+{if {> {size $dx_stored_main_menu_bg} 0}
+   {set $dx_default_main_menu FALSE}
+   {set $dx_black_main_menu FALSE}
+}
+
+;fix improper transition sets
+{if {== {size $dx_stored_practice_bg} 0}
+   {if $dx_black_practice {set $dx_default_practice FALSE}}
+   {if $dx_default_practice {set $dx_black_practice FALSE}}
+   {if {&& {! $dx_default_practice} {! $dx_black_practice}}
+      {set $dx_default_practice TRUE}
+   }
+}
+{if {> {size $dx_stored_practice_bg} 0}
+   {set $dx_default_practice FALSE}
+   {set $dx_black_practice FALSE}
+}
+
+;fix improper transition sets
+{if {== {size $dx_stored_outro_vignette} 0}
+   {if $dx_black_song_transition {set $dx_default_transitions FALSE}}
+   {if $dx_default_transitions {set $dx_black_song_transition FALSE}}
+   {if {&& {! $dx_default_transitions} {! $dx_black_song_transition}}
+      {set $dx_default_transitions TRUE}
+   }
+}
+{if {> {size $dx_stored_outro_vignette} 0}
+   {set $dx_default_transitions FALSE}
+   {set $dx_black_song_transition FALSE}
+}
+
+{if {&& {! $dx_black_main_menu} {! $dx_default_main_menu}}
+   {set_elem {find $syscfg vignettes backdrops sv3} 1 {eval $dx_stored_main_menu_bg}}
+}
+{if {&& {! $dx_black_song_select} {! $dx_default_song_select}}
+   {set_elem {find $syscfg vignettes backdrops sv4} 1 {eval $dx_stored_song_select_bg}}
+}
+
+{if $dx_black_song_select
+   {set_elem {find $syscfg vignettes backdrops sv4} 1 {quote ()}}
+}
+
+{if {&& {! $dx_black_practice} {! $dx_default_practice}}
+   {set_elem {find $syscfg vignettes backdrops sv5} 1 {eval $dx_stored_practice_bg}}
+}
+
+{if $dx_black_practice
+   {set_elem {find $syscfg vignettes backdrops sv5} 1 {quote ()}}
 }
 
 {switch $dx_fctype
@@ -931,8 +1064,6 @@ DX_CURRENT_SONG_CLEAR
    }
 }
 
-{set $dx_in_calibration FALSE}
-
 {set $dx_no_message_sound FALSE}
 {set $dx_menu_message ""}
 {set $dx_is_in_chat FALSE}
@@ -946,6 +1077,22 @@ DX_CURRENT_SONG_CLEAR
 
 {unless {== $dx_joypad_pad_mapping joypad} {do DX_REMAP_PAD}}
 
+{set_elem {find $syscfg beatmatcher controller joypad slots} 1 $dx_joypad_pad_remap_0}
+{set_elem {find $syscfg beatmatcher controller joypad slots} 3 $dx_joypad_pad_remap_1}
+{set_elem {find $syscfg beatmatcher controller joypad slots} 5 $dx_joypad_pad_remap_2}
+{set_elem {find $syscfg beatmatcher controller joypad slots} 7 $dx_joypad_pad_remap_3}
+{set_elem {find $syscfg beatmatcher controller joypad slots} 9 $dx_joypad_pad_remap_4}
+{set_elem {find $syscfg beatmatcher controller joypad force_mercury} 1 $dx_joypad_pad_remap_5}
+
+{set $dx_button_0_array_num $dx_joypad_pad_remap_0}
+{set $dx_button_1_array_num $dx_joypad_pad_remap_1}
+{set $dx_button_2_array_num $dx_joypad_pad_remap_2}
+{set $dx_button_3_array_num $dx_joypad_pad_remap_3}
+{set $dx_button_4_array_num $dx_joypad_pad_remap_4}
+{set $dx_button_5_array_num $dx_joypad_pad_remap_5}
+
+
+
 ;reset textures and angle if set to rb3
 {do {dx_default_texture_var_reset} {dx_track_angle_var_reset}}
 
@@ -957,24 +1104,17 @@ DX_CURRENT_SONG_CLEAR
 
 {profile_mgr set_mic_vol 2 $mic_vol_3} {profile_mgr update_mic_levels 2}
 
-{set $dx_remote_highway_guitar $dx_highway_guitar} {set $dx_remote_highway_bass $dx_highway_bass} {set $dx_remote_highway_drum $dx_highway_drum} {set $dx_remote_highway_keys $dx_highway_keys} {set $dx_remote_keyboard $dx_keyboard}
-{set $dx_remote_streak_guitar $dx_streak_guitar} {set $dx_remote_streak_bass $dx_streak_bass} {set $dx_remote_streak_drum $dx_streak_drum} {set $dx_remote_streak_keys $dx_streak_keys} {set $dx_remote_streak_prokeys $dx_streak_prokeys}
-{set $dx_remote_overdrive_guitar $dx_overdrive_guitar} {set $dx_remote_overdrive_bass $dx_overdrive_bass} {set $dx_remote_overdrive_drum $dx_overdrive_drum} {set $dx_remote_overdrive_keys $dx_overdrive_keys} {set $dx_remote_overdrive_prokeys $dx_overdrive_prokeys}
-{set $dx_remote_vocal_arrow $dx_vocal_arrow} {set $dx_remote_vocal_highway $dx_vocal_highway} {set $dx_remote_vocal_notes $dx_vocal_notes} {set $dx_remote_vocal_overdrive $dx_vocal_overdrive}
+{foreach_int $i 0 4
+   {set_var {sprint "dx_remote_slot" $i "_highway"} FALSE}
+   {set_var {sprint "dx_remote_slot" $i "_streak"} FALSE}
+   {set_var {sprint "dx_remote_slot" $i "_overdrive"} FALSE}
+   {set_var {sprint "dx_remote_slot" $i "_rails"} FALSE}
+   {set_var {sprint "dx_tex_ran_once_slot" $1} FALSE}
+}
 
-{set $dx_local_highway_guitar $dx_highway_guitar} {set $dx_local_highway_bass $dx_highway_bass} {set $dx_local_highway_drum $dx_highway_drum} {set $dx_local_highway_keys $dx_highway_keys} {set $dx_local_keyboard $dx_keyboard}
-{set $dx_local_streak_guitar $dx_streak_guitar} {set $dx_local_streak_bass $dx_streak_bass} {set $dx_local_streak_drum $dx_streak_drum} {set $dx_local_streak_keys $dx_streak_keys} {set $dx_local_streak_prokeys $dx_streak_prokeys}
-{set $dx_local_overdrive_guitar $dx_overdrive_guitar} {set $dx_local_overdrive_bass $dx_overdrive_bass} {set $dx_local_overdrive_drum $dx_overdrive_drum} {set $dx_local_overdrive_keys $dx_overdrive_keys} {set $dx_local_overdrive_prokeys $dx_overdrive_prokeys}
-{set $dx_local_vocal_arrow $dx_vocal_arrow} {set $dx_local_vocal_highway $dx_vocal_highway} {set $dx_local_vocal_notes $dx_vocal_notes} {set $dx_local_vocal_overdrive $dx_vocal_overdrive}
 
 {set $dx_last_song_has_tonic FALSE}
 
-{set $dx_button_0_array_num kPad_L2}
-{set $dx_button_1_array_num kPad_L1}
-{set $dx_button_2_array_num kPad_R1}
-{set $dx_button_3_array_num kPad_R2}
-{set $dx_button_4_array_num kPad_X}
-{set $dx_button_5_array_num kPad_Select}
 
 ;force a venue name. found in macros.dta.
 ;the following is all possible venue names internally

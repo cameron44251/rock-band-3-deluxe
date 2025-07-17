@@ -3,18 +3,18 @@
    {set $guitar_groove_active FALSE} {set $bass_groove_active FALSE} {set $drum_groove_active FALSE}
    {set $dx_someone_fcd FALSE} {set $dx_someone_niced FALSE} {set $dx_someone_jurgend FALSE}
    {set $dx_reported_highscore FALSE}
-   {foreach_int $i 0 3
+   {foreach_int $i 0 4
       {set_var {sprint "brutal_number_" $i} -26}
       {set_var {sprint "dx_perfects_count_" $i} 0}
       {set_var {sprint "dx_stop_od_" $i} FALSE}
-      {set_var {sprint $i "_missed_once"} FALSE}
-      {set_var {sprint $i "_caughtmissed"} FALSE}
       {set_var {sprint "num_gems_combo_" $i} FALSE}
    }
    {foreach $entry (guitar bass drum keys real_guitar real_bass real_drum real_keys)
       {set_var {sprint $entry "_milosong"} FALSE}
       {set_var {sprint $entry "_firstnote"} FALSE}
       {set_var {sprint $entry "_finalnote"} FALSE}
+      {set_var {sprint $entry "_missed_once"} FALSE}
+      {set_var {sprint $entry "_caughtmissed"} FALSE}
    }
 }
 {func
@@ -55,21 +55,27 @@
             {if {== $dx_vocal_highway "rock band 3"} {set $dx_vocal_highway none}}
             {if {== $dx_vocal_notes "rock band 3"} {set $dx_vocal_notes none}}
             {if {== $dx_vocal_overdrive "rock band 3"} {set $dx_vocal_overdrive none}}
-            {if {== $dx_keyboard "rock band 3"} {set $dx_keyboard none}}
+            {if {== $dx_highway_real_keys "rock band 3"} {set $dx_highway_real_keys none}}
             {if {== $dx_highway_guitar _2_rb3_guitar} {set $dx_highway_guitar none}}
+            {if {== $dx_highway_real_guitar _2_rb3_guitar} {set $dx_highway_real_guitar none}}
             {if {== $dx_highway_bass _rb3_bass} {set $dx_highway_bass none}}
+            {if {== $dx_highway_real_bass _rb3_bass} {set $dx_highway_real_bass none}}
             {if {== $dx_highway_drum _rb3_drum} {set $dx_highway_drum none}}
             {if {== $dx_highway_keys _rb3_keys} {set $dx_highway_keys none}}
             {if {== $dx_streak_guitar _1_rb3_guitarbass} {set $dx_streak_guitar none}}
+            {if {== $dx_streak_real_guitar _1_rb3_guitarbass} {set $dx_streak_real_guitar none}}
             {if {== $dx_streak_bass _1_rb3_guitarbass} {set $dx_streak_bass none}}
+            {if {== $dx_streak_real_bass _1_rb3_guitarbass} {set $dx_streak_real_bass none}}
             {if {== $dx_streak_drum _rb3_drums} {set $dx_streak_drum none}}
-            {if {== $dx_streak_prokeys _rb3_prokeys} {set $dx_streak_prokeys none}}
+            {if {== $dx_streak_real_keys _rb3_prokeys} {set $dx_streak_real_keys none}}
             {if {== $dx_streak_keys _rb3_keys} {set $dx_streak_keys none}}
             {if {== $dx_overdrive_guitar _1_rb3_guitar} {set $dx_overdrive_guitar none}}
+            {if {== $dx_overdrive_real_guitar _1_rb3_guitar} {set $dx_overdrive_real_guitar none}}
             {if {== $dx_overdrive_bass _rb3_bass} {set $dx_overdrive_bass none}}
+            {if {== $dx_overdrive_real_bass _rb3_bass} {set $dx_overdrive_real_bass none}}
             {if {== $dx_overdrive_drum _rb3_drums} {set $dx_overdrive_drum none}}
             {if {== $dx_overdrive_keys _rb3_keys} {set $dx_overdrive_keys none}}
-            {if {== $dx_overdrive_prokeys _rb3_prokeys} {set $dx_overdrive_prokeys none}}
+            {if {== $dx_overdrive_real_keys _rb3_prokeys} {set $dx_overdrive_real_keys none}}
          }
    ;   }
    ;}

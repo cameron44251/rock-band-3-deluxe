@@ -13,33 +13,12 @@
                         {! {gamemode in_mode practice}}
                         {! {gamemode in_mode trainer}}
                      }
+                     {> {meta_performer num_songs} 1}
                      {! {meta_performer is_set_complete}}
                      {session_mgr is_leader_local} ;set venue only if host of the lobby
                      $dx_venue_swap
                   }
                   {dx_venue_setter}
-               }
-            }
-      ;   }
-      ;}
-   )
-   (dx_swap_char_mid_setlist
-      ;{dx_log_writer info {sprint "func: dx_swap_char_mid_setlist"}}
-      ;{dx_log_writer info
-      ;   {sprintf "Executed dx_swap_char_mid_setlist - time: %.4fms"
-            {time
-               {if
-                  {&&
-                     {||
-                        {! {gamemode in_mode practice}}
-                        {! {gamemode in_mode trainer}}
-                     }
-                     {! {meta_performer is_set_complete}}
-                     {session_mgr is_leader_local} ;set venue only if host of the lobby
-                     $dx_character_swap
-                  }
-                  {prefab_mgr assign_prefabs_to_slots}
-                  {char_sync update_char_cache}
                }
             }
       ;   }
@@ -52,6 +31,7 @@
             {time
                {if {|| {modifier_mgr is_modifier_active mod_fakejuke} {modifier_mgr is_modifier_active mod_auto_play}}
                   {if $dx_auto_endgame
+                     {dx_uptime_onscreen}
                      {script_task kTaskSeconds
                         (delay 7)
                         (script ;this script is 1 for 1 pulled from the endgame SELECT_MSG handle for pressing green. im just adding a delay to do it automatically
@@ -72,7 +52,7 @@
                                        {ui sync_screen complete_screen 0})
                                     ({meta_performer has_battle}
                                        {ui sync_screen complete_screen 0})
-                                    {ui sync_screen maybe_outro_to_meta_loading_continue_screen 0}
+                                    {ui sync_screen meta_loading_continue_screen 0}
                                  }
                                  {ui sync_screen preload_nextsong_screen 0}
                               }
@@ -87,15 +67,27 @@
    )
    (dx_endgame_enter
       {dx_presence_manager}
+      {if $in_dx_settings
+         {leave_dx_settings}
+      }
       {$this dx_auto_endgame}
       {$this dx_swap_venue_mid_setlist}
-      {$this dx_swap_char_mid_setlist}
+      {if
+         {&&
+            {> {meta_performer num_songs} 1}
+            {! {meta_performer is_set_complete}}}
+         {dx_randomize_backup_band}} ; only do this here if there are multiple songs in the set and we're not done, i moved the other one to outro vignette finished :)
       {dx_countdown_var_reset}
+      ; force close solo boxes if it's still up when exiting game
+      {beatmatch foreach_active_player $player
+         {dx_final_percent_report $player {$player instrument}}
+      }
       ;{if {modifier_mgr is_modifier_active mod_brutalmode}
       ;   {header_song_bg_refract.mat set_color {pack_color 0.85 0.05 0.05}}
       ;   {highscore.mat set_color {pack_color 0.85 0.05 0.05}}
       ;   {header_song_bg.mat set_color {pack_color 0.85 0.05 0.05}}
       ;}
+      {dx_admin_mode}
    )
    (dx_endgame_exit
       {if

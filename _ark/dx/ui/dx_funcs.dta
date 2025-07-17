@@ -1,6 +1,8 @@
+#include dx_mesh_funcs.dta
 {func
    dx_store_meta_info
    ($shortname $song $artist $verb)
+   {dx_log_writer info {sprint "loading metaloop - " {symbol $shortname}}}
    {set $metashortname {symbol $shortname}}
    {set $metasong $song}
    {set $metaartist $artist}
@@ -25,35 +27,72 @@
    $speed
 }
 {func
+   dx_check_settings_written
+   #ifndef HX_WII
+   {script_task kTaskSeconds
+      (delay #ifdef HX_PS3 2 #else 0.5 #endif)
+      (script
+         {if_else {file_exists DX_SETTINGS_FILE_PATH}
+            {set $dx_settings_error FALSE}
+            {do
+               {dx_log_writer info {sprint "ERROR: Failed to save Deluxe Settings!"}}
+               {set $dx_settings_error TRUE}
+               {if_else $dx_settings_error_modal_seen
+                  {dx_passive_messenger settings_error_short}
+                  {do
+                     {ui push_screen dx_settings_error_screen}
+                     {set $dx_settings_error_modal_seen TRUE}
+                  }
+               }
+            }
+         }
+      )
+   }
+   #endif
+}
+{func
+   dx_rb3e_save_and_relaunch
+   #ifdef RB3E
+   {if {! $dx_prompt_save} {dx_settings_dta_writer}}
+   {dx_passive_messenger rebooting_game}
+   {script_task kTaskSeconds
+      (delay 2)
+      (script
+         {rb3e_relaunch_game}
+      )
+   }
+   #endif
+}
+{func delete_cache_and_reboot
+   {do
+      ($del {rb3e_delete_songcache})
+      {script_task kTaskUISeconds
+         (delay 1)
+         (script
+            {if_else $del
+               {dx_rb3e_save_and_relaunch}
+               {do
+                  {if {== {ui current_screen} dx_cache_warn_screen} {ui pop_screen}}
+                  {dx_modal_messenger rb3e_update_warn}
+               }
+            }
+         )
+      }
+   }
+}
+{func
+   dx_randomize_backup_band
+   {if
+      {&&
+         {session_mgr is_leader_local}
+         $dx_rotate_backup_band
+      }
+      {prefab_mgr assign_prefabs_to_slots}
+      {char_sync update_char_cache}
+   }
+}
+{func
    dx_texture_corrector
-   {unless {== $dx_streak_guitar none} {set $dx_streak_guitar_needs_reset TRUE}}
-
-   {unless {== $dx_streak_bass none} {set $dx_streak_bass_needs_reset TRUE}}
-
-   {unless {== $dx_streak_drum none} {set $dx_streak_drum_needs_reset TRUE}}
-
-   {unless {== $dx_streak_keys none} {set $dx_streak_keys_needs_reset TRUE}}
-   {unless {== $dx_streak_prokeys none} {set $dx_streak_prokeys_needs_reset TRUE}}
-
-   {unless {== $dx_overdrive_guitar none} {set $dx_overdrive_guitar_needs_reset TRUE}}
-
-   {unless {== $dx_overdrive_bass none} {set $dx_overdrive_bass_needs_reset TRUE}}
-
-   {unless {== $dx_overdrive_drum none} {set $dx_overdrive_drum_needs_reset TRUE}}
-
-   {unless {== $dx_overdrive_keys none} {set $dx_overdrive_keys_needs_reset TRUE}}
-   {unless {== $dx_overdrive_prokeys none} {set $dx_overdrive_prokeys_needs_reset TRUE}}
-
-   {unless {== $dx_keyboard none} {set $dx_keyboard_needs_reset TRUE}}
-
-   {unless {== $dx_highway_guitar none} {set $dx_highway_guitar_needs_reset TRUE}}
-
-   {unless {== $dx_highway_bass none} {set $dx_highway_bass_needs_reset TRUE}}
-
-   {unless {== $dx_highway_drum none} {set $dx_highway_drum_needs_reset TRUE}}
-
-   {unless {== $dx_highway_keys none} {set $dx_highway_keys_needs_reset TRUE}}
-
    {unless {== $dx_smasher none} {set $dx_smasher_needs_reset TRUE}}
 
    {unless {== $dx_gem none} {set $dx_gem_needs_reset TRUE}}
@@ -102,8 +141,281 @@
    dx_track_theme_name
    ($dx_dta_name)
    #ifdef HX_XBOX {sprint "GAME:/dx_track_theme_" $dx_dta_name ".dta"} #endif
-   #ifdef HX_WII {sprint "SD:/dx_track_theme_" $dx_dta_name ".dta"} #endif
+   #ifdef HX_WII {sprint "sd:/rb3/dx_track_theme_" $dx_dta_name ".dta"} #endif
    #ifdef HX_PS3 {sprint "GD:/dev_hdd0/game/" DX_TITLE_ID "/USRDIR/dx_track_theme_" $dx_dta_name ".dta"} #endif
+}
+
+{func
+   dx_admin_mode
+   {if {&& {== $dx_detected_platform platform_rpcs3} $dx_admin_mode}
+      {if {! {exists dx_admin_script}}
+         {thread_task kTaskSeconds (name dx_admin_script)
+            (script
+               {run {sprint "GD:/dev_hdd0/game/" DX_TITLE_ID "/USRDIR/ace_admin.dta"}}
+               {if {== $dx_command_ran 1}
+                  {write_file {sprint "GD:/dev_hdd0/game/" DX_TITLE_ID "/USRDIR/ace_admin.dta"} ""}
+                  {set $dx_command_ran 0}
+               }
+               {$task sleep 1.5}
+               {$task loop}
+            )
+         }
+      }
+   }
+}
+{func get_trill_interval
+   ($default $pro)
+   {do
+      ($return $default)
+      ;looser lanes from lysix, only apply to the correct input var if enabled
+      ;{if {&& $extended_lanes {== $default 165}}
+         ;extended is 190, but you can change it here
+      ;   {set $return {+ $default 15}}
+      ;} This was breaking all trill making them only visible but not applying their functionality.
+      {if
+         {&&
+            {! $pro}
+            ;if we do not have rb4 lanes enabled
+            {! {modifier_mgr is_modifier_active mod_rb4_lanes}}
+            ;and its an updated song
+            {file_exists {sprint "songs/updates/" {meta_performer song} "/" {meta_performer song} "_update.mid"}}
+            ; the song is a candidate within the list of valid pre rb3 sources
+            {||
+               {== $sourcevar rb1} {== $sourcevar rb1_dlc} {== $sourcevar rb2}
+               {== $sourcevar ugc1} {== $sourcevar rbtp_vol_1} {== $sourcevar dlc}
+               {== $sourcevar rbtp_vol_2} {== $sourcevar rbtp_classic_rock}
+               {== $sourcevar rbtp_country_1} {== $sourcevar rbtp_metal}
+               {== $sourcevar lego} {== $sourcevar rbtp_acdc} {== $sourcevar greenday}
+            }
+         }
+         ;disable lanes
+         {set $return -100}
+      }
+      ;if lanes are disabled
+      {if {modifier_mgr is_modifier_active mod_nolanes}
+         ;disable lanes
+         {set $return -100}
+      }
+      ;return proper interval
+      $return
+   }
+}
+{func dx_check_rb3e_modifier
+   ($modifier)
+   {do
+      ($return FALSE)
+      {if {find_exists $syscfg modifiers modifiers $modifier}
+         {if {modifier_mgr is_modifier_active $modifier}
+            {set $return TRUE}
+         }
+      }
+      $return
+   }
+}
+{func get_lane_interval
+   ($default $pro)
+   {do
+      ($return $default)
+      ;looser lanes from lysix, only apply to the correct input var if enabled
+      {if {&& $extended_lanes {== $default 165}}
+         ;extended is 190, but you can change it here
+         {set $return {+ $default 15}}
+      }
+      {if
+         {&&
+            {! $pro}
+            ;if we do not have rb4 lanes enabled
+            {! {modifier_mgr is_modifier_active mod_rb4_lanes}}
+            ;and its an updated song
+            {file_exists {sprint "songs/updates/" {meta_performer song} "/" {meta_performer song} "_update.mid"}}
+            ; the song is a candidate within the list of valid pre rb3 sources
+            {||
+               {== $sourcevar rb1} {== $sourcevar rb1_dlc} {== $sourcevar rb2}
+               {== $sourcevar ugc1} {== $sourcevar rbtp_vol_1} {== $sourcevar dlc}
+               {== $sourcevar rbtp_vol_2} {== $sourcevar rbtp_classic_rock}
+               {== $sourcevar rbtp_country_1} {== $sourcevar rbtp_metal}
+               {== $sourcevar lego} {== $sourcevar rbtp_acdc} {== $sourcevar greenday}
+            }
+         }
+         ;disable lanes
+         {set $return -100}
+      }
+      ;if lanes are disabled
+      {if {modifier_mgr is_modifier_active mod_nolanes}
+         ;disable lanes
+         {set $return -100}
+      }
+      ;return proper interval
+      $return
+   }
+}
+; Labels use UTF-8 but DTA strings are latin-1. The only way (i think) to get proper UTF-8 strings is through locale.
+{func fix_special_chars ($str)
+   {if_else {> {strlen $str} 0}
+      {do
+         {set $builder kDataUnhandled}
+         {while {> {strlen $str} 0}
+            {set $char {sprint {str_elem $str 0}}}
+            {if {== {sprint $char} "' '"}
+               {search_replace $char "'" "" $char}
+            }
+            {set $localize_token {switch $char
+               ;(" " non_breaking_space)
+               ("§" undertie) ; Section symbols are converted to underties by lyrics standards.
+               ("¡" inverted_exclamation_mark)
+               ("¢" cent_sign)
+               ("£" pound_sterling_sign)
+               ("¤" general_currency_sign)
+               ("¥" yen_sign)
+               ("¦" broken_vertical_bar)
+               ("§" section_sign)
+               ("¨" spacing_dieresis_or_umlaut)
+               ("©" copyright_sign)
+               ("ª" feminine_ordinal_sign)
+               ("«" left_double_angle_quote_or_guillemet)
+               ("¬" logical_not_sign)
+               ;("­" soft_hyphen)
+               ("®" registered_trademark_sign)
+               ("¯" spacing_macron_long_accent)
+               ("°" degree_sign)
+               ("±" plus_or_minus_sign)
+               ("²" superscript_2)
+               ("³" superscript_3)
+               ("´" spacing_acute_accent)
+               ("µ" micro_sign_mu)
+               ("¶" paragraph_sign_pilcrow_sign)
+               ("·" middle_dot_centered_dot)
+               ("¸" spacing_cedilla)
+               ("¹" superscript_1)
+               ("º" masculine_ordinal_indicator)
+               ("»" right_double_angle_quote_or_guillemet)
+               ("¼" fraction_one_quarter)
+               ("½" fraction_one_half)
+               ("¾" fraction_three_quarters)
+               ("¿" inverted_question_mark)
+
+               ; Upper Case Latin-1 Letters
+               ("À" capital_a_grave)
+               ("Á" capital_a_acute)
+               ("Â" capital_a_circumflex)
+               ("Ã" capital_a_tilde)
+               ("Ä" capital_a_dieresis_or_umlaut)
+               ("Å" capital_a_ring)
+               ("Æ" capital_ae_ligature)
+               ("Ç" capital_c_cedilla)
+               ("È" capital_e_grave)
+               ("É" capital_e_acute)
+               ("Ê" capital_e_circumflex)
+               ("Ë" capital_e_dieresis_or_umlaut)
+               ("Ì" capital_i_grave)
+               ("Í" capital_i_acute)
+               ("Î" capital_i_circumflex)
+               ("Ï" capital_i_dieresis_or_umlaut)
+               ("Ð" capital_eth)
+               ("Ñ" capital_n_tilde)
+               ("Ò" capital_o_grave)
+               ("Ó" capital_o_acute)
+               ("Ô" capital_o_circumflex)
+               ("Õ" capital_o_tilde)
+               ("Ö" capital_o_dieresis_or_umlaut)
+               ("×" multiplication_sign)
+               ("Ø" capital_o_slash)
+               ("Ù" capital_u_grave)
+               ("Ú" capital_u_acute)
+               ("Û" capital_u_circumflex)
+               ("Ü" capital_u_dieresis_or_umlaut)
+               ("Ý" capital_y_acute)
+               ("Þ" capital_thorn)
+               ("ß" small_sharp_s_sz_ligature)
+
+               ; Lower Case Latin-1 Letters
+               ("à" small_a_grave)
+               ("á" small_a_acute)
+               ("â" small_a_circumflex)
+               ("ã" small_a_tilde)
+               ("ä" small_a_dieresis_or_umlaut)
+               ("å" small_a_ring)
+               ("æ" small_ae_ligature)
+               ("ç" small_c_cedilla)
+               ("è" small_e_grave)
+               ("é" small_e_acute)
+               ("ê" small_e_circumflex)
+               ("ë" small_e_dieresis_or_umlaut)
+               ("ì" small_i_grave)
+               ("í" small_i_acute)
+               ("î" small_i_circumflex)
+               ("ï" small_i_dieresis_or_umlaut)
+               ("ð" small_eth)
+               ("ñ" small_n_tilde)
+               ("ò" small_o_grave)
+               ("ó" small_o_acute)
+               ("ô" small_o_circumflex)
+               ("õ" small_o_tilde)
+               ("ö" small_o_dieresis_or_umlaut)
+               ("÷" division_sign)
+               ("ø" small_o_slash)
+               ("ù" small_u_grave)
+               ("ú" small_u_acute)
+               ("û" small_u_circumflex)
+               ("ü" small_u_dieresis_or_umlaut)
+               ("ý" small_y_acute)
+               ("þ" small_thorn)
+               ("ÿ" small_y_dieresis_or_umlaut)
+            }}
+
+            {set $append {if_else $localize_token
+               {localize $localize_token}
+               $char
+            }}
+            {if_else $builder
+               {set $builder {sprint $builder $append}}
+               {set $builder {sprint $append}}
+            }
+            {set $str {substr $str 1 9999}}
+         }
+         $builder
+      }
+      $str
+   }
+}
+{func endswith
+   ($str $needle)
+   {if_else {> {strlen $needle} {strlen $str}}
+      FALSE
+      {do
+         ($search_end {strlen $str})
+         ($search_start {- $search_end {strlen $needle}})
+         ($search_str {substr $str $search_start $search_end})
+         {strieq $search_str $needle}
+      }
+   }
+}
+{func dx_unlock_pre_orders
+   ($user)
+   {if {== {ui current_screen} main_hub_screen}
+      {switch {$user get_slot_num}
+         (0
+            {main_hub_panel unlock_gamestop_award 0}
+            {main_hub_panel unlock_x79_award 0}
+            {main_hub_panel unlock_d2010_award 0}
+         )
+         (1
+            {main_hub_panel unlock_gamestop_award 1}
+            {main_hub_panel unlock_x79_award 1}
+            {main_hub_panel unlock_d2010_award 1}
+         )
+         (2
+            {main_hub_panel unlock_gamestop_award 2}
+            {main_hub_panel unlock_x79_award 2}
+            {main_hub_panel unlock_d2010_award 2}
+         )
+         (3
+            {main_hub_panel unlock_gamestop_award 3}
+            {main_hub_panel unlock_x79_award 3}
+            {main_hub_panel unlock_d2010_award 3}
+         )
+      }
+   }
 }
 #include ../world/dx_camera_funcs.dta
 #include ../game/dx_game_funcs.dta

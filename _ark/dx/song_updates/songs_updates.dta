@@ -225,6 +225,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (extra_authoring disc_update)
    (loading_phrase
       "This song, originally by Bob Dylan, has been covered by many, many artists, including Neil Young, U2, The Grateful Dead, Indigo Girls, XTC, and perhaps most famously, Jimi Hendrix."
@@ -1021,7 +1022,7 @@ missing_song_data
       "Harmonix"
    )
    (name
-      "Come as You Are (Live from MTV Unplugged)"
+      "Come as You Are (Unplugged)"
    )
    (song
       (vocal_parts 2)
@@ -1076,7 +1077,7 @@ missing_song_data
    (real_bass_tuning
       (0 0 0 0)
    )
-   (game_origin rb_blitz)
+   (game_origin blitz)
    (author
       "Harmonix"
    )
@@ -1806,7 +1807,7 @@ missing_song_data
    (real_bass_tuning
       (0 0 0 0)
    )
-   (game_origin rb_blitz)
+   (game_origin blitz)
    (author
       "Harmonix"
    )
@@ -2390,6 +2391,9 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (artist
+      "Panic! at the Disco"
+   )
    (extra_authoring disc_update)
 )
 (ivedoneeverything
@@ -2623,7 +2627,7 @@ missing_song_data
    (real_bass_tuning
       (0 0 0 0)
    )
-   (game_origin rb_blitz)
+   (game_origin blitz)
    (author
       "Harmonix"
    )
@@ -2647,7 +2651,7 @@ missing_song_data
    (real_bass_tuning
       (0 0 0 0)
    )
-   (game_origin rb_blitz)
+   (game_origin blitz)
    (author
       "Harmonix"
    )
@@ -2809,6 +2813,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (extra_authoring disc_update)
 )
 (lithiumlive
@@ -2829,6 +2834,9 @@ missing_song_data
    )
    (author
       "Harmonix"
+   )
+   (name
+      "Lithium (Live)"
    )
    (extra_authoring disc_update)
    (song_length 271363)
@@ -2858,6 +2866,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (extra_authoring disc_update)
    (song
       (tracks
@@ -3320,7 +3329,9 @@ missing_song_data
    (name
       "My Sharona (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2007)
    (song
       (vocal_parts 2)
    )
@@ -3431,6 +3442,9 @@ missing_song_data
       (0 0 0 0)
    )
    (game_origin rb3dlc)
+   (author
+      "Harmonix"
+   )
    (extra_authoring disc_update)
 )
 (nowimhere
@@ -4057,6 +4071,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (song
       (vocal_parts 3)
    )
@@ -4135,6 +4150,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre blues)
    (extra_authoring disc_update)
 )
 (rimeoftheancientmariner
@@ -4864,7 +4880,7 @@ missing_song_data
    (real_bass_tuning
       (-2 0 0 0)
    )
-   (game_origin rb_blitz)
+   (game_origin blitz)
    (author
       "Harmonix"
    )
@@ -5687,7 +5703,7 @@ missing_song_data
    (real_bass_tuning
       (0 0 0 0)
    )
-   (game_origin rb_blitz)
+   (game_origin blitz)
    (author
       "Harmonix"
    )
@@ -5841,6 +5857,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (extra_authoring disc_update)
 )
 (turningjapanese
@@ -6699,7 +6716,9 @@ missing_song_data
    (name
       "Ballroom Blitz (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2007)
    (song
       (vocal_parts 3)
    )
@@ -6999,7 +7018,7 @@ missing_song_data
    (keys_author
       "FujiSkunk"
    )
-   (version 30)
+   (version 29)
    (song_id 49)
    (preview 27700 57700)
    (song_length 234907)
@@ -7845,7 +7864,7 @@ missing_song_data
                (10 11)
             )
             (keys
-               (12 13)
+               (12)
             )
          )
       )
@@ -7875,7 +7894,7 @@ missing_song_data
    (strings_author
       "Ruggy"
    )
-   (version 30)
+   (version 29)
    (song_id 18)
    (preview 5900 35900)
    (song_length 187426)
@@ -7899,7 +7918,9 @@ missing_song_data
    (name
       "Green Grass and High Tides (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2007)
    (song
       (vocal_parts 3)
    )
@@ -8015,31 +8036,31 @@ missing_song_data
       )
    )
    (extra_authoring disc_update)
+   (upgrade_version 1)
    (rank
       (drum 430)
       (guitar 385)
       (bass 385)
       (vocals 290)
-      (band 440)
       (keys 477)
-      (real_keys 476)
       (real_guitar 442)
       (real_bass 430)
+      (real_keys 476)
+      (band 440)
    )
-   (keys_author
-      "Ruggy"
-   )
-   (version 30)
-   (upgrade_version 1)
    (real_guitar_tuning
       (0 0 0 0 0 0)
    )
    (real_bass_tuning
       (0 0 0 0)
    )
-   (strings_author
-      "RK"
+   (keys_author
+      "mazegeek"
    )
+   (strings_author
+      "Ruggy, RK"
+   )
+   (version 30)
    (song_id 21)
    (preview 36850 66850)
    (song_length 369375)
@@ -8415,7 +8436,9 @@ missing_song_data
    (name
       "Mississippi Queen (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2007)
    (extra_authoring disc_update)
    (upgrade_version 1)
    (song
@@ -8624,6 +8647,23 @@ missing_song_data
    )
    (song
       (vocal_parts 3)
+      (tracks
+         (
+            (drum
+               (0 1 2 3 4 5)
+            )
+            (bass 6)
+            (guitar
+               (7 8)
+            )
+            (vocals
+               (9 10)
+            )
+            (keys
+               (11 12)
+            )
+         )
+      )
    )
    (extra_authoring disc_update)
    (upgrade_version 1)
@@ -8632,9 +8672,11 @@ missing_song_data
       (guitar 280)
       (bass 129)
       (vocals 220)
-      (band 360)
+      (keys 175)
       (real_guitar 355)
       (real_bass 315)
+      (real_keys 175)
+      (band 360)
    )
    (real_guitar_tuning
       (0 0 0 0 0 0)
@@ -8645,6 +8687,10 @@ missing_song_data
    (strings_author
       "RK, Carl Mylo"
    )
+   (keys_author
+      "SonicSBL"
+   )
+   (version 30)
    (song_id 54)
    (preview 146500 176500)
    (song_length 294981)
@@ -8652,7 +8698,6 @@ missing_song_data
       (guitar vocal_percussion)
    )
    (format 10)
-   (version 1)
    (game_origin rb1)
    (rating 1)
    (year_released 1989)
@@ -8669,7 +8714,9 @@ missing_song_data
    (name
       "Paranoid (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2007)
    (extra_authoring disc_update)
    (upgrade_version 1)
    (rank
@@ -8789,7 +8836,9 @@ missing_song_data
    (name
       "Run to the Hills (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2007)
    (song
       (vocal_parts 3)
    )
@@ -9277,7 +9326,9 @@ missing_song_data
    (name
       "Tom Sawyer (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2007)
    (extra_authoring disc_update)
    (upgrade_version 1)
    (rank
@@ -9323,7 +9374,9 @@ missing_song_data
    (name
       "Train Kept a Rollin' (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2007)
    (extra_authoring disc_update)
    (upgrade_version 1)
    (rank
@@ -9616,6 +9669,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre hardrock)
    (song
       (vocal_parts 2)
       (tracks
@@ -9671,6 +9725,7 @@ missing_song_data
    )
 )
 (aceofspades
+   (band_fail_cue band_fail_heavy.cue)
    (vocal_tonic_note 3)
    (song_tonality 1)
    (author
@@ -9710,6 +9765,7 @@ missing_song_data
    )
 )
 (ajaggedgorgeouswinter
+   (band_fail_cue band_fail_vintage.cue)
    (vocal_tonic_note 11)
    (song_tonality 0)
    (author
@@ -9717,13 +9773,47 @@ missing_song_data
    )
    (song
       (vocal_parts 3)
+      (tracks
+         (
+            (drum
+               (0 1)
+            )
+            (bass
+               (2)
+            )
+            (guitar
+               (3 4)
+            )
+            (vocals
+               (5 6)
+            )
+            (keys
+               (7 8)
+            )
+         )
+      )
    )
    (extra_authoring disc_update)
+   (upgrade_version 1)
+   (rank
+      (drum 339)
+      (guitar 223)
+      (bass 258)
+      (vocals 203)
+      (keys 223)
+      (real_keys 223)
+      (band 273)
+   )
+   (version 30)
+   (keys_author
+      "BowlsforRick, SonicSBL"
+   )
    (loading_phrase
       "The music video for \qA Jagged Gorgeous Winter\q was filmed in 4 hours in Vermont and edited in the van on the ride back to Boston."
    )
 )
 (alabamagetaway
+   (band_fail_cue band_fail_vintage.cue)
    (vocal_tonic_note 9)
    (song_tonality 0)
    (author
@@ -9732,6 +9822,7 @@ missing_song_data
    (artist
       "Grateful Dead"
    )
+   (genre blues)
    (song
       (vocal_parts 3)
    )
@@ -9741,6 +9832,7 @@ missing_song_data
    )
 )
 (alexchilton
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 9)
    (song_tonality 0)
    (author
@@ -9779,6 +9871,7 @@ missing_song_data
    )
 )
 (alive
+   (band_fail_cue band_fail_vintage.cue)
    (vocal_tonic_note 9)
    (song_tonality 0)
    (author
@@ -9811,6 +9904,7 @@ missing_song_data
    )
 )
 (almosteasy
+   (band_fail_cue band_fail_heavy_keys.cue)
    (vocal_tonic_note 1)
    (song_tonality 1)
    (author
@@ -9869,6 +9963,7 @@ missing_song_data
    )
 )
 (americanwoman
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 4)
    (song_tonality 0)
    (author
@@ -9901,6 +9996,7 @@ missing_song_data
    )
 )
 (anywayyouwantit
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 7)
    (song_tonality 0)
    (author
@@ -9908,6 +10004,26 @@ missing_song_data
    )
    (song
       (vocal_parts 3)
+      (tracks
+         (
+            (drum
+               (0 1 2 3 4 5)
+            )
+            (bass
+               (6)
+            )
+            (guitar
+               (7 8)
+            )
+            (vocals
+               (9 10)
+            )
+            (keys
+               (11 12)
+            )
+         )
+      )
+      (crowd_channels 13 14)
    )
    (extra_authoring disc_update)
    (upgrade_version 1)
@@ -9919,6 +10035,8 @@ missing_song_data
       (real_guitar 350)
       (real_bass 250)
       (band 373)
+      (keys 296)
+      (real_keys 278)
    )
    (real_guitar_tuning
       (0 0 0 0 0 0)
@@ -9929,6 +10047,10 @@ missing_song_data
    (strings_author
       "RK"
    )
+   (keys_author
+      "BowlsforRick, SonicSBL"
+   )
+   (version 30)
    (song_length 196432)
    (solo
       (guitar vocal_percussion)
@@ -9938,6 +10060,7 @@ missing_song_data
    )
 )
 (aqualung
+   (band_fail_cue band_fail_vintage.cue)
    (vocal_tonic_note 7)
    (song_tonality 1)
    (author
@@ -9994,6 +10117,7 @@ missing_song_data
    )
 )
 (badreputation
+   (band_fail_cue band_fail_rock_keys.cue)
    (vocal_tonic_note 11)
    (song_tonality 0)
    (author
@@ -10048,6 +10172,7 @@ missing_song_data
    )
 )
 (battery
+   (band_fail_cue band_fail_heavy.cue)
    (vocal_tonic_note 4)
    (song_tonality 1)
    (author
@@ -10085,6 +10210,7 @@ missing_song_data
    )
 )
 (bodhisattva
+   (band_fail_cue band_fail_vintage_keys.cue)
    (vocal_tonic_note 7)
    (song_tonality 0)
    (author
@@ -10144,6 +10270,7 @@ missing_song_data
    )
 )
 (carryonwaywardson
+   (band_fail_cue band_fail_vintage_keys.cue)
    (vocal_tonic_note 9)
    (song_tonality 1)
    (author
@@ -10201,6 +10328,7 @@ missing_song_data
    )
 )
 (chopsuey
+   (band_fail_cue band_fail_heavy_keys.cue)
    (vocal_tonic_note 7)
    (song_tonality 1)
    (author
@@ -10260,6 +10388,7 @@ missing_song_data
    )
 )
 (colonyofbirchmen
+   (band_fail_cue band_fail_heavy.cue)
    (vocal_tonic_note 2)
    (song_tonality 1)
    (author
@@ -10293,6 +10422,7 @@ missing_song_data
    )
 )
 (comeoutandplay
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 11)
    (song_tonality 1)
    (author
@@ -10326,6 +10456,7 @@ missing_song_data
    )
 )
 (conventionallover
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 1)
    (song_tonality 0)
    (author
@@ -10361,6 +10492,7 @@ missing_song_data
    )
 )
 (coolforcats
+   (band_fail_cue band_fail_electro_keys.cue)
    (vocal_tonic_note 7)
    (song_tonality 0)
    (author
@@ -10420,6 +10552,7 @@ missing_song_data
    )
 )
 (deluxe
+   (band_fail_cue band_fail_vintage.cue)
    (vocal_tonic_note 4)
    (song_tonality 0)
    (author
@@ -10456,6 +10589,7 @@ missing_song_data
    )
 )
 (downwiththesickness
+   (band_fail_cue band_fail_heavy_keys.cue)
    (vocal_tonic_note 3)
    (song_tonality 1)
    (author
@@ -10487,6 +10621,7 @@ missing_song_data
    )
 )
 (drainyou
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 9)
    (song_tonality 0)
    (author
@@ -10522,6 +10657,7 @@ missing_song_data
    )
 )
 (epro
+   (band_fail_cue band_fail_vintage.cue)
    (vocal_tonic_note 4)
    (song_tonality 1)
    (author
@@ -10554,6 +10690,7 @@ missing_song_data
    )
 )
 (everlong
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 2)
    (song_tonality 0)
    (author
@@ -10586,6 +10723,7 @@ missing_song_data
    )
 )
 (eyeofthetiger
+   (band_fail_cue band_fail_rock_keys.cue)
    (vocal_tonic_note 0)
    (song_tonality 1)
    (author
@@ -10645,6 +10783,7 @@ missing_song_data
    )
 )
 (feelthepain
+   (band_fail_cue band_fail_vintage.cue)
    (vocal_tonic_note 0)
    (song_tonality 0)
    (author
@@ -10680,6 +10819,7 @@ missing_song_data
    )
 )
 (floaton
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 6)
    (song_tonality 0)
    (author
@@ -10739,6 +10879,7 @@ missing_song_data
    )
 )
 (getclean
+   (band_fail_cue band_fail_heavy_keys.cue)
    (vocal_tonic_note 2)
    (song_tonality 1)
    (author
@@ -10794,6 +10935,7 @@ missing_song_data
    )
 )
 (girlsnotgrey
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 8)
    (song_tonality 1)
    (author
@@ -10827,6 +10969,7 @@ missing_song_data
    )
 )
 (giveitall
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 6)
    (song_tonality 1)
    (author
@@ -10873,6 +11016,7 @@ missing_song_data
    )
 )
 (goyourownway
+   (band_fail_cue band_fail_vintage_keys.cue)
    (vocal_tonic_note 5)
    (song_tonality 0)
    (author
@@ -10931,6 +11075,7 @@ missing_song_data
    )
 )
 (hellothere
+   (band_fail_cue band_fail_rock_keys.cue)
    (vocal_tonic_note 9)
    (song_tonality 0)
    (author
@@ -10980,6 +11125,7 @@ missing_song_data
    )
 )
 (hungrylikethewolf
+   (band_fail_cue band_fail_electro_keys.cue)
    (vocal_tonic_note 4)
    (song_tonality 0)
    (author
@@ -11036,6 +11182,7 @@ missing_song_data
    (version 30)
 )
 (iwaswrong
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 3)
    (song_tonality 0)
    (author
@@ -11071,6 +11218,7 @@ missing_song_data
    )
 )
 (kidsinamerica
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 10)
    (song_tonality 0)
    (author
@@ -11108,6 +11256,7 @@ missing_song_data
    )
 )
 (lazyeye
+   (band_fail_cue band_fail_vintage.cue)
    (vocal_tonic_note 4)
    (song_tonality 0)
    (author
@@ -11166,13 +11315,14 @@ missing_song_data
    )
 )
 (letthereberock
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 4)
    (song_tonality 1)
    (author
       "Harmonix"
    )
    (song_length 371908)
-   (genre classicrock)
+   (genre hardrock)
    (rating 1)
    (extra_authoring disc_update)
    (upgrade_version 1)
@@ -11208,6 +11358,7 @@ missing_song_data
    )
 )
 (lump
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 1)
    (song_tonality 0)
    (author
@@ -11244,6 +11395,7 @@ missing_song_data
    )
 )
 (maninthebox
+   (band_fail_cue band_fail_vintage.cue)
    (vocal_tonic_note 3)
    (song_tonality 1)
    (author
@@ -11279,6 +11431,7 @@ missing_song_data
    )
 )
 (masterexploder
+   (band_fail_cue band_fail_vintage.cue)
    (vocal_tonic_note 4)
    (song_tonality 1)
    (author
@@ -11317,6 +11470,7 @@ missing_song_data
    )
 )
 (mountainsong
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 4)
    (song_tonality 0)
    (author
@@ -11373,6 +11527,7 @@ missing_song_data
    )
 )
 (myownworstenemy
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 4)
    (song_tonality 0)
    (author
@@ -11409,6 +11564,7 @@ missing_song_data
    )
 )
 (newkidinschool
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 7)
    (song_tonality 1)
    (author
@@ -11441,6 +11597,7 @@ missing_song_data
    )
 )
 (nightlies
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 3)
    (song_tonality 1)
    (author
@@ -11457,10 +11614,14 @@ missing_song_data
    (extra_authoring disc_update)
 )
 (nineintheafternoon
+   (band_fail_cue band_fail_vintage_keys.cue)
    (vocal_tonic_note 10)
    (song_tonality 0)
    (author
       "Harmonix"
+   )
+   (artist
+      "Panic! at the Disco"
    )
    (genre psychadelic)
    (song
@@ -11511,6 +11672,7 @@ missing_song_data
    )
 )
 (onestepcloser
+   (band_fail_cue band_fail_heavy_keys.cue)
    (vocal_tonic_note 1)
    (song_tonality 1)
    (author
@@ -11518,6 +11680,23 @@ missing_song_data
    )
    (song
       (vocal_parts 3)
+      (tracks
+         (
+            (drum
+               (0 1 2 3 4)
+            )
+            (bass 5)
+            (guitar
+               (6 7)
+            )
+            (vocals
+               (8 9)
+            )
+            (keys
+               (10 11)
+            )
+         )
+      )
    )
    (extra_authoring disc_update)
    (upgrade_version 1)
@@ -11526,8 +11705,10 @@ missing_song_data
       (guitar 128)
       (bass 165)
       (vocals 284)
+      (keys 243)
       (real_guitar 67)
       (real_bass 117)
+      (real_keys 243)
       (band 214)
    )
    (real_guitar_tuning
@@ -11536,12 +11717,16 @@ missing_song_data
    (real_bass_tuning
       (-2 0 0 0)
    )
+   (keys_author
+      "BowlsforRick"
+   )
    (strings_author
       "RK"
    )
    (version 30)
 )
 (onewayoranother
+   (band_fail_cue band_fail_vintage.cue)
    (vocal_tonic_note 2)
    (song_tonality 0)
    (author
@@ -11600,6 +11785,7 @@ missing_song_data
    )
 )
 (ourtruth
+   (band_fail_cue band_fail_heavy.cue)
    (vocal_tonic_note 11)
    (song_tonality 0)
    (author
@@ -11607,6 +11793,25 @@ missing_song_data
    )
    (song
       (vocal_parts 3)
+      (tracks
+         (
+            (drum
+               (0 1 2 3 4)
+            )
+            (bass
+               (5)
+            )
+            (guitar
+               (6 7)
+            )
+            (vocals
+               (8 9)
+            )
+            (keys
+               (10 11)
+            )
+         )
+      )
    )
    (extra_authoring disc_update)
    (upgrade_version 1)
@@ -11615,11 +11820,11 @@ missing_song_data
       (guitar 185)
       (bass 374)
       (vocals 365)
-      (keys 0)
-      (real_keys 0)
-      (band 355)
+      (keys 195)
       (real_guitar 222)
       (real_bass 282)
+      (real_keys 183)
+      (band 355)
    )
    (real_guitar_tuning
       (0 0 0 0 0 0)
@@ -11627,11 +11832,17 @@ missing_song_data
    (real_bass_tuning
       (0 0 0 0)
    )
+   (keys_author
+      "JohnSmith, BowlsforRick, SonicSBL"
+   )
    (strings_author
       "RK"
    )
+   (version 30)
 )
 (painkiller
+   (band_fail_cue band_fail_heavy.cue)
+   (band_fail_cue band_fail_heavy.cue)
    (vocal_tonic_note 4)
    (song_tonality 1)
    (author
@@ -11667,6 +11878,7 @@ missing_song_data
    )
 )
 (panicattack
+   (band_fail_cue band_fail_heavy_keys.cue)
    (vocal_tonic_note 0)
    (song_tonality 1)
    (author
@@ -11707,7 +11919,10 @@ missing_song_data
       (real_keys 575)
       (band 540)
    )
-   (version 30)
+   (version 29)
+   (solo
+      (guitar vocal_percussion keys)
+   )
    (real_guitar_tuning
       (0 0 0 0 0 0)
    )
@@ -11725,6 +11940,7 @@ missing_song_data
    )
 )
 (pda
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 11)
    (song_tonality 1)
    (author
@@ -11779,6 +11995,7 @@ missing_song_data
    (version 30)
 )
 (peacesells
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 4)
    (song_tonality 0)
    (author
@@ -11814,11 +12031,13 @@ missing_song_data
    )
 )
 (pinballwizard
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 11)
    (song_tonality 0)
    (author
       "Harmonix"
    )
+   (genre rock)
    (song
       (vocal_parts 3)
    )
@@ -11849,6 +12068,7 @@ missing_song_data
    )
 )
 (pretendweredead
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 11)
    (song_tonality 0)
    (author
@@ -11882,6 +12102,7 @@ missing_song_data
    )
 )
 (psychokiller
+   (band_fail_cue band_fail_vintage.cue)
    (vocal_tonic_note 9)
    (song_tonality 1)
    (author
@@ -11914,13 +12135,36 @@ missing_song_data
    )
 )
 (pumpitup
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 11)
    (song_tonality 0)
    (author
       "Harmonix"
    )
+   (artist
+      "Elvis Costello & the Attractions"
+   )
    (song
       (vocal_parts 3)
+      (tracks
+         (
+            (drum
+               (0 1 2 3 4)
+            )
+            (bass
+               (5)
+            )
+            (guitar
+               (6 7)
+            )
+            (vocals
+               (8 9)
+            )
+            (keys
+               (10 11)
+            )
+         )
+      )
    )
    (extra_authoring disc_update)
    (upgrade_version 1)
@@ -11929,11 +12173,11 @@ missing_song_data
       (guitar 232)
       (bass 210)
       (vocals 169)
-      (keys 0)
-      (real_keys 0)
-      (band 209)
+      (keys 398)
       (real_guitar 250)
       (real_bass 330)
+      (real_keys 398)
+      (band 209)
    )
    (real_guitar_tuning
       (0 0 0 0 0 0)
@@ -11944,8 +12188,13 @@ missing_song_data
    (strings_author
       "RK"
    )
+   (keys_author
+      "BowlsforRick, SonicSBL"
+   )
+   (version 30)
 )
 (ramblinman
+   (band_fail_cue band_fail_vintage.cue)
    (vocal_tonic_note 8)
    (song_tonality 0)
    (author
@@ -11981,6 +12230,7 @@ missing_song_data
    )
 )
 (rebelgirl
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 11)
    (song_tonality 0)
    (author
@@ -12017,6 +12267,7 @@ missing_song_data
    )
 )
 (robtheprezodent
+   (band_fail_cue band_fail_electro.cue)
    (vocal_tonic_note 4)
    (song_tonality 1)
    (author
@@ -12024,6 +12275,25 @@ missing_song_data
    )
    (song
       (vocal_parts 3)
+      (tracks
+         (
+            (drum
+               (0 1 2 3 4)
+            )
+            (bass
+               (5)
+            )
+            (guitar
+               (6 7)
+            )
+            (vocals
+               (8 9)
+            )
+            (keys
+               (10 11)
+            )
+         )
+      )
    )
    (extra_authoring disc_update)
    (upgrade_version 1)
@@ -12032,10 +12302,10 @@ missing_song_data
       (guitar 331)
       (bass 370)
       (vocals 265)
-      (keys 0)
+      (keys 300)
       (real_guitar 400)
       (real_bass 350)
-      (real_keys 0)
+      (real_keys 300)
       (band 440)
    )
    (real_guitar_tuning
@@ -12047,8 +12317,13 @@ missing_song_data
    (strings_author
       "MatthNerd"
    )
+   (keys_author
+      "BowlsforRick, SonicSBL"
+   )
+   (version 30)
 )
 (rocknme
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 11)
    (song_tonality 0)
    (author
@@ -12081,6 +12356,7 @@ missing_song_data
    )
 )
 (roundandround
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 3)
    (song_tonality 1)
    (author
@@ -12117,6 +12393,7 @@ missing_song_data
    )
 )
 (shacklersrevenge
+   (band_fail_cue band_fail_heavy_keys.cue)
    (vocal_tonic_note 1)
    (song_tonality 1)
    (author
@@ -12172,6 +12449,7 @@ missing_song_data
    )
 )
 (shootingstar
+   (band_fail_cue band_fail_vintage.cue)
    (vocal_tonic_note 9)
    (song_tonality 0)
    (author
@@ -12186,6 +12464,7 @@ missing_song_data
    )
 )
 (shouldertotheplow
+   (band_fail_cue band_fail_heavy.cue)
    (vocal_tonic_note 0)
    (song_tonality 1)
    (author
@@ -12197,6 +12476,7 @@ missing_song_data
    (extra_authoring disc_update)
 )
 (soulsofblack
+   (band_fail_cue band_fail_heavy.cue)
    (vocal_tonic_note 3)
    (song_tonality 1)
    (author
@@ -12205,6 +12485,7 @@ missing_song_data
    (extra_authoring disc_update)
 )
 (sowhatchawant
+   (band_fail_cue band_fail_heavy.cue)
    (vocal_tonic_note 3)
    (song_tonality 1)
    (author
@@ -12259,6 +12540,7 @@ missing_song_data
    (version 30)
 )
 (spiritinthesky
+   (band_fail_cue band_fail_vintage.cue)
    (vocal_tonic_note 9)
    (song_tonality 0)
    (author
@@ -12309,6 +12591,7 @@ missing_song_data
    )
 )
 (supremegirl
+   (band_fail_cue band_fail_rock_keys.cue)
    (vocal_tonic_note 8)
    (song_tonality 0)
    (author
@@ -12316,6 +12599,25 @@ missing_song_data
    )
    (song
       (vocal_parts 3)
+      (tracks
+         (
+            (drum
+               (0 1 2 3)
+            )
+            (bass
+               (4)
+            )
+            (guitar
+               (5 6)
+            )
+            (vocals
+               (7 8)
+            )
+            (keys
+               (9 10)
+            )
+         )
+      )
    )
    (extra_authoring disc_update)
    (upgrade_version 1)
@@ -12324,11 +12626,11 @@ missing_song_data
       (guitar 300)
       (bass 274)
       (vocals 258)
-      (keys 0)
-      (real_keys 0)
-      (band 345)
+      (keys 352)
       (real_guitar 405)
       (real_bass 448)
+      (real_keys 352)
+      (band 345)
    )
    (real_guitar_tuning
       (0 0 0 0 0 0)
@@ -12339,11 +12641,16 @@ missing_song_data
    (strings_author
       "RK"
    )
+   (keys_author
+      "BowlsforRick, SonicSBL"
+   )
+   (version 30)
    (loading_phrase
       "Supreme Girl is actually a reference to failed supreme court nominee Harriet Miers."
    )
 )
 (tangledupinblue
+   (band_fail_cue band_fail_vintage.cue)
    (vocal_tonic_note 9)
    (song_tonality 0)
    (author
@@ -12351,16 +12658,35 @@ missing_song_data
    )
    (extra_authoring disc_update)
    (upgrade_version 1)
+   (song
+      (tracks
+         (
+            (drum
+               (0 1)
+            )
+            (bass 2)
+            (guitar
+               (3 4)
+            )
+            (vocals
+               (5 6)
+            )
+            (keys
+               (7 8)
+            )
+         )
+      )
+   )
    (rank
       (drum 124)
       (guitar 278)
       (bass 223)
       (vocals 450)
-      (keys 0)
-      (real_keys 0)
-      (band 318)
+      (keys 343)
       (real_guitar 175)
       (real_bass 125)
+      (real_keys 343)
+      (band 318)
    )
    (real_guitar_tuning
       (0 0 0 0 0 0)
@@ -12371,11 +12697,16 @@ missing_song_data
    (strings_author
       "RK"
    )
+   (keys_author
+      "BowlsforRick, SonicSBL"
+   )
+   (version 30)
    (loading_phrase
       "There are many layers of meaning in \qTangled Up in Blue.\q The shifts in perspective were partly inspired by painting classes that Dylan was taking at the time."
    )
 )
 (teenageriot
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 7)
    (song_tonality 0)
    (author
@@ -12390,6 +12721,7 @@ missing_song_data
    )
 )
 (testify
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 2)
    (song_tonality 1)
    (author
@@ -12422,6 +12754,7 @@ missing_song_data
    )
 )
 (thatswhatyouget
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 3)
    (song_tonality 0)
    (author
@@ -12454,6 +12787,7 @@ missing_song_data
    )
 )
 (themiddle
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 2)
    (song_tonality 0)
    (author
@@ -12462,6 +12796,25 @@ missing_song_data
    (rating 1)
    (song
       (vocal_parts 2)
+      (tracks
+         (
+            (drum
+               (0 1 2 3 4)
+            )
+            (bass
+               (5)
+            )
+            (guitar
+               (6 7)
+            )
+            (vocals
+               (8 9)
+            )
+            (keys
+               (10 11)
+            )
+         )
+      )
    )
    (extra_authoring disc_update)
    (upgrade_version 1)
@@ -12470,11 +12823,11 @@ missing_song_data
       (guitar 291)
       (bass 245)
       (vocals 226)
-      (keys 0)
-      (real_keys 0)
-      (band 255)
+      (keys 100)
       (real_guitar 153)
       (real_bass 53)
+      (real_keys 100)
+      (band 255)
    )
    (real_guitar_tuning
       (-2 0 0 0 0 0)
@@ -12485,11 +12838,16 @@ missing_song_data
    (strings_author
       "Ziggy"
    )
+   (keys_author
+      "BowlsforRick"
+   )
+   (version 30)
    (loading_phrase
       "The lyrics of \qThe Middle\q were the band cheering itself up after losing a record-label contract. The song helped get them a second one."
    )
 )
 (thetrees
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 2)
    (song_tonality 0)
    (author
@@ -12547,6 +12905,7 @@ missing_song_data
    )
 )
 (today
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 3)
    (song_tonality 0)
    (author
@@ -12564,6 +12923,7 @@ missing_song_data
    )
 )
 (uncontrollableurge
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 9)
    (song_tonality 0)
    (author
@@ -12619,6 +12979,7 @@ missing_song_data
    (version 30)
 )
 (visions
+   (band_fail_cue band_fail_heavy.cue)
    (vocal_tonic_note 4)
    (song_tonality 1)
    (author
@@ -12633,6 +12994,7 @@ missing_song_data
    )
 )
 (wegotthebeat
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 9)
    (song_tonality 0)
    (author
@@ -12690,6 +13052,7 @@ missing_song_data
    (version 30)
 )
 (welcometothe
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 7)
    (song_tonality 0)
    (author
@@ -12719,6 +13082,7 @@ missing_song_data
    )
 )
 (wheredyougo
+   (band_fail_cue band_fail_vintage.cue)
    (vocal_tonic_note 9)
    (song_tonality 0)
    (author
@@ -12776,6 +13140,7 @@ missing_song_data
    )
 )
 (whitewedding
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 11)
    (song_tonality 1)
    (author
@@ -12834,6 +13199,7 @@ missing_song_data
    )
 )
 (yououghtaknow
+   (band_fail_cue band_fail_rock.cue)
    (vocal_tonic_note 6)
    (song_tonality 0)
    (author
@@ -12896,6 +13262,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre hardrock)
    (album_name
       "Live at Donington"
    )
@@ -12941,6 +13308,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre hardrock)
    (album_name
       "Live at Donington"
    )
@@ -12963,6 +13331,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre hardrock)
    (album_name
       "Live at Donington"
    )
@@ -12985,6 +13354,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre hardrock)
    (album_name
       "Live at Donington"
    )
@@ -13007,6 +13377,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre hardrock)
    (album_name
       "Live at Donington"
    )
@@ -13029,6 +13400,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre hardrock)
    (album_name
       "Live at Donington"
    )
@@ -13067,6 +13439,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre hardrock)
    (album_name
       "Live at Donington"
    )
@@ -13089,6 +13462,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre hardrock)
    (album_name
       "Live at Donington"
    )
@@ -13114,6 +13488,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre hardrock)
    (album_name
       "Live at Donington"
    )
@@ -13136,6 +13511,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre hardrock)
    (album_name
       "Live at Donington"
    )
@@ -13161,6 +13537,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre hardrock)
    (album_name
       "Live at Donington"
    )
@@ -13180,6 +13557,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre hardrock)
    (album_name
       "Live at Donington"
    )
@@ -13202,6 +13580,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre hardrock)
    (album_name
       "Live at Donington"
    )
@@ -13221,6 +13600,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre hardrock)
    (album_name
       "Live at Donington"
    )
@@ -13243,6 +13623,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre hardrock)
    (album_name
       "Live at Donington"
    )
@@ -13284,6 +13665,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre hardrock)
    (album_name
       "Live at Donington"
    )
@@ -13306,6 +13688,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre hardrock)
    (album_name
       "Live at Donington"
    )
@@ -13324,6 +13707,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre hardrock)
    (album_name
       "Live at Donington"
    )
@@ -13705,6 +14089,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (song
       (vocal_parts 3)
    )
@@ -14092,8 +14477,38 @@ missing_song_data
    )
    (song
       (vocal_parts 3)
+      (tracks
+         (
+            (drum
+               (0 1 2 3)
+            )
+            (bass 4)
+            (guitar
+               (5 6)
+            )
+            (vocals
+               (7 8)
+            )
+            (keys
+               (9 10)
+            )
+         )
+      )
    )
    (extra_authoring disc_update)
+   (rank
+      (drum 221)
+      (guitar 237)
+      (bass 281)
+      (vocals 329)
+      (keys 370)
+      (real_keys 370)
+      (band 253)
+   )
+   (version 30)
+   (keys_author
+      "SonicSBL"
+   )
    (song_length 254545)
    (solo
       (guitar)
@@ -14382,6 +14797,38 @@ missing_song_data
       "Back from the Dead"
    )
    (extra_authoring disc_update)
+   (song
+      (tracks
+         (
+            (drum
+               (0 1 2 3)
+            )
+            (bass 4)
+            (guitar
+               (5 6)
+            )
+            (vocals
+               (7 8)
+            )
+            (keys
+               (9 10)
+            )
+         )
+      )
+   )
+   (rank
+      (drum 311)
+      (guitar 304)
+      (bass 304)
+      (vocals 157)
+      (keys 451)
+      (real_keys 462)
+      (band 321)
+   )
+   (version 30)
+   (keys_author
+      "SonicSBL"
+   )
    (preview 127974 157974)
    (song_length 399545)
    (solo
@@ -14723,8 +15170,38 @@ missing_song_data
    )
    (song
       (vocal_parts 3)
+      (tracks
+         (
+            (drum
+               (0 1 2 3 4)
+            )
+            (bass 5)
+            (guitar
+               (6 7)
+            )
+            (vocals
+               (8 9)
+            )
+            (keys
+               (10 11)
+            )
+         )
+      )
    )
    (extra_authoring disc_update)
+   (rank
+      (drum 119)
+      (guitar 136)
+      (bass 140)
+      (vocals 160)
+      (keys 180)
+      (real_keys 218)
+      (band 126)
+   )
+   (version 30)
+   (keys_author
+      "SonicSBL"
+   )
    (song_length 244090)
    (format 10)
 )
@@ -14810,8 +15287,38 @@ missing_song_data
    )
    (song
       (vocal_parts 3)
+      (tracks
+         (
+            (drum
+               (0 1 2 3 4 5)
+            )
+            (bass 6)
+            (guitar
+               (7 8)
+            )
+            (vocals
+               (9 10)
+            )
+            (keys
+               (11 12)
+            )
+         )
+      )
    )
    (extra_authoring disc_update)
+   (rank
+      (drum 231)
+      (guitar 212)
+      (bass 184)
+      (vocals 179)
+      (keys 195)
+      (real_keys 195)
+      (band 205)
+   )
+   (version 30)
+   (keys_author
+      "SonicSBL, BowlsforRick"
+   )
    (song_length 243636)
    (format 10)
 )
@@ -15306,7 +15813,9 @@ missing_song_data
    (name
       "Action (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2008)
    (song
       (vocal_parts 3)
    )
@@ -15526,15 +16035,16 @@ missing_song_data
       (real_keys 240)
       (band 300)
    )
+   (solo
+      (keys)
+      (guitar vocal_percussion)
+   )
    (version 30)
    (keys_author
       "BowlsforRick"
    )
    (song_id 1005132)
    (song_length 350454)
-   (solo
-      (guitar vocal_percussion)
-   )
    (format 10)
    (game_origin rb1_dlc)
    (rating 2)
@@ -15605,6 +16115,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (song
       (vocal_parts 3)
    )
@@ -15618,6 +16129,14 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (name
+      "Alive (Live)"
+   )
+   (year_recorded 1992)
+   (album_name
+      "Drop in the Park"
+   )
+   (album_track_number 8)
    (extra_authoring disc_update)
    (song_id 1005487)
    (song_length 313181)
@@ -16101,6 +16620,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre rock)
    (extra_authoring disc_update)
    (song_id 1005172)
    (song_length 213181)
@@ -16399,6 +16919,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (extra_authoring disc_update)
 )
 (areyougonnagomyway
@@ -16431,8 +16952,38 @@ missing_song_data
    )
    (song
       (vocal_parts 3)
+      (tracks
+         (
+            (drum
+               (0 1 2 3 4)
+            )
+            (bass 5)
+            (guitar
+               (6 7)
+            )
+            (vocals
+               (8 9)
+            )
+            (keys
+               (10 11)
+            )
+         )
+      )
    )
    (extra_authoring disc_update)
+   (rank
+      (drum 291)
+      (guitar 156)
+      (bass 170)
+      (vocals 202)
+      (keys 320)
+      (real_keys 320)
+      (band 231)
+   )
+   (version 30)
+   (keys_author
+      "SonicSBL"
+   )
    (song_id 1005318)
    (preview 8550 38550)
    (song_length 171818)
@@ -16553,6 +17104,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre hardrock)
    (song
       (vocal_parts 2)
       (tracks
@@ -16800,7 +17352,9 @@ missing_song_data
    (name
       "Bang a Gong (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2007)
    (song
       (vocal_parts 3)
    )
@@ -16931,6 +17485,7 @@ missing_song_data
    (artist
       "Grateful Dead"
    )
+   (genre blues)
    (song
       (vocal_parts 3)
    )
@@ -16945,6 +17500,9 @@ missing_song_data
    (song_tonality 1)
    (author
       "Harmonix"
+   )
+   (name
+      "Beautiful (ft. Pharrell & Uncle Charlie Wilson)"
    )
    (genre hiphoprap)
    (song
@@ -16999,6 +17557,9 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (name
+      "Beer for My Horses (ft. Willie Nelson)"
+   )
    (song
       (vocal_parts 3)
    )
@@ -17048,7 +17609,9 @@ missing_song_data
    (name
       "Beetlebum (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2007)
    (song
       (vocal_parts 3)
    )
@@ -17071,6 +17634,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre hardrock)
    (song
       (vocal_parts 3)
    )
@@ -17647,6 +18211,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (extra_authoring disc_update)
    (solo
       (drum guitar)
@@ -17798,7 +18363,9 @@ missing_song_data
    (name
       "Brass in Pocket (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2007)
    (song
       (vocal_parts 3)
    )
@@ -18703,6 +19270,7 @@ missing_song_data
    (artist
       "Grateful Dead"
    )
+   (genre folkrock)
    (song
       (vocal_parts 2)
    )
@@ -18728,6 +19296,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (solo
       (guitar)
    )
@@ -18839,7 +19408,9 @@ missing_song_data
    (name
       "Cherry Bomb (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2007)
    (song
       (vocal_parts 2)
    )
@@ -18938,6 +19509,7 @@ missing_song_data
    (artist
       "Grateful Dead"
    )
+   (genre psychadelic)
    (song
       (vocal_parts 3)
    )
@@ -19314,6 +19886,7 @@ missing_song_data
    (artist
       "Grateful Dead"
    )
+   (genre blues)
    (song
       (vocal_parts 2)
    )
@@ -19450,6 +20023,12 @@ missing_song_data
    (song_tonality 1)
    (author
       "Harmonix"
+   )
+   (artist
+      "Mutemath"
+   )
+   (album_name
+      "Mutemath"
    )
    (song
       (vocal_parts 3)
@@ -19637,8 +20216,38 @@ missing_song_data
    )
    (song
       (vocal_parts 3)
+      (tracks
+         (
+            (drum
+               (0 1 2 3)
+            )
+            (bass 4)
+            (guitar
+               (5 6)
+            )
+            (vocals
+               (7 8)
+            )
+            (keys
+               (9 10)
+            )
+         )
+      )
    )
    (extra_authoring disc_update)
+   (rank
+      (drum 170)
+      (guitar 161)
+      (bass 116)
+      (vocals 217)
+      (keys 140)
+      (real_keys 140)
+      (band 175)
+   )
+   (version 30)
+   (keys_author
+      "SonicSBL"
+   )
    (song_id 1005316)
    (song_length 230909)
    (format 10)
@@ -19777,6 +20386,9 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (name
+      "crushcrushcrush"
+   )
    (song
       (vocal_parts 3)
    )
@@ -19842,6 +20454,7 @@ missing_song_data
    (artist
       "Grateful Dead"
    )
+   (genre folkrock)
    (song
       (vocal_parts 3)
    )
@@ -20600,6 +21213,7 @@ missing_song_data
    (artist
       "Grateful Dead"
    )
+   (genre psychadelic)
    (extra_authoring disc_update)
    (song_id 1005416)
    (song_length 292727)
@@ -20687,6 +21301,7 @@ missing_song_data
    (artist
       "Grateful Dead"
    )
+   (genre blues)
    (song
       (vocal_parts 3)
    )
@@ -20843,15 +21458,15 @@ missing_song_data
       (real_keys 269)
       (band 183)
    )
-   (version 30)
+   (version 29)
+   (solo
+      (guitar vocal_percussion keys)
+   )
    (keys_author
       "FujiSkunk & StackOverflow0x"
    )
    (song_id 1005365)
    (song_length 291818)
-   (solo
-      (guitar vocal_percussion)
-   )
    (format 10)
    (game_origin rb1_dlc)
    (rating 1)
@@ -20874,7 +21489,7 @@ missing_song_data
    (game_origin rb1_dlc)
 )
 (dontstopbelieving
-   (vocal_tonic_note 0)
+   (vocal_tonic_note 4)
    (song_tonality 0)
    (author
       "Harmonix"
@@ -21338,6 +21953,9 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (name
+      "Drop It Like It's Hot (ft. Pharrell)"
+   )
    (genre hiphoprap)
    (song
       (vocal_parts 3)
@@ -21562,6 +22180,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre rock)
    (song
       (vocal_parts 3)
       (tracks
@@ -21736,7 +22355,9 @@ missing_song_data
    (name
       "Ever Fallen in Love (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2007)
    (song
       (vocal_parts 3)
    )
@@ -22384,6 +23005,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre rock)
    (extra_authoring disc_update)
    (loading_phrase
       "The lyrics to the song \qFire\q were partly inspired by an unco-operative Great Dane that would not let Jimi Hendrix warm himself by the open fire."
@@ -22398,6 +23020,7 @@ missing_song_data
    (artist
       "Grateful Dead"
    )
+   (genre blues)
    (song
       (vocal_parts 3)
    )
@@ -22640,7 +23263,9 @@ missing_song_data
    (name
       "Fortunate Son (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2007)
    (extra_authoring disc_update)
    (song_id 1005004)
    (song_length 145000)
@@ -22663,6 +23288,7 @@ missing_song_data
    (name
       "Foxy Lady"
    )
+   (genre psychadelic)
    (song
       (vocal_parts 2)
    )
@@ -22677,6 +23303,7 @@ missing_song_data
    (artist
       "Grateful Dead"
    )
+   (genre jazz)
    (song
       (vocal_parts 3)
    )
@@ -23130,7 +23757,9 @@ missing_song_data
             (drum
                (0 1 2 3 4 5)
             )
-            (bass 6)
+            (bass
+               (6)
+            )
             (guitar
                (7 8)
             )
@@ -23144,19 +23773,31 @@ missing_song_data
       )
    )
    (extra_authoring disc_update)
+   (upgrade_version 1)
    (rank
       (drum 253)
       (guitar 242)
       (bass 273)
+      (keys 374)
+      (real_guitar 331)
+      (real_bass 426)
+      (real_keys 413)
       (vocals 289)
-      (keys 211)
-      (real_keys 211)
       (band 246)
    )
-   (version 30)
-   (keys_author
-      "FujiSkunk"
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
    )
+   (real_bass_tuning
+      (-2 0 0 0)
+   )
+   (keys_author
+      "BowlsforRick"
+   )
+   (strings_author
+      "Carl Mylo, RK"
+   )
+   (version 30)
    (song_length 355000)
    (solo
       (guitar vocal_percussion)
@@ -23386,6 +24027,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre hardrock)
    (extra_authoring disc_update)
    (song_id 1005168)
    (song_length 225454)
@@ -24018,7 +24660,9 @@ missing_song_data
    (name
       "Hard to Handle (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2008)
    (extra_authoring disc_update)
    (song_id 1005034)
    (preview 38823 68823)
@@ -24115,8 +24759,38 @@ missing_song_data
    )
    (song
       (vocal_parts 3)
+      (tracks
+         (
+            (drum
+               (0 1 2 3 4 5)
+            )
+            (bass 6)
+            (guitar
+               (7 8)
+            )
+            (vocals
+               (9 10)
+            )
+            (keys
+               (11 12)
+            )
+         )
+      )
    )
    (extra_authoring disc_update)
+   (rank
+      (drum 189)
+      (guitar 176)
+      (bass 275)
+      (vocals 165)
+      (keys 50)
+      (real_keys 50)
+      (band 184)
+   )
+   (version 30)
+   (keys_author
+      "SonicSBL"
+   )
    (song_id 1005360)
    (song_length 182272)
    (solo
@@ -24346,6 +25020,7 @@ missing_song_data
    (artist
       "Grateful Dead"
    )
+   (genre blues)
    (extra_authoring disc_update)
    (song_id 1005413)
    (song_length 338636)
@@ -24549,7 +25224,9 @@ missing_song_data
    (name
       "Heroes (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2007)
    (song
       (vocal_parts 3)
    )
@@ -24669,6 +25346,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre rock)
 )
 (heyjohnnypark
    (vocal_tonic_note 11)
@@ -24771,6 +25449,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
 )
 (hillbillydeluxe
    (vocal_tonic_note 2)
@@ -25416,6 +26095,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (song
       (vocal_parts 2)
    )
@@ -26004,6 +26684,7 @@ missing_song_data
    (artist
       "Grateful Dead"
    )
+   (genre blues)
    (song
       (vocal_parts 3)
    )
@@ -26960,7 +27641,9 @@ missing_song_data
    (name
       "Juke Box Hero (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2007)
    (song
       (vocal_parts 3)
    )
@@ -27040,13 +27723,13 @@ missing_song_data
       (guitar 244)
       (bass 170)
       (vocals 142)
-      (keys 211)
-      (real_keys 211)
+      (keys 234)
+      (real_keys 234)
       (band 190)
    )
-   (version 30)
+   (version 29)
    (keys_author
-      "FujiSkunk & StackOverflow0x"
+      "FujiSkunk, StackOverflow0x, Aloquendiar"
    )
    (song_id 1005376)
    (song_length 202727)
@@ -27639,7 +28322,9 @@ missing_song_data
    (name
       "Last Train to Clarksville (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2008)
    (song
       (vocal_parts 3)
    )
@@ -27665,6 +28350,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre poprock)
    (song
       (vocal_parts 3)
    )
@@ -27964,8 +28650,42 @@ missing_song_data
    (name
       "Limelight (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2008)
    (extra_authoring disc_update)
+   (song
+      (tracks
+         (
+            (drum
+               (0 1 2 3 4 5)
+            )
+            (bass 6)
+            (guitar
+               (7 8)
+            )
+            (vocals
+               (9 10)
+            )
+            (keys
+               (11 12)
+            )
+         )
+      )
+   )
+   (rank
+      (drum 320)
+      (guitar 230)
+      (bass 230)
+      (vocals 200)
+      (keys 115)
+      (real_keys 160)
+      (band 250)
+   )
+   (version 30)
+   (keys_author
+      "ataeaf"
+   )
    (song_id 1005033)
    (preview 11517 41517)
    (song_length 266818)
@@ -27973,7 +28693,6 @@ missing_song_data
       (guitar vocal_percussion)
    )
    (format 10)
-   (version 1)
    (game_origin rb1_dlc)
    (rating 1)
    (year_released 1981)
@@ -28065,6 +28784,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (song
       (vocal_parts 3)
    )
@@ -28274,8 +28994,50 @@ missing_song_data
    )
    (song
       (vocal_parts 3)
+      (tracks
+         (
+            (drum
+               (0 1)
+            )
+            (bass 2)
+            (guitar
+               (3 4)
+            )
+            (vocals
+               (5 6)
+            )
+            (keys
+               (7 8)
+            )
+         )
+      )
    )
    (extra_authoring disc_update)
+   (upgrade_version 1)
+   (rank
+      (drum 260)
+      (guitar 330)
+      (bass 235)
+      (vocals 241)
+      (keys 390)
+      (real_guitar 383)
+      (real_bass 324)
+      (real_keys 410)
+      (band 295)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (keys_author
+      "BowlsforRick, Carl Mylo"
+   )
+   (strings_author
+      "WarGod, Carl Mylo, Ruggy"
+   )
+   (version 30)
 )
 (lookinforagoodtime
    (vocal_tonic_note 7)
@@ -28512,6 +29274,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
 )
 (lovespreads
    (vocal_tonic_note 2)
@@ -28641,6 +29404,10 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (name
+      "Magic Bus (Live)"
+   )
+   (genre hardrock)
    (song
       (vocal_parts 3)
    )
@@ -28756,6 +29523,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (extra_authoring disc_update)
 )
 (manofme
@@ -28962,6 +29730,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (song
       (vocal_parts 2)
    )
@@ -30097,6 +30866,10 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (name
+      "My Generation (Live)"
+   )
+   (genre hardrock)
    (song
       (vocal_parts 3)
    )
@@ -30555,7 +31328,9 @@ missing_song_data
    (name
       "N.I.B. (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2007)
    (extra_authoring disc_update)
    (song_id 1005021)
    (song_length 325909)
@@ -30671,6 +31446,40 @@ missing_song_data
       "Harmonix"
    )
    (extra_authoring disc_update)
+   (song
+      (tracks
+         (
+            (drum
+               (0 1 2 3 4)
+            )
+            (bass
+               (5 6)
+            )
+            (guitar
+               (7 8)
+            )
+            (vocals
+               (9 10)
+            )
+            (keys
+               (11 12)
+            )
+         )
+      )
+   )
+   (rank
+      (drum 301)
+      (guitar 240)
+      (bass 225)
+      (vocals 248)
+      (keys 185)
+      (real_keys 185)
+      (band 281)
+   )
+   (version 30)
+   (keys_author
+      "VreyIsGrey"
+   )
 )
 (nineteensixtynine
    (author
@@ -30903,7 +31712,9 @@ missing_song_data
    (name
       "The Number of the Beast (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2008)
    (extra_authoring disc_update)
    (song_id 1005036)
    (preview 67740 97740)
@@ -31226,6 +32037,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (extra_authoring disc_update)
    (solo
       (guitar)
@@ -31347,8 +32159,40 @@ missing_song_data
    (genre hiphoprap)
    (song
       (vocal_parts 3)
+      (tracks
+         (
+            (drum
+               (0 1 2 3 4)
+            )
+            (bass
+               (5 6)
+            )
+            (guitar
+               (7 8)
+            )
+            (vocals
+               (9 10)
+            )
+            (keys
+               (11 12)
+            )
+         )
+      )
    )
    (extra_authoring disc_update)
+   (rank
+      (drum 267)
+      (guitar 313)
+      (bass 166)
+      (vocals 187)
+      (keys 203)
+      (real_keys 203)
+      (band 263)
+   )
+   (version 30)
+   (keys_author
+      "SonicSBL"
+   )
    (song_length 245000)
    (format 10)
    (game_origin rb1_dlc)
@@ -32414,6 +33258,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre industrial)
    (song
       (vocal_parts 2)
    )
@@ -32432,7 +33277,9 @@ missing_song_data
    (name
       "Queen Bitch (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2007)
    (song
       (vocal_parts 2)
    )
@@ -32461,6 +33308,9 @@ missing_song_data
 (radioradio
    (author
       "Harmonix"
+   )
+   (artist
+      "Elvis Costello & the Attractions"
    )
    (song
       (vocal_parts 3)
@@ -32585,6 +33435,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre rock)
    (song
       (vocal_parts 3)
       (tracks
@@ -33675,7 +34526,7 @@ missing_song_data
 )
 (runnindownadream
    (vocal_tonic_note 4)
-   (song_tonality 1)
+   (song_tonality 0)
    (author
       "Harmonix"
    )
@@ -34109,6 +34960,7 @@ missing_song_data
    (album_name
       "From the Mars Hotel"
    )
+   (genre blues)
    (song
       (vocal_parts 3)
    )
@@ -34279,6 +35131,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre hardrock)
    (extra_authoring disc_update)
    (song_id 1005164)
    (song_length 315454)
@@ -34496,6 +35349,9 @@ missing_song_data
    (song_tonality 0)
    (author
       "Harmonix"
+   )
+   (artist
+      "Panic! at the Disco"
    )
    (genre psychadelic)
    (song
@@ -34733,6 +35589,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (song
       (vocal_parts 3)
    )
@@ -35670,7 +36527,9 @@ missing_song_data
    (name
       "Song with a Mission (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2007)
    (song
       (vocal_parts 3)
    )
@@ -35961,6 +36820,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (extra_authoring disc_update)
    (song
       (tracks
@@ -36054,7 +36914,7 @@ missing_song_data
       (real_keys 269)
       (band 216)
    )
-   (version 30)
+   (version 29)
    (keys_author
       "FujiSkunk & StackOverflow0x"
    )
@@ -36197,6 +37057,14 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (name
+      "State of Love and Trust (Live)"
+   )
+   (year_recorded 1992)
+   (album_name
+      "Drop in the Park"
+   )
+   (album_track_number 3)
    (extra_authoring disc_update)
    (song_id 1005488)
    (song_length 215909)
@@ -36389,6 +37257,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre rock)
    (song
       (vocal_parts 3)
    )
@@ -36417,6 +37286,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (vocal_gender female)
    (song
       (vocal_parts 3)
    )
@@ -36719,6 +37589,7 @@ missing_song_data
    (artist
       "Grateful Dead"
    )
+   (genre folkrock)
    (song
       (vocal_parts 3)
    )
@@ -36779,6 +37650,10 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (name
+      "Summertime Blues (Live)"
+   )
+   (genre hardrock)
    (song
       (vocal_parts 2)
    )
@@ -36853,7 +37728,7 @@ missing_song_data
       (real_keys 269)
       (band 230)
    )
-   (version 30)
+   (version 29)
    (keys_author
       "FujiSkunk & StackOverflow0x"
    )
@@ -36914,6 +37789,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre hardrock)
    (song
       (vocal_parts 3)
    )
@@ -37029,7 +37905,9 @@ missing_song_data
    (name
       "Sweet Leaf (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2007)
    (song_id 1005020)
    (preview 23000 53000)
    (song_length 304545)
@@ -37487,7 +38365,9 @@ missing_song_data
    (name
       "Ten Speed (Of God's Blood and Burial) (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2008)
    (song
       (vocal_parts 3)
    )
@@ -37986,17 +38866,17 @@ missing_song_data
       (tracks
          (
             (drum
-               (0 1 2 3)
+               (0 1 2)
             )
-            (bass 4)
+            (bass 3)
             (guitar
-               (5 6)
+               (4 5)
             )
             (vocals
-               (7 8)
+               (6 7)
             )
             (keys
-               (9 10)
+               (8 9)
             )
          )
       )
@@ -38075,11 +38955,9 @@ missing_song_data
             (guitar
                (6 7)
             )
-            (vocals
-               (8 9)
-            )
+            (vocals 8)
             (keys
-               (10 11)
+               (9 10)
             )
          )
       )
@@ -38637,6 +39515,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (loading_phrase
       "According to the book \qJimi Hendrix: Electric Gypsy\q, Hendrix wrote this as a very long song, but broke it down to fit the short-song convention and make it radio friendly. Hendrix was concerned that listeners wouldn't understand the song in its shortened form."
    )
@@ -38765,6 +39644,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (song
       (vocal_parts 3)
    )
@@ -39059,6 +39939,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (vocal_gender female)
    (song
       (vocal_parts 3)
    )
@@ -39117,6 +39998,7 @@ missing_song_data
    (artist
       "Grateful Dead"
    )
+   (genre blues)
    (song
       (vocal_parts 3)
    )
@@ -39465,6 +40347,7 @@ missing_song_data
    (artist
       "Grateful Dead"
    )
+   (genre blues)
    (song
       (vocal_parts 3)
       (tracks
@@ -39631,7 +40514,7 @@ missing_song_data
    (keys_author
       "MarsPhoenix"
    )
-   (version 30)
+   (version 29)
    (solo
       (guitar)
    )
@@ -39762,8 +40645,38 @@ missing_song_data
    )
    (song
       (vocal_parts 2)
+      (tracks
+         (
+            (drum
+               (0 1 2 3 4)
+            )
+            (bass 5)
+            (guitar
+               (6 7)
+            )
+            (vocals
+               (8 9)
+            )
+            (keys
+               (10 11)
+            )
+         )
+      )
    )
    (extra_authoring disc_update)
+   (rank
+      (drum 263)
+      (guitar 388)
+      (bass 302)
+      (vocals 357)
+      (keys 244)
+      (real_keys 244)
+      (band 375)
+   )
+   (version 30)
+   (keys_author
+      "SonicSBL"
+   )
    (song_length 245454)
    (solo
       (guitar)
@@ -39818,6 +40731,7 @@ missing_song_data
    (artist
       "Grateful Dead"
    )
+   (genre folkrock)
    (song
       (vocal_parts 3)
    )
@@ -39916,6 +40830,12 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (artist
+      "Mutemath"
+   )
+   (album_name
+      "Mutemath"
+   )
    (song
       (vocal_parts 3)
       (tracks
@@ -39969,6 +40889,7 @@ missing_song_data
    (artist
       "Grateful Dead"
    )
+   (genre folkrock)
    (song
       (vocal_parts 3)
    )
@@ -40099,6 +41020,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (solo
       (guitar)
    )
@@ -40149,6 +41071,7 @@ missing_song_data
    (album_name
       "From the Mars Hotel"
    )
+   (genre blues)
    (song
       (vocal_parts 3)
    )
@@ -40233,9 +41156,9 @@ missing_song_data
    (author
       "Harmonix"
    )
-   (year_released 1969)
-   (year_recorded 2010)
+   (genre rock)
    (format 10)
+   (year_recorded 1969)
 )
 (vengeanceismine
    (vocal_tonic_note 2)
@@ -40406,6 +41329,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (song
       (vocal_parts 3)
    )
@@ -40495,6 +41419,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (album_art 1)
    (song
       (vocal_parts 3)
    )
@@ -40649,7 +41574,9 @@ missing_song_data
    (name
       "War Pigs (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2007)
    (extra_authoring disc_update)
    (song_id 1005019)
    (song_length 483636)
@@ -41268,6 +42195,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre hardrock)
    (song
       (vocal_parts 3)
    )
@@ -41752,7 +42680,9 @@ missing_song_data
    (name
       "Working Man (Cover)"
    )
+   (master 0)
    (album_art 1)
+   (year_recorded 2008)
    (extra_authoring disc_update)
    (song_id 1005045)
    (song_length 438636)
@@ -42024,6 +42954,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (song
       (vocal_parts 3)
    )
@@ -42103,6 +43034,10 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (name
+      "Young Man Blues (Live)"
+   )
+   (genre hardrock)
    (extra_authoring disc_update)
    (song_id 1005161)
    (song_length 307272)
@@ -42133,7 +43068,7 @@ missing_song_data
 )
 (yourealligot
    (vocal_tonic_note 11)
-   (song_tonality 0)
+   (song_tonality 1)
    (author
       "Harmonix"
    )
@@ -43151,6 +44086,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (loading_phrase
       "The Doors' drummer John Densmore took \qBreak on Through\q's distinctive drum groove from the burgeoning bossa nova movement going on in Brazil at the time."
    )
@@ -43204,6 +44140,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (loading_phrase
       "This song is about a girl who is hard to get rid of. Getting through to her that she's not wanted is like getting through crosstown traffic."
    )
@@ -43338,6 +44275,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (loading_phrase
       "Paul McCartney of The Beatles had read that \qI Can See for Miles\q was apparently the \qheaviest rock song ever\q, and, without even hearing the actual song, wanted to top that, and wrote \qHelter Skelter\q in response."
    )
@@ -43798,6 +44736,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre classicrock)
 )
 (animalihavebecome
    (game_origin rb3dlc)
@@ -44056,6 +44995,12 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (name
+      "BURN IT DOWN"
+   )
+   (album_name
+      "LIVING THINGS"
+   )
    (extra_authoring disc_update)
    (upgrade_version 1)
    (rank
@@ -44285,6 +45230,28 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (extra_authoring disc_update)
+   (upgrade_version 1)
+   (rank
+      (drum 288)
+      (guitar 267)
+      (bass 289)
+      (vocals 279)
+      (keys 123)
+      (real_guitar 331)
+      (real_bass 267)
+      (real_keys 131)
+      (band 251)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (strings_author
+      "WarGod, Carl Mylo"
+   )
    (loading_phrase
       "'Dance, Dance' has won many awards, including Viewer's Choice at MTV Video Music Awards, and received various nominations."
    )
@@ -44313,6 +45280,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre blues)
 )
 (dontletthesungodownonme
    (game_origin rb3dlc)
@@ -44661,6 +45629,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (extra_authoring disc_update)
 )
 (happyxmas
@@ -44751,6 +45720,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
 )
 (helpisontheway
    (game_origin rb3dlc)
@@ -45182,6 +46152,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre blues)
 )
 (layyourhandsonme
    (game_origin rb3dlc)
@@ -45259,6 +46230,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (extra_authoring disc_update)
 )
 (longroadtoruin
@@ -45294,6 +46266,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre blues)
 )
 (lovehurts
    (game_origin rb3dlc)
@@ -45316,6 +46289,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (extra_authoring disc_update)
    (loading_phrase
       "Although this was released as a single and became a hit, it was recorded for the first Doors album, but didn't make the cut. When it came time to record the second Doors album Strange Days, \qLove Me Two Times\q was ready to go."
@@ -45410,6 +46384,9 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (artist
+      "Janis Joplin"
+   )
    (extra_authoring disc_update)
 )
 (mercy
@@ -45444,6 +46421,9 @@ missing_song_data
    (game_origin rb3dlc)
    (author
       "Harmonix"
+   )
+   (album_name
+      "Extreme II: Pornograffitti (A Funked Up Fairy Tale)"
    )
 )
 (mouthforwar
@@ -45560,9 +46540,6 @@ missing_song_data
       "Harmonix"
    )
    (extra_authoring disc_update)
-)
-(author
-   "Harmonix"
 )
 (numb2
    (game_origin rb3dlc)
@@ -45740,12 +46717,14 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre blues)
 )
 (peoplearestrange
    (game_origin rb3dlc)
    (author
       "Harmonix"
    )
+   (genre psychadelic)
 )
 (perfectday2
    (game_origin rb3dlc)
@@ -45992,6 +46971,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre blues)
 )
 (rosanna
    (game_origin rb3dlc)
@@ -46037,6 +47017,28 @@ missing_song_data
       "Harmonix"
    )
    (genre industrial)
+   (extra_authoring disc_update)
+   (upgrade_version 1)
+   (rank
+      (drum 309)
+      (guitar 179)
+      (bass 120)
+      (vocals 191)
+      (keys 160)
+      (real_guitar 227)
+      (real_bass 307)
+      (real_keys 227)
+      (band 205)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (strings_author
+      "Carl Mylo, RK"
+   )
 )
 (satellite
    (game_origin rb3dlc)
@@ -46316,6 +47318,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
    (extra_authoring disc_update)
 )
 (southofheaven
@@ -46336,6 +47339,10 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (artist
+      "Eric Burdon & WAR"
+   )
+   (genre rbsoulfunk)
    (album_name
       "Eric Burdon Declares \qWAR"
    )
@@ -46517,6 +47524,28 @@ missing_song_data
       "Harmonix"
    )
    (genre industrial)
+   (extra_authoring disc_update)
+   (upgrade_version 1)
+   (rank
+      (drum 220)
+      (guitar 75)
+      (bass 110)
+      (vocals 240)
+      (keys 304)
+      (real_guitar 75)
+      (real_bass 50)
+      (real_keys 373)
+      (band 192)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (strings_author
+      "VreyIsGrey"
+   )
 )
 (thatshowcountryboysroll2
    (game_origin rb3dlc)
@@ -46560,6 +47589,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre psychadelic)
 )
 (theentertainer
    (game_origin rb3dlc)
@@ -46820,6 +47850,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre rock)
    (extra_authoring disc_update)
 )
 (waitingforagirl
@@ -47025,13 +48056,13 @@ missing_song_data
    )
 )
 (16candles
-   (game_origin rb_blitz)
+   (game_origin blitz)
    (author
       "Harmonix"
    )
 )
 (always
-   (game_origin rb_blitz)
+   (game_origin blitz)
    (author
       "Harmonix"
    )
@@ -47065,34 +48096,34 @@ missing_song_data
    )
 )
 (bangyourhead
-   (game_origin rb_blitz)
+   (game_origin blitz)
    (author
       "Harmonix"
    )
    (extra_authoring disc_update)
 )
 (deathontwolegs
-   (game_origin rb_blitz)
+   (game_origin blitz)
    (author
       "Harmonix"
    )
    (extra_authoring disc_update)
 )
 (diamondeyes
-   (game_origin rb_blitz)
+   (game_origin blitz)
    (author
       "Harmonix"
    )
 )
 (imstillstanding
-   (game_origin rb_blitz)
+   (game_origin blitz)
    (author
       "Harmonix"
    )
    (genre poprock)
 )
 (kidsinthestreet
-   (game_origin rb_blitz)
+   (game_origin blitz)
    (author
       "Harmonix"
    )
@@ -47101,7 +48132,7 @@ missing_song_data
    )
 )
 (moveslikejagger
-   (game_origin rb_blitz)
+   (game_origin blitz)
    (author
       "Harmonix"
    )
@@ -47113,20 +48144,20 @@ missing_song_data
    )
 )
 (oncebittentwiceshy
-   (game_origin rb_blitz)
+   (game_origin blitz)
    (author
       "Harmonix"
    )
 )
 (oneweek
-   (game_origin rb_blitz)
+   (game_origin blitz)
    (author
       "Harmonix"
    )
    (extra_authoring disc_update)
 )
 (pumpedupkicks
-   (game_origin rb_blitz)
+   (game_origin blitz)
    (author
       "Harmonix"
    )
@@ -47156,13 +48187,13 @@ missing_song_data
    )
 )
 (raiseyourglass
-   (game_origin rb_blitz)
+   (game_origin blitz)
    (author
       "Harmonix"
    )
 )
 (shine
-   (game_origin rb_blitz)
+   (game_origin blitz)
    (author
       "Harmonix"
    )
@@ -47189,7 +48220,7 @@ missing_song_data
    )
 )
 (shout
-   (game_origin rb_blitz)
+   (game_origin blitz)
    (author
       "Harmonix"
    )
@@ -47217,14 +48248,14 @@ missing_song_data
    )
 )
 (sing
-   (game_origin rb_blitz)
+   (game_origin blitz)
    (author
       "Harmonix"
    )
    (extra_authoring disc_update)
 )
 (sofaraway
-   (game_origin rb_blitz)
+   (game_origin blitz)
    (author
       "Harmonix"
    )
@@ -47252,13 +48283,13 @@ missing_song_data
    )
 )
 (thesedaysfoo
-   (game_origin rb_blitz)
+   (game_origin blitz)
    (author
       "Harmonix"
    )
 )
 (weareyoung
-   (game_origin rb_blitz)
+   (game_origin blitz)
    (author
       "Harmonix"
    )
@@ -47271,7 +48302,7 @@ missing_song_data
    (encoding latin1)
 )
 (whatdoesntkillyou2
-   (game_origin rb_blitz)
+   (game_origin blitz)
    (author
       "Harmonix"
    )
@@ -47705,7 +48736,6 @@ missing_song_data
    (author
       "Harmonix, Rhythm Authors"
    )
-   (genre popdanceelectronic)
 )
 (rockandrollhoochiekoo
    (author
@@ -48097,6 +49127,42 @@ missing_song_data
    (author
       "Harmonix, Rhythm Authors"
    )
+   (extra_authoring disc_update)
+   (upgrade_version 1)
+   (song
+      (tracks
+         (
+            (drum
+               (0 1)
+            )
+            (bass
+               (2 3)
+            )
+            (guitar
+               (4 5)
+            )
+            (vocals
+               (6 7)
+            )
+            (keys
+               (8 9)
+            )
+         )
+      )
+   )
+   (rank
+      (drum 142)
+      (guitar 176)
+      (bass 220)
+      (vocals 386)
+      (keys 280)
+      (real_keys 280)
+      (band 195)
+   )
+   (keys_author
+      "SonicSBL"
+   )
+   (version 30)
 )
 (yourlove
    (author
@@ -48123,17 +49189,7 @@ missing_song_data
       "kevinturner"
    )
 )
-(10000hours
-   (anim_tempo 16)
-   (vocal_tonic_note 10)
-)
-(100baddays
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 10)
-)
 (18andlife
-   (drum_bank sfx/kit02_bank.milo)
-   (vocal_tonic_note 1)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -48141,73 +49197,25 @@ missing_song_data
       "According to Dave Sabo, the song \q18 and Life\q was inspired by a newspaper article he read about an 18 year-old named Ricky who was sentenced to life for shooting and killing his friend with a gun he thought was not loaded."
    )
 )
-(21her
-   (drum_bank sfx/kit03_bank.milo)
-   (anim_tempo 16)
-   (vocal_tonic_note 10)
-   (genre rbsoulfunk)
-)
 (24kmagic
-   (vocal_tonic_note 5)
    (author
       "Harmonix, Rhythm Authors"
    )
 )
 (3am
-   (vocal_tonic_note 8)
    (author
       "Harmonix, Rhythm Authors"
    )
    (extra_authoring disc_update)
-)
-(abcdefu
-   (vocal_tonic_note 4)
 )
 (absolutely
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(aclockworkexpectation
-   (anim_tempo 64)
-   (vocal_tonic_note 2)
-)
 (adecadeundertheinfluence
    (author
       "Harmonix, Rhythm Authors"
-   )
-)
-(addicted
-   (vocal_tonic_note 1)
-)
-(addisonrae
-   (vocal_tonic_note 2)
-)
-(adoreyou2
-   (vocal_tonic_note 8)
-)
-(adventureofalifetime
-   (band_fail_cue band_fail_heavy.cue)
-   (vocal_tonic_note 9)
-   (extra_authoring disc_update)
-   (upgrade_version 1)
-   (rank
-      (drum 349)
-      (guitar 319)
-      (bass 251)
-      (vocals 288)
-      (real_guitar 405)
-      (real_bass 281)
-      (band 275)
-   )
-   (real_guitar_tuning
-      (0 0 0 0 0 0)
-   )
-   (real_bass_tuning
-      (0 0 0 0)
-   )
-   (strings_author
-      "WarGod"
    )
 )
 (africa
@@ -48224,7 +49232,6 @@ missing_song_data
    )
 )
 (aintitfun
-   (vocal_tonic_note 2)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -48232,12 +49239,7 @@ missing_song_data
       "The song is energetic and initially appears to be a cheerful tune about the aspiration of becoming an adult. However, the song actually reflects the harsh reality of life and how overwhelming the world can be, making one long for their childhood once again."
    )
 )
-(aintnoking
-   (vocal_tonic_note 9)
-)
 (ainttalkinboutlove
-   (band_fail_cue band_fail_rock.cue)
-   (vocal_tonic_note 8)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -48245,22 +49247,6 @@ missing_song_data
    (loading_phrase
       "'Ain't Talkin' 'Bout Love' starts with an arpeggiated chord progression in the key of A minor. Eddie actually played a wrong note during the intro but decided to keep it for the record."
    )
-)
-(alittlebitbetter
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 4)
-)
-(alittlebitoff
-   (vocal_tonic_note 0)
-)
-(alittlewild
-   (vocal_tonic_note 1)
-)
-(alive2
-   (vocal_tonic_note 2)
-)
-(alivewiththeglory
-   (vocal_tonic_note 9)
 )
 (allaboutthatbass
    (author
@@ -48322,55 +49308,22 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(allforyou
-   (vocal_tonic_note 8)
-)
-(alligator
-   (vocal_tonic_note 3)
-)
-(allireallywannado
-   (drum_bank sfx/kit03_bank.milo)
-   (anim_tempo 16)
-   (vocal_tonic_note 7)
-   (genre rbsoulfunk)
-)
-(allmyfavoritesongs2
-   (vocal_tonic_note 1)
-)
 (allthatshewants
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(alltheragebackhome
-   (anim_tempo 64)
-   (band_fail_cue band_fail_rock.cue)
-   (vocal_tonic_note 0)
-)
-(allthesethingsthativedone
-   (vocal_tonic_note 6)
-)
-(allthewaystay
-   (vocal_tonic_note 7)
-)
 (allyouwanted
-   (vocal_tonic_note 8)
    (author
       "Harmonix, Rhythm Authors"
    )
 )
 (alwayssomethingthere
-   (band_fail_cue band_fail_electro.cue)
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(andsoitwent
-   (vocal_tonic_note 8)
-)
 (andthecradlewillrock
-   (band_fail_cue band_fail_rock.cue)
-   (vocal_tonic_note 9)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -48380,8 +49333,6 @@ missing_song_data
    )
 )
 (angel3
-   (tuning_offset_cents 30)
-   (vocal_tonic_note 9)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -48430,40 +49381,12 @@ missing_song_data
       "This song was originally set to appear in \qGuitar Hero: Metallica\q thanks to Lars Ulrich's involvement. However, due to pressure from Microsoft over the band's lyrical themes, the song had to be replaced last minute with \qWar Ensemble\q instead."
    )
 )
-(angelsanddemons
-   (vocal_tonic_note 0)
-)
-(animals2
-   (anim_tempo 16)
-   (vocal_tonic_note 1)
-)
 (anthempart2
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(antisocialist
-   (vocal_tonic_note 6)
-)
-(anythingwasbetter
-   (anim_tempo 64)
-   (vocal_tonic_note 11)
-)
-(aok
-   (anim_tempo 64)
-   (vocal_tonic_note 11)
-)
-(applause
-   (anim_tempo 64)
-   (vocal_tonic_note 8)
-   (genre popdanceelectronic)
-)
-(askyfullofstars
-   (anim_tempo 64)
-   (vocal_tonic_note 6)
-)
 (astronautmaskedwolf
-   (drum_bank sfx/kit05_bank.milo)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -48471,23 +49394,10 @@ missing_song_data
       "Like many of Masked Wolf's songs, this song tackles the topics of mental health and well being. During the chorus, his depression is described as feeling as if he's \qrollin' down in the deep\q ocean, comparing his feelings to astronauts preparing for their trips by spending time underwater."
    )
 )
-(astronautourlastnight
-   (vocal_tonic_note 11)
-)
-(attention
-   (vocal_tonic_note 3)
-)
 (awake
-   (band_fail_cue band_fail_heavy.cue)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(ayo
-   (anim_tempo 64)
-   (vocal_tonic_note 10)
-   (genre popdanceelectronic)
-   (extra_authoring disc_update)
 )
 (babycomeback
    (author
@@ -48499,46 +49409,18 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(backtome
-   (vocal_tonic_note 2)
-)
-(backwoodsco
-   (band_fail_cue band_fail_rock.cue)
-   (vocal_tonic_note 6)
-   (extra_authoring disc_update)
-)
 (badcaseoflovingyou
-   (band_fail_cue band_fail_rock.cue)
-   (vocal_tonic_note 4)
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(badcatholics
-   (vocal_tonic_note 0)
-   (extra_authoring disc_update)
-)
 (badcompany
-   (drum_bank sfx/kit03_bank.milo)
-   (vocal_tonic_note 3)
    (author
       "Harmonix, Rhythm Authors"
    )
    (loading_phrase
       "Yes, this is indeed the title song for an album that happens to share the same name, by a band that just so happens to also share the same name."
    )
-)
-(baddecisions
-   (vocal_tonic_note 0)
-)
-(badguy
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 7)
-   (genre popdanceelectronic)
-)
-(badidea
-   (anim_tempo 16)
-   (vocal_tonic_note 3)
 )
 (badthings
    (author
@@ -48550,18 +49432,6 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(bang
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 1)
-)
-(bathcounty
-   (vocal_tonic_note 7)
-)
-(beatsports
-   (drum_bank sfx/kit05_bank.milo)
-   (anim_tempo 64)
-   (extra_authoring disc_update)
-)
 (believe
    (author
       "Harmonix, Rhythm Authors"
@@ -48571,14 +49441,6 @@ missing_song_data
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(bestsongever
-   (vocal_tonic_note 1)
-   (extra_authoring disc_update)
-)
-(bettertogether
-   (drum_bank sfx/kit03_bank.milo)
-   (vocal_tonic_note 5)
 )
 (bigrig
    (author
@@ -48590,13 +49452,7 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(bizarrelovetriangle
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 7)
-)
 (blackbetty
-   (drum_bank sfx/kit03_bank.milo)
-   (vocal_tonic_note 11)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -48604,62 +49460,22 @@ missing_song_data
       "'Black Betty' is commonly played at sporting events to pump up the crowd, as the song is driven by a powerful beat and an aggressive tempo."
    )
 )
-(blackearth
-   (drum_bank sfx/kit03_bank.milo)
-   (anim_tempo 16)
-   (vocal_tonic_note 4)
-)
-(blackseas
-   (vocal_tonic_note 2)
-   (extra_authoring disc_update)
-)
 (blacksummer
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(blameitonmyyouth
-   (vocal_tonic_note 3)
-)
 (blindinglights
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 1)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(blindleadingtheblind
-   (vocal_tonic_note 6)
-)
-(blisterinthesun
-   (drum_bank sfx/kit03_bank.milo)
-   (anim_tempo 64)
-   (vocal_tonic_note 7)
-)
-(bloodforthebloodgod
-   (vocal_tonic_note 1)
-)
-(bloodhands
-   (vocal_tonic_note 0)
 )
 (bloodyvalentine
-   (vocal_tonic_note 2)
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(blownaway
-   (vocal_tonic_note 1)
-)
-(bluemonday2
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 3)
-)
-(blueonblack
-   (vocal_tonic_note 2)
-)
 (blurredlines
-   (vocal_tonic_note 7)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -48669,13 +49485,6 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(bodylikethat
-   (vocal_tonic_note 6)
-)
-(bodytalks
-   (anim_tempo 16)
-   (vocal_tonic_note 3)
-)
 (bombsaway
    (author
       "Harmonix, Rhythm Authors"
@@ -48684,22 +49493,7 @@ missing_song_data
       "The song that doesn't exist by the band that doesn't exist. BOMBS AWAY GO ALL THE BOYS!"
    )
 )
-(bonnie
-   (vocal_tonic_note 4)
-)
-(boredtodeath
-   (vocal_tonic_note 2)
-)
-(bornagaintomorrow
-   (vocal_tonic_note 3)
-)
-(bornintheheat
-   (anim_tempo 64)
-   (vocal_tonic_note 9)
-)
 (borntobewild
-   (vocal_tonic_note 4)
-   (song_tonality 1)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -48751,28 +49545,6 @@ missing_song_data
    )
    (version 30)
 )
-(boyfriend
-   (vocal_tonic_note 10)
-   (genre popdanceelectronic)
-)
-(brandyyoureafinegirl
-   (drum_bank sfx/kit03_bank.milo)
-   (vocal_tonic_note 4)
-)
-(brassic
-   (vocal_tonic_note 1)
-)
-(breakfastattiffanys
-   (vocal_tonic_note 2)
-   (extra_authoring disc_update)
-)
-(breakinup
-   (vocal_tonic_note 2)
-)
-(brickhouse
-   (vocal_tonic_note 9)
-   (genre rbsoulfunk)
-)
 (bringthanoize
    (author
       "Harmonix, Rhythm Authors"
@@ -48791,19 +49563,10 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(broken3
-   (tuning_offset_cents 30)
-   (vocal_tonic_note 0)
-   (genre popdanceelectronic)
-)
 (brutal
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(burn2
-   (anim_tempo 64)
-   (vocal_tonic_note 1)
 )
 (burninforyou
    (author
@@ -48849,15 +49612,6 @@ missing_song_data
       "This song was Blue Oyster Cult's first major radio hit since 1976's \q(Don't Fear) The Reaper\q."
    )
 )
-(burninitdown
-   (drum_bank sfx/kit05_bank.milo)
-   (anim_tempo 64)
-   (vocal_tonic_note 6)
-)
-(burymetonight
-   (anim_tempo 16)
-   (vocal_tonic_note 4)
-)
 (cakebytheocean
    (author
       "Harmonix, Rhythm Authors"
@@ -48866,25 +49620,10 @@ missing_song_data
       "When asked about the meaning behind \qCake By The Ocean\q, Joe Jonas said that it could be up to interpretation, from eating pastries while soaking up the sun or having sex on the beach. It can be whatever you want it to be."
    )
 )
-(california
-   (band_fail_cue band_fail_rock.cue)
-   (vocal_tonic_note 9)
-)
-(californiadreamin
-   (vocal_tonic_note 3)
-)
-(callmecrazy
-   (vocal_tonic_note 10)
-)
 (candelier
-   (vocal_tonic_note 10)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(cannedheat
-   (vocal_tonic_note 2)
-   (genre rbsoulfunk)
 )
 (cannonball
    (author
@@ -48892,8 +49631,6 @@ missing_song_data
    )
 )
 (cantfeelmyface
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 9)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -48904,7 +49641,6 @@ missing_song_data
    )
 )
 (catsinthecradle
-   (drum_bank sfx/kit03_bank.milo)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -48913,7 +49649,6 @@ missing_song_data
    )
 )
 (caution
-   (vocal_tonic_note 7)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -48923,27 +49658,10 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(chaiselongue
-   (vocal_tonic_note 7)
-)
 (champangesupernova
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(champion
-   (anim_tempo 64)
-   (vocal_tonic_note 8)
-)
-(change
-   (vocal_tonic_note 9)
-)
-(cheapthrills
-   (vocal_tonic_note 6)
-   (genre popdanceelectronic)
-)
-(cheerleader
-   (vocal_tonic_note 5)
 )
 (chelseadagger
    (author
@@ -48958,52 +49676,22 @@ missing_song_data
       "This song has a humorous tone due to its overt sexual content. However, Warrant was able to sidestep any potential controversy by using sexually suggestive imagery with dual interpretations, making it difficult to definitively prove that they were not actually singing about a pie."
    )
 )
-(chickenfried
-   (vocal_tonic_note 6)
-)
-(churchbells
-   (vocal_tonic_note 2)
-)
-(circles
-   (anim_tempo 64)
-   (vocal_tonic_note 2)
-)
 (circles2
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 0)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(circles3
-   (anim_tempo 64)
-   (vocal_tonic_note 5)
 )
 (cirice
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(cityofangels
-   (vocal_tonic_note 0)
-   (genre hiphoprap)
-)
-(cityofthedead
-   (vocal_tonic_note 0)
-)
-(classlessact
-   (drum_bank sfx/kit02_bank.milo)
-   (anim_tempo 64)
-   (vocal_tonic_note 7)
-)
 (closer3
-   (vocal_tonic_note 8)
    (author
       "Harmonix, Rhythm Authors"
    )
 )
 (closingtime
-   (vocal_tonic_note 7)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -49046,14 +49734,11 @@ missing_song_data
       "TrojanNemo, BowlsforRick"
    )
    (version 30)
+   (vocal_tonic_note 7)
    (song_tonality 0)
    (loading_phrase
       "'Closing Time' is something bartenders would often bellow at the end of the night to not-so-gently encourage patrons to leave. It's something singer Dan Wilson heard often in Minneapolis drinking establishments, which provided the title."
    )
-)
-(cocoon
-   (vocal_tonic_note 10)
-   (extra_authoring disc_update)
 )
 (coldheart
    (author
@@ -49063,31 +49748,17 @@ missing_song_data
       "This club-ready single blends together four of Elton John's much-loved tracks for a song about a relationship that's gone icy."
    )
 )
-(colors
-   (vocal_tonic_note 6)
-)
 (comeandgetyourlove
-   (tuning_offset_cents 30)
-   (vocal_tonic_note 11)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(comeandgo
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 0)
-   (genre hiphoprap)
 )
 (comeoneileen2
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(comforteagle
-   (vocal_tonic_note 11)
-)
 (complicated
-   (vocal_tonic_note 5)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -49096,8 +49767,6 @@ missing_song_data
    )
 )
 (countingstars
-   (vocal_tonic_note 1)
-   (song_tonality 1)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -49139,16 +49808,7 @@ missing_song_data
    )
    (version 30)
 )
-(connection
-   (vocal_tonic_note 10)
-)
-(cosmicthrill
-   (anim_tempo 16)
-   (vocal_tonic_note 8)
-)
 (cowboysfromhelllive
-   (band_fail_cue band_fail_heavy.cue)
-   (vocal_tonic_note 3)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -49156,16 +49816,7 @@ missing_song_data
       "There is an all-female Pantera cover band called 'Cowgirls from Hell'."
    )
 )
-(cradles
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 1)
-   (genre hiphoprap)
-)
-(crashintome
-   (vocal_tonic_note 4)
-)
 (crazy
-   (vocal_tonic_note 10)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -49174,8 +49825,6 @@ missing_song_data
    )
 )
 (crazyonyou
-   (drum_bank sfx/kit03_bank.milo)
-   (vocal_tonic_note 9)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -49199,19 +49848,12 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(cumbersome
-   (anim_tempo 64)
-   (vocal_tonic_note 6)
-)
 (cutewithoutthee
    (author
       "Harmonix, Rhythm Authors"
    )
 )
 (dancethenightaway
-   (band_fail_cue band_fail_rock.cue)
-   (tuning_offset_cents 20)
-   (vocal_tonic_note 3)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -49220,17 +49862,7 @@ missing_song_data
       "Originally titled \qDance Lolita Dance,\q Eddie convinced Dave that \qDance the Night Away\q was a more suitable title and the chorus was changed."
    )
 )
-(dancingwithmyself
-   (vocal_tonic_note 4)
-   (loading_phrase
-      "'Dancing with Myself' was originally released by Billy Idol's band Generation X. The version in GH5 is the more radio-friendly solo effort, but this version is the original."
-   )
-)
-(dangerous
-   (vocal_tonic_note 2)
-)
 (dangerzone
-   (vocal_tonic_note 3)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -49243,85 +49875,30 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(deadmemories
-   (drum_bank sfx/kit04_bank.milo)
-   (vocal_tonic_note 5)
-)
 (dearmariacount
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(deathbyrockandroll
-   (vocal_tonic_note 4)
-)
-(deletemyself2
-   (anim_tempo 64)
-   (vocal_tonic_note 4)
-)
-(desire
-   (band_fail_cue band_fail_rock.cue)
-   (vocal_tonic_note 3)
-   (extra_authoring disc_update)
-)
-(devilonmyshoulder
-   (vocal_tonic_note 1)
 )
 (devilshaircut
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(devilsradio
-   (vocal_tonic_note 0)
-)
-(die4u
-   (vocal_tonic_note 2)
-)
-(dieouthere
-   (vocal_tonic_note 4)
-)
-(differentcolors
-   (vocal_tonic_note 5)
-)
-(dirtroadanthem
-   (vocal_tonic_note 2)
-)
-(distance
-   (vocal_tonic_note 7)
-)
 (divide
-   (band_fail_cue band_fail_heavy.cue)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(donotdisturb
-   (vocal_tonic_note 2)
 )
 (dontdomelikethat
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(dontfencemein
-   (anim_tempo 64)
-   (vocal_tonic_note 8)
-)
 (dontlethergo
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(dontstartnow
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 11)
-   (genre popdanceelectronic)
-)
-(dontwannafight
-   (band_fail_cue band_fail_rock.cue)
-   (vocal_tonic_note 10)
-   (extra_authoring disc_update)
 )
 (dontyouforgetaboutme
    (author
@@ -49329,7 +49906,6 @@ missing_song_data
    )
 )
 (dopenose
-   (band_fail_cue band_fail_heavy.cue)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -49337,46 +49913,17 @@ missing_song_data
       "The \qDope Nose\q music video, directed by Marcos Siega, featured a Japanese motorcycle gang."
    )
 )
-(down3
-   (anim_tempo 64)
-   (vocal_tonic_note 9)
-)
-(downinahole
-   (vocal_tonic_note 8)
-   (extra_authoring disc_update)
-)
-(downtothedevil
-   (anim_tempo 16)
-   (vocal_tonic_note 2)
-)
-(doyourworst
-   (vocal_tonic_note 4)
-)
 (dragmedown
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(dreams2
-   (vocal_tonic_note 1)
-)
-(dreams3
-   (vocal_tonic_note 4)
-)
-(dreaming
-   (anim_tempo 64)
-   (vocal_tonic_note 2)
 )
 (drown
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(drunk
-   (vocal_tonic_note 5)
-)
 (dudelookslikealady
-   (vocal_tonic_note 9)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -49392,8 +49939,6 @@ missing_song_data
    )
 )
 (eattherich
-   (vocal_tonic_note 4)
-   (song_tonality 1)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -49403,17 +49948,12 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(endoftheworld
-   (vocal_tonic_note 2)
-)
 (enjoythesilence
    (author
       "Harmonix, Rhythm Authors"
    )
 )
 (escapethepinacoladasong
-   (drum_bank sfx/kit03_bank.milo)
-   (vocal_tonic_note 0)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -49423,20 +49963,10 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(euphoria
-   (anim_tempo 64)
-   (vocal_tonic_note 2)
-)
 (everybodytalks
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(everymorning
-   (vocal_tonic_note 7)
-)
-(everythingyouwant
-   (vocal_tonic_note 3)
 )
 (exsandohs
    (author
@@ -49449,19 +49979,10 @@ missing_song_data
    )
 )
 (failure
-   (vocal_tonic_note 10)
    (author
       "Harmonix, Rhythm Authors"
    )
    (extra_authoring disc_update)
-)
-(fallapart
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 5)
-)
-(falling2
-   (vocal_tonic_note 10)
-   (genre popdanceelectronic)
 )
 (famouslastwords
    (author
@@ -49472,15 +49993,6 @@ missing_song_data
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(fartoonear
-   (vocal_tonic_note 4)
-)
-(fatalillusion
-   (vocal_tonic_note 9)
-)
-(fatherofall
-   (vocal_tonic_note 1)
 )
 (fcpremix
    (author
@@ -49517,54 +50029,15 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(feelitstill
-   (anim_tempo 64)
-   (vocal_tonic_note 1)
-)
 (fightforyourright
-   (drum_bank sfx/kit04_bank.milo)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(figureitout
-   (vocal_tonic_note 4)
-)
-(first
-   (anim_tempo 16)
-   (band_fail_cue band_fail_rock.cue)
-   (vocal_tonic_note 9)
-)
-(flagpolesitta
-   (vocal_tonic_note 2)
-)
-(flavoroftheweak
-   (vocal_tonic_note 10)
-)
-(float
-   (vocal_tonic_note 2)
-)
-(followmedown
-   (vocal_tonic_note 3)
 )
 (followyou
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 9)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(forgetabouttomorrow
-   (vocal_tonic_note 0)
-   (extra_authoring disc_update)
-)
-(foundoutaboutyou
-   (vocal_tonic_note 7)
-   (extra_authoring disc_update)
-)
-(freaks
-   (anim_tempo 64)
-   (vocal_tonic_note 9)
 )
 (freewill
    (author
@@ -49572,14 +50045,7 @@ missing_song_data
    )
    (extra_authoring disc_update)
 )
-(futureblind
-   (vocal_tonic_note 2)
-)
-(gepetto
-   (vocal_tonic_note 9)
-)
 (getlucky
-   (vocal_tonic_note 6)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -49588,8 +50054,6 @@ missing_song_data
    )
 )
 (gimmechocolate
-   (band_fail_cue band_fail_heavy.cue)
-   (vocal_tonic_note 4)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -49630,38 +50094,15 @@ missing_song_data
    )
    (version 30)
 )
-(girlscoutcookies
-   (anim_tempo 64)
-   (vocal_tonic_note 10)
-)
 (girlsjustwanttohavefun
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(girlslikeyou
-   (anim_tempo 64)
-   (vocal_tonic_note 0)
-)
-(girlsmakemewannadie
-   (anim_tempo 64)
-   (vocal_tonic_note 2)
-)
 (givenup
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(giveyourselfatry
-   (anim_tempo 64)
-   (vocal_tonic_note 8)
-)
-(glasshouse
-   (anim_tempo 64)
-   (vocal_tonic_note 2)
-)
-(gloria
-   (vocal_tonic_note 11)
 )
 (glycerine2
    (author
@@ -49672,15 +50113,6 @@ missing_song_data
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(goinghometoaparty
-   (vocal_tonic_note 5)
-)
-(golden
-   (vocal_tonic_note 4)
-)
-(goldontheceiling
-   (vocal_tonic_note 2)
 )
 (good4u
    (author
@@ -49697,52 +50129,20 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(goodthingsfallapart
-   (drum_bank sfx/kit05_bank.milo)
-   (anim_tempo 16)
-   (vocal_tonic_note 7)
-   (genre popdanceelectronic)
-)
 (googoomuck
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(gotyoursix
-   (vocal_tonic_note 2)
-)
-(graffiti
-   (anim_tempo 64)
-   (vocal_tonic_note 4)
-)
-(grandcanyon
-   (anim_tempo 64)
-   (vocal_tonic_note 7)
-)
-(greatestofalltime
-   (vocal_tonic_note 0)
 )
 (grooveisintheheart
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(handclap
-   (vocal_tonic_note 0)
-)
 (hangingbyamoment
-   (vocal_tonic_note 1)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(happy2
-   (anim_tempo 64)
-   (vocal_tonic_note 5)
-   (extra_authoring disc_update)
-)
-(happysong
-   (vocal_tonic_note 0)
 )
 (hardtimes
    (author
@@ -49785,35 +50185,13 @@ missing_song_data
    )
    (version 30)
 )
-(harmonyhall
-   (vocal_tonic_note 11)
-)
 (hatemyself
    (author
       "Harmonix, Rhythm Authors"
    )
    (extra_authoring disc_update)
 )
-(headsweat
-   (vocal_tonic_note 7)
-)
-(heartbeatsong
-   (vocal_tonic_note 6)
-   (genre popdanceelectronic)
-)
-(heartbreaker2
-   (vocal_tonic_note 0)
-)
-(heartbreakofthecentury
-   (anim_tempo 64)
-   (vocal_tonic_note 3)
-   (extra_authoring disc_update)
-)
-(heatabove
-   (vocal_tonic_note 0)
-)
 (heathens
-   (vocal_tonic_note 4)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -49867,7 +50245,6 @@ missing_song_data
    (song_tonality 0)
 )
 (heavenisaplaceonearth
-   (vocal_tonic_note 4)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -49880,16 +50257,16 @@ missing_song_data
                (0 1)
             )
             (bass
-               (2 3)
+               (2)
             )
             (guitar
-               (4 5)
+               (3 4)
             )
             (vocals
-               (6 7)
+               (5 6)
             )
             (keys
-               (8 9)
+               (7 8)
             )
          )
       )
@@ -49919,59 +50296,25 @@ missing_song_data
    )
    (version 30)
 )
-(heavenknows
-   (vocal_tonic_note 2)
-)
 (heirapparent
-   (vocal_tonic_note 4)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(helpimalive
-   (vocal_tonic_note 5)
 )
 (hemorrhage
-   (vocal_tonic_note 11)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(hereandnow
-   (vocal_tonic_note 4)
-)
-(herestothenight
-   (vocal_tonic_note 7)
-)
-(heyjealousy
-   (vocal_tonic_note 9)
-   (extra_authoring disc_update)
 )
 (heyya
-   (vocal_tonic_note 7)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(highermendes
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 10)
-   (genre popdanceelectronic)
-)
-(highhopes
-   (anim_tempo 64)
-   (vocal_tonic_note 5)
 )
 (highroad
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(highsociety
-   (vocal_tonic_note 11)
-)
-(historyofviolence
-   (vocal_tonic_note 9)
 )
 (highwaytooblivion
    (author
@@ -50015,17 +50358,7 @@ missing_song_data
    (song_tonality 0)
    (version 30)
 )
-(holdinmeback
-   (vocal_tonic_note 11)
-)
-(holdmyhand
-   (vocal_tonic_note 0)
-)
-(holdon
-   (vocal_tonic_note 5)
-)
 (holdtheline
-   (vocal_tonic_note 7)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -50077,35 +50410,12 @@ missing_song_data
    )
    (version 30)
 )
-(homegrown
-   (vocal_tonic_note 6)
-   (extra_authoring disc_update)
-)
-(homesick
-   (vocal_tonic_note 4)
-)
-(honeyimgood
-   (vocal_tonic_note 9)
-   (extra_authoring disc_update)
-)
-(hook
-   (vocal_tonic_note 9)
-)
 (hookedonafeeling
-   (drum_bank sfx/kit03_bank.milo)
-   (vocal_tonic_note 4)
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(hotelkey
-   (vocal_tonic_note 11)
-)
 (hotforteacher
-   (band_fail_cue band_fail_rock.cue)
-   (tuning_offset_cents 50)
-   (vocal_tonic_note 9)
-   (song_tonality 1)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -50114,58 +50424,28 @@ missing_song_data
       "Warning...do not attempt this guitar part without adult supervision!"
    )
 )
-(houseparty
-   (vocal_tonic_note 3)
-)
 (hungerstrike
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(hurricane
-   (vocal_tonic_note 9)
-)
-(hurt
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 9)
-)
-(hymnfortheweekend
-   (anim_tempo 16)
-   (vocal_tonic_note 0)
-)
-(iaintworried
-   (vocal_tonic_note 2)
 )
 (icantdrive55
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(icantwait
-   (vocal_tonic_note 4)
-)
 (iceicebaby
-   (vocal_tonic_note 2)
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(idontwanttobe
-   (anim_tempo 64)
-   (vocal_tonic_note 3)
-)
 (idontwanttomissathing
-   (vocal_tonic_note 2)
    (author
       "Harmonix, Rhythm Authors"
    )
    (loading_phrase
       "'I Don't Want to Miss a Thing' was featured in the movie Armageddon, which starred Steven Tyler's daughter, Liv Tyler."
    )
-)
-(idwbs
-   (anim_tempo 64)
-   (vocal_tonic_note 11)
 )
 (ifyoucouldonlysee
    (author
@@ -50185,12 +50465,6 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(ihope
-   (vocal_tonic_note 6)
-)
-(ilikeyou
-   (vocal_tonic_note 2)
-)
 (illbethereforyou2
    (author
       "Harmonix, Rhythm Authors"
@@ -50199,18 +50473,12 @@ missing_song_data
       "'I'll Be There for You' is the theme song to the iconic NBC sitcom Friends, which aired from 1994-2004. Originally, R.E.M. was asked to allow their song 'Shiny Happy People' to be used, but the band declined. So the original theme song by the Rembrandts we all know and love was written and recorded in its place."
    )
 )
-(ily
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 11)
-   (genre popdanceelectronic)
-)
 (imgonnabe500miles
    (author
       "Harmonix, Rhythm Authors"
    )
 )
 (immortalized
-   (band_fail_cue band_fail_heavy.cue)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -50220,20 +50488,7 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(inagaddadavida
-   (vocal_tonic_note 2)
-)
-(insideout2
-   (vocal_tonic_note 11)
-)
-(ireallylikeyou
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 5)
-   (genre popdanceelectronic)
-)
 (irememberyou
-   (drum_bank sfx/kit02_bank.milo)
-   (vocal_tonic_note 7)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -50242,7 +50497,6 @@ missing_song_data
    )
 )
 (iris
-   (vocal_tonic_note 2)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -50251,30 +50505,10 @@ missing_song_data
       "Johnny Rzeznik wrote this song for the movie City Of Angels, where it is sung from the perspective of Nicolas Cage's character. In the film, Cage plays an angel sent to help humans make their transition to the afterlife. When he falls in love with a human, he must choose between love and eternal life."
    )
 )
-(iris2
-   (anim_tempo 64)
-   (vocal_tonic_note 2)
-)
-(irresistible
-   (anim_tempo 16)
-   (band_fail_cue band_fail_rock.cue)
-   (vocal_tonic_note 11)
-   (extra_authoring disc_update)
-)
-(isshereallygoingoutwithhim
-   (drum_bank sfx/kit03_bank.milo)
-   (vocal_tonic_note 10)
-)
-(ithinkimokay
-   (vocal_tonic_note 7)
-)
 (ithinkwerealonenow
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(itsalright
-   (vocal_tonic_note 3)
 )
 (itsbeenalittleheavylately
    (author
@@ -50287,12 +50521,7 @@ missing_song_data
    )
    (extra_authoring disc_update)
 )
-(iwannadancewithsomebody2
-   (vocal_tonic_note 4)
-)
 (iwannarock
-   (vocal_tonic_note 9)
-   (song_tonality 1)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -50300,24 +50529,7 @@ missing_song_data
       "The title captures the essence of the song perfectly - Dee Snider wants to rock. This song resonates with young people who were feeling overwhelmed by the expectations of their parents and teachers to conform to social norms and behave appropriately."
    )
 )
-(iwantyou
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 7)
-)
-(iwillsurvive
-   (anim_tempo 16)
-   (vocal_tonic_note 6)
-   (extra_authoring disc_update)
-)
-(iwillwait
-   (vocal_tonic_note 2)
-)
-(iwontgiveitup
-   (vocal_tonic_note 9)
-)
 (jane
-   (drum_bank sfx/kit03_bank.milo)
-   (band_fail_cue band_fail_vintage.cue)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -50368,8 +50580,6 @@ missing_song_data
    (version 30)
 )
 (janiesgotagun
-   (tuning_offset_cents -15)
-   (vocal_tonic_note 7)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -50379,12 +50589,7 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(jolene
-   (drum_bank sfx/kit03_bank.milo)
-   (vocal_tonic_note 1)
-)
 (juice
-   (vocal_tonic_note 0)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -50393,7 +50598,6 @@ missing_song_data
    )
 )
 (jumper
-   (vocal_tonic_note 0)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -50402,10 +50606,6 @@ missing_song_data
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(kamikaze
-   (drum_bank sfx/kit03_bank.milo)
-   (vocal_tonic_note 3)
 )
 (karmachameleon
    (author
@@ -50422,27 +50622,10 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(kidsofsummer
-   (vocal_tonic_note 2)
-)
-(killingisjustameans
-   (anim_tempo 64)
-   (vocal_tonic_note 2)
-   (extra_authoring disc_update)
-)
-(killingmeslowly
-   (vocal_tonic_note 1)
-)
 (kingforaday
-   (band_fail_cue band_fail_heavy.cue)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(kingoftheworld
-   (anim_tempo 64)
-   (vocal_tonic_note 6)
-   (extra_authoring disc_update)
 )
 (kissmedeadly
    (author
@@ -50450,9 +50633,6 @@ missing_song_data
    )
 )
 (labamba
-   (drum_bank sfx/kit03_bank.milo)
-   (tuning_offset_cents 30)
-   (vocal_tonic_note 0)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -50496,74 +50676,20 @@ missing_song_data
       "A modest hit for Ritchie Valens in 1959, \qLa Bamba\q is a traditional Mexican Folk song popular at weddings and other celebrations. When Los Lobos recorded it for the 1987 biopic about Valens, their version became a massive hit and popularized the song with a new generation."
    )
 )
-(learningtofly
-   (vocal_tonic_note 0)
-)
-(leavethelighton
-   (vocal_tonic_note 9)
-)
-(les
-   (vocal_tonic_note 1)
-)
-(lethercry
-   (anim_tempo 16)
-   (vocal_tonic_note 7)
-)
-(letmebenormal
-   (vocal_tonic_note 6)
-)
-(letmefallapart
-   (anim_tempo 64)
-   (vocal_tonic_note 4)
-)
-(letmeout
-   (anim_tempo 64)
-   (vocal_tonic_note 7)
-)
-(letmyloveopenthedoor
-   (vocal_tonic_note 0)
-)
-(letsjustdance
-   (drum_bank sfx/kit02_bank.milo)
-   (vocal_tonic_note 2)
-)
-(letthebadtimesroll
-   (vocal_tonic_note 3)
-)
-(levelofconcern
-   (vocal_tonic_note 4)
-)
-(lifestylesoftherich
-   (vocal_tonic_note 1)
-)
-(lifewaseasier
-   (vocal_tonic_note 1)
-)
 (lightemup
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(lightmylove
-   (vocal_tonic_note 5)
-)
 (likeastone
-   (band_fail_cue band_fail_rock.cue)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(likenosurprise
-   (vocal_tonic_note 4)
 )
 (lipsofanangel
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(littletalks
-   (vocal_tonic_note 1)
-   (extra_authoring disc_update)
 )
 (liveinthemoment
    (author
@@ -50571,17 +50697,11 @@ missing_song_data
    )
 )
 (livinontheedge
-   (vocal_tonic_note 3)
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(lockedandloaded
-   (vocal_tonic_note 8)
-)
 (lockedoutofheaven
-   (band_fail_cue band_fail_rock.cue)
-   (vocal_tonic_note 2)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -50591,42 +50711,10 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(longcoolwoman
-   (drum_bank sfx/kit03_bank.milo)
-   (band_fail_cue band_fail_vintage.cue)
-   (vocal_tonic_note 4)
-)
-(longshot
-   (vocal_tonic_note 4)
-)
-(loseit
-   (vocal_tonic_note 4)
-)
-(lovebrandnew
-   (drum_bank sfx/kit05_bank.milo)
-   (anim_tempo 16)
-   (vocal_tonic_note 11)
-   (genre popdanceelectronic)
-)
-(lovedyoualittle
-   (anim_tempo 64)
-   (vocal_tonic_note 11)
-)
-(lovefromtheotherside
-   (vocal_tonic_note 4)
-)
 (loveinanelevator
-   (band_fail_cue band_fail_rock.cue)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(loveisnotaweapon
-   (anim_tempo 64)
-   (vocal_tonic_note 2)
-)
-(loveitwhenyouhateme
-   (vocal_tonic_note 7)
 )
 (lovesong
    (author
@@ -50670,48 +50758,17 @@ missing_song_data
    (vocal_tonic_note 9)
    (version 30)
 )
-(lovespell
-   (vocal_tonic_note 2)
-)
-(lovestinks
-   (vocal_tonic_note 0)
-   (extra_authoring disc_update)
-)
-(lovethathurts
-   (drum_bank sfx/kit03_bank.milo)
-   (vocal_tonic_note 10)
-)
-(loveumadly
-   (anim_tempo 64)
-   (vocal_tonic_note 2)
-)
 (loveyourself
    (author
       "Harmonix, Rhythm Authors"
    )
    (extra_authoring disc_update)
 )
-(lustforlife
-   (anim_tempo 64)
-   (band_fail_cue band_fail_rock.cue)
-   (vocal_tonic_note 9)
-   (loading_phrase
-      "A version of \qLust for Life\q with altered lyrics was performed by Bruce Willis on the soundtrack for \qRugrats Go Wild\q, in which Iggy himself voices a newborn baby."
-   )
-)
 (lyingfromyou
-   (band_fail_cue band_fail_heavy.cue)
    (author
       "Harmonix, Rhythm Authors"
    )
    (extra_authoring disc_update)
-)
-(makeshiftvehicles
-   (anim_tempo 64)
-   (vocal_tonic_note 0)
-)
-(makingafire
-   (vocal_tonic_note 4)
 )
 (magicman
    (author
@@ -50723,17 +50780,12 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(mantra
-   (vocal_tonic_note 2)
-)
 (maps2
-   (vocal_tonic_note 2)
    (author
       "Harmonix, Rhythm Authors"
    )
 )
 (maryonacross
-   (vocal_tonic_note 11)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -50774,105 +50826,32 @@ missing_song_data
    )
    (version 30)
 )
-(masquerader
-   (vocal_tonic_note 6)
-)
-(mastersofmorbidity
-   (anim_tempo 64)
-   (vocal_tonic_note 2)
-)
-(matilda
-   (vocal_tonic_note 1)
-)
-(medicine
-   (anim_tempo 16)
-   (vocal_tonic_note 1)
-)
-(memory
-   (anim_tempo 64)
-   (vocal_tonic_note 1)
-)
 (mercyme
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(mightberight
-   (vocal_tonic_note 11)
-)
-(milesandmiles
-   (drum_bank sfx/kit03_bank.milo)
-   (vocal_tonic_note 6)
-)
 (mindrider
-   (vocal_tonic_note 0)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(missedconnection
-   (vocal_tonic_note 9)
-)
-(missingpieve
-   (vocal_tonic_note 0)
-)
-(monalisa
-   (anim_tempo 16)
-   (band_fail_cue band_fail_heavy.cue)
-   (vocal_tonic_note 1)
-   (extra_authoring disc_update)
-)
-(monsters
-   (vocal_tonic_note 0)
-)
-(montero
-   (anim_tempo 64)
-   (vocal_tonic_note 8)
-   (genre hiphoprap)
 )
 (morethevictim
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(mothermother
-   (anim_tempo 64)
-   (vocal_tonic_note 2)
-)
 (mountainsound
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(mouthshut
-   (vocal_tonic_note 7)
-)
-(moveover
-   (drum_bank sfx/kit03_bank.milo)
-   (band_fail_cue band_fail_vintage.cue)
-   (vocal_tonic_note 2)
 )
 (mrjones
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(musicisworthlivingfor
-   (anim_tempo 64)
-   (vocal_tonic_note 8)
-)
-(mydemons
-   (anim_tempo 64)
-   (vocal_tonic_note 5)
-)
-(myexsbuild
-   (vocal_tonic_note 5)
-)
-(myfriendsoveryou
-   (vocal_tonic_note 2)
-)
 (myhappyending
-   (vocal_tonic_note 9)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -50881,39 +50860,15 @@ missing_song_data
    )
 )
 (myowneyes
-   (band_fail_cue band_fail_rock.cue)
    (author
       "Harmonix, Rhythm Authors"
    )
-   (extra_authoring disc_update)
-)
-(mywave
-   (vocal_tonic_note 4)
-)
-(mywaysoon
-   (vocal_tonic_note 10)
-)
-(nativetongue
-   (vocal_tonic_note 7)
-)
-(natural
-   (anim_tempo 16)
-   (vocal_tonic_note 2)
-)
-(neverenough
-   (vocal_tonic_note 7)
-)
-(nevermore
-   (vocal_tonic_note 2)
    (extra_authoring disc_update)
 )
 (nevertoolate
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(ninetynine
-   (vocal_tonic_note 3)
 )
 (noapologies
    (author
@@ -50926,7 +50881,6 @@ missing_song_data
    )
 )
 (nomoremrniceguy
-   (vocal_tonic_note 9)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -50935,121 +50889,22 @@ missing_song_data
       "Cooper wrote this about the reaction of friends and family toward his on stage persona. The maniac he plays on stage goes over well with his audiences, but the folks in his mother's church groups were unsure how to handle it and were uncomfortable talking about it."
    )
 )
-(novocaine
-   (vocal_tonic_note 9)
-)
-(nowheregeneration
-   (vocal_tonic_note 6)
-)
-(numb3
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 3)
-   (genre popdanceelectronic)
-)
-(odetomyfamily
-   (vocal_tonic_note 2)
-)
-(oh
-   (vocal_tonic_note 9)
-)
-(oldestdaughter
-   (vocal_tonic_note 11)
-)
 (oldtownroad
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 8)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(ole
-   (vocal_tonic_note 0)
-   (name
-      "¡Olé!"
-   )
-   (encoding latin1)
-)
-(one
-   (anim_tempo 16)
-   (band_fail_cue band_fail_rock.cue)
-   (vocal_tonic_note 9)
-)
-(onebigholiday
-   (anim_tempo 64)
-   (band_fail_cue band_fail_heavy.cue)
-   (vocal_tonic_note 9)
-   (loading_phrase
-      "The video for \qOne Big Holiday\q is done in the style of wayang kulit, Indonesian shadow puppetry. My Morning Jacket is also known to incorporate puppetry into their stage shows."
-   )
-)
-(onekindofsolomon
-   (vocal_tonic_note 9)
-)
-(onemanband
-   (anim_tempo 16)
-   (vocal_tonic_note 6)
-)
-(onemorenight
-   (vocal_tonic_note 5)
-)
-(onlylovecansavemenow
-   (anim_tempo 16)
-   (vocal_tonic_note 3)
-)
-(onlywannabewithyou
-   (vocal_tonic_note 6)
-)
-(onmymind
-   (drum_bank sfx/kit05_bank.milo)
-   (anim_tempo 64)
-   (band_fail_cue band_fail_electro.cue)
-   (vocal_tonic_note 2)
-)
-(openwater
-   (vocal_tonic_note 6)
-)
-(orphans
-   (vocal_tonic_note 11)
-)
-(ourlovewillstillbethere
-   (drum_bank sfx/kit03_bank.milo)
-   (vocal_tonic_note 9)
 )
 (outside2
-   (vocal_tonic_note 4)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(overmyhead
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 10)
-)
-(packofsmokes
-   (drum_bank sfx/kit04_bank.milo)
-   (anim_tempo 64)
-   (vocal_tonic_note 0)
-)
-(panic2
-   (vocal_tonic_note 7)
-)
-(panicattack2
-   (vocal_tonic_note 8)
 )
 (paradise
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(paralyzed
-   (vocal_tonic_note 3)
-)
-(paranoia
-   (vocal_tonic_note 2)
-)
 (partyrockanthem
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 6)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -51059,36 +50914,15 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(pathkeeper
-   (vocal_tonic_note 3)
-)
-(peacethatstartsawar
-   (anim_tempo 64)
-   (vocal_tonic_note 9)
-)
 (peg
    (author
       "Harmonix, Rhythm Authors"
    )
 )
 (peoplearepeople
-   (drum_bank sfx/kit05_bank.milo)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(physical
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 4)
-   (genre popdanceelectronic)
-)
-(picturesofgirls
-   (vocal_tonic_note 1)
-)
-(picturesofmatchstickmen
-   (drum_bank sfx/kit03_bank.milo)
-   (anim_tempo 16)
-   (vocal_tonic_note 2)
 )
 (playthatfunkymusic
    (author
@@ -51098,46 +50932,23 @@ missing_song_data
       "This song was a huge cross-cultural hit for Wild Cherry, with versions recorded by Average White Band, Vanilla Ice, and The Chipmunks."
    )
 )
-(poisonpill
-   (anim_tempo 64)
-   (vocal_tonic_note 2)
-)
 (pompeii
    (author
       "Harmonix, Rhythm Authors"
    )
    (extra_authoring disc_update)
 )
-(postpone
-   (vocal_tonic_note 2)
-)
 (popularmonster
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(prettymouth
-   (anim_tempo 64)
-   (vocal_tonic_note 2)
-)
-(pride
-   (band_fail_cue band_fail_rock.cue)
-   (vocal_tonic_note 11)
 )
 (prisoner
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(promiseeverything
-   (anim_tempo 64)
-   (vocal_tonic_note 2)
-)
-(promqueen
-   (vocal_tonic_note 11)
-)
 (pullmeunder
-   (vocal_tonic_note 4)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -51176,6 +50987,7 @@ missing_song_data
    (keys_author
       "Farottone, BowlsforRick, Linos Melendi"
    )
+   (vocal_tonic_note 4)
    (song_tonality 1)
    (version 30)
    (loading_phrase
@@ -51187,12 +50999,7 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(radio
-   (anim_tempo 64)
-   (vocal_tonic_note 2)
-)
 (radioactive
-   (vocal_tonic_note 11)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -51203,13 +51010,9 @@ missing_song_data
    )
 )
 (ragdoll
-   (vocal_tonic_note 0)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(raindown
-   (vocal_tonic_note 0)
 )
 (ratsghost
    (author
@@ -51217,30 +51020,12 @@ missing_song_data
    )
 )
 (ratsinthecellar
-   (band_fail_cue band_fail_rock.cue)
    (author
       "Harmonix, Rhythm Authors"
    )
    (extra_authoring disc_update)
 )
-(readyforcombat
-   (vocal_tonic_note 0)
-)
-(rebelheart
-   (anim_tempo 64)
-   (vocal_tonic_note 2)
-)
-(rebellion
-   (band_fail_cue band_fail_heavy.cue)
-   (vocal_tonic_note 1)
-)
-(redneck
-   (vocal_tonic_note 2)
-)
 (redredwine
-   (drum_bank sfx/kit03_bank.milo)
-   (tuning_offset_cents -15)
-   (vocal_tonic_note 1)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -51286,56 +51071,17 @@ missing_song_data
    )
    (version 30)
 )
-(reminiscing
-   (drum_bank sfx/kit03_bank.milo)
-   (vocal_tonic_note 2)
-)
-(renegades
-   (vocal_tonic_note 2)
-)
-(rescued
-   (vocal_tonic_note 2)
-)
-(rescueme2
-   (vocal_tonic_note 2)
-   (artist
-      "Thirty Seconds to Mars"
-   )
-)
-(resentment
-   (vocal_tonic_note 9)
-)
 (respect
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(richgirl
-   (vocal_tonic_note 5)
-)
-(ride2
-   (anim_tempo 16)
-   (vocal_tonic_note 4)
-)
-(righthererightnow
-   (vocal_tonic_note 2)
 )
 (riptide
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(riptide2
-   (vocal_tonic_note 4)
-)
-(roadtonowhere
-   (anim_tempo 64)
-   (vocal_tonic_note 1)
-)
 (rockthistown
-   (drum_bank sfx/kit03_bank.milo)
-   (band_fail_cue band_fail_vintage.cue)
-   (vocal_tonic_note 2)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -51349,52 +51095,18 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(rollercoaster
-   (anim_tempo 64)
-   (vocal_tonic_note 10)
-)
 (rollin
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(rolling7s
-   (vocal_tonic_note 10)
-)
-(rolltome
-   (vocal_tonic_note 6)
-)
-(royals
-   (anim_tempo 16)
-   (vocal_tonic_note 2)
-   (genre popdanceelectronic)
-)
 (rude
-   (vocal_tonic_note 1)
    (author
       "Harmonix, Rhythm Authors"
    )
    (extra_authoring disc_update)
 )
-(runaround
-   (vocal_tonic_note 7)
-)
-(runaway2
-   (anim_tempo 64)
-   (vocal_tonic_note 0)
-)
-(runforcover
-   (anim_tempo 64)
-   (band_fail_cue band_fail_rock.cue)
-   (vocal_tonic_note 11)
-)
-(runningwiththewild
-   (vocal_tonic_note 9)
-)
 (runninwiththedevil
-   (band_fail_cue band_fail_rock.cue)
-   (tuning_offset_cents 40)
-   (vocal_tonic_note 3)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -51403,45 +51115,18 @@ missing_song_data
       "'Runnin' with the Devil' fades in with car horns, which were mounted in a wooden cabinet and used in between songs to add to the party environment."
    )
 )
-(runwithyou
-   (anim_tempo 64)
-   (vocal_tonic_note 4)
-)
-(sacrifice
-   (anim_tempo 64)
-   (vocal_tonic_note 8)
-)
 (safeandsound
-   (vocal_tonic_note 0)
    (author
       "Harmonix, Rhythm Authors"
    )
    (extra_authoring disc_update)
-)
-(salvation
-   (vocal_tonic_note 4)
-)
-(saveahorse
-   (vocal_tonic_note 4)
 )
 (savetonight
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(saveyourself
-   (anim_tempo 64)
-   (vocal_tonic_note 8)
-)
-(sawlightning
-   (vocal_tonic_note 7)
-)
-(season5
-   (anim_tempo 16)
-   (vocal_tonic_note 7)
-)
 (seasonsofwither
-   (band_fail_cue band_fail_rock.cue)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -51476,80 +51161,20 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(selfdestructor
-   (vocal_tonic_note 6)
-)
-(sellout
-   (anim_tempo 64)
-   (vocal_tonic_note 1)
-)
-(sendmeonmyway
-   (vocal_tonic_note 0)
-)
 (september
-   (vocal_tonic_note 9)
    (author
       "Harmonix, Rhythm Authors"
    )
    (extra_authoring disc_update)
 )
-(settling
-   (vocal_tonic_note 4)
-)
 (seventeen
-   (vocal_tonic_note 3)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(sexxlaws
-   (vocal_tonic_note 11)
-)
-(shakemeup
-   (vocal_tonic_note 3)
-)
-(shame
-   (vocal_tonic_note 2)
-)
-(shame2
-   (drum_bank sfx/kit04_bank.milo)
-   (vocal_tonic_note 1)
-)
-(shapeofyou
-   (vocal_tonic_note 1)
-)
-(shapeshifter
-   (anim_tempo 64)
-   (vocal_tonic_note 11)
 )
 (she_lf
-   (band_fail_cue band_fail_vintage.cue)
    (author
       "Harmonix, Rhythm Authors"
-   )
-)
-(shedrivesmecrazy
-   (vocal_tonic_note 9)
-)
-(shelookssoperfect
-   (anim_tempo 64)
-   (vocal_tonic_note 4)
-)
-(shesalliwannabe
-   (anim_tempo 64)
-   (vocal_tonic_note 2)
-)
-(shesgotsorcery
-   (anim_tempo 64)
-   (vocal_tonic_note 10)
-)
-(shimmer
-   (vocal_tonic_note 7)
-)
-(shiver
-   (vocal_tonic_note 4)
-   (loading_phrase
-      "This was Coldplay's first hit. It was included on Parachutes after it became a hit as a single."
    )
 )
 (shotinthedark
@@ -51557,40 +51182,17 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(shout2
-   (drum_bank sfx/kit03_bank.milo)
-   (anim_tempo 64)
-   (tuning_offset_cents 15)
-   (vocal_tonic_note 6)
-   (genre rbsoulfunk)
-)
 (showmethewaylive
    (author
       "Harmonix, Rhythm Authors"
    )
 )
 (shutupanddance
-   (drum_bank sfx/kit05_bank.milo)
-   (band_fail_cue band_fail_electro.cue)
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(shy
-   (vocal_tonic_note 9)
-)
-(sickness
-   (anim_tempo 16)
-   (vocal_tonic_note 2)
-)
-(simmer
-   (vocal_tonic_note 7)
-)
-(simplify
-   (vocal_tonic_note 4)
-)
 (sing_ed
-   (band_fail_cue band_fail_rock.cue)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -51604,79 +51206,30 @@ missing_song_data
       "Lavigne was only 17 years old when her debut album 'Let Go' released in 2002."
    )
 )
-(sixfeetunder
-   (anim_tempo 64)
-   (vocal_tonic_note 2)
-)
-(sixteen2
-   (vocal_tonic_note 2)
-)
-(slide
-   (vocal_tonic_note 8)
-)
 (slowride
-   (tuning_offset_cents 30)
-   (vocal_tonic_note 9)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(smile
-   (anim_tempo 16)
-   (vocal_tonic_note 6)
 )
 (soakupthesun
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(soberup
-   (anim_tempo 64)
-   (vocal_tonic_note 5)
-)
-(some1else
-   (vocal_tonic_note 9)
-)
-(somekindof
-   (vocal_tonic_note 11)
-)
-(somenights
-   (vocal_tonic_note 1)
-)
-(someonetoyou
-   (vocal_tonic_note 2)
-)
 (somethingjustlikethis
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(sometimes
-   (vocal_tonic_note 3)
-)
-(song3
-   (anim_tempo 64)
-   (vocal_tonic_note 1)
-)
-(sorry_bieber
-   (vocal_tonic_note 3)
-   (genre popdanceelectronic)
-   (extra_authoring disc_update)
 )
 (sorrynotsorry
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(sos
-   (vocal_tonic_note 4)
-)
-(speedfighter
-   (vocal_tonic_note 4)
-   (genre popdanceelectronic)
-)
-(speedofsound2
-   (vocal_tonic_note 11)
+(stacysmom
+   (author
+      "Harmonix, Rhythm Authors"
+   )
    (extra_authoring disc_update)
    (upgrade_version 1)
    (song
@@ -51699,26 +51252,21 @@ missing_song_data
             )
          )
       )
+      (crowd_channels 10 11)
    )
    (rank
-      (drum 151)
-      (guitar 176)
-      (bass 135)
-      (vocals 279)
-      (keys 170)
-      (real_keys 250)
-      (band 215)
+      (drum 153)
+      (guitar 141)
+      (bass 183)
+      (vocals 281)
+      (keys 200)
+      (real_keys 200)
+      (band 217)
    )
    (keys_author
-      "Bansheeflyer, BowlsforRick"
+      "SonicSBL"
    )
    (version 30)
-)
-(stacysmom
-   (vocal_tonic_note 11)
-   (author
-      "Harmonix, Rhythm Authors"
-   )
    (loading_phrase
       "'Stacy's Mom' became a hit in large part due to its music video in which a boy attempts, rather humorously, to gain the attention of his friend's mother, who was played by model Rachel Hunter."
    )
@@ -51733,43 +51281,15 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(starships
-   (vocal_tonic_note 2)
-   (genre popdanceelectronic)
-)
-(stayhigh
-   (drum_bank sfx/kit04_bank.milo)
-   (anim_tempo 16)
-   (vocal_tonic_note 9)
-)
-(stayimissedyou
-   (anim_tempo 64)
-   (vocal_tonic_note 1)
-)
-(stealmysunshine
-   (anim_tempo 16)
-   (vocal_tonic_note 4)
-)
 (stellar
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(stillbreathing
-   (anim_tempo 64)
-   (vocal_tonic_note 1)
-)
-(stilltheone
-   (vocal_tonic_note 4)
-)
 (stitches
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(stolendance
-   (anim_tempo 64)
-   (vocal_tonic_note 11)
 )
 (stop2
    (author
@@ -51795,112 +51315,20 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(stupidgirl
-   (vocal_tonic_note 6)
-)
-(sugarhoneyiceandtea
-   (vocal_tonic_note 0)
-)
 (sugaryou
-   (band_fail_cue band_fail_rock.cue)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(summertimeboy
-   (band_fail_cue band_fail_rock.cue)
-   (vocal_tonic_note 2)
-   (extra_authoring disc_update)
-)
-(sundaybloodysunday
-   (vocal_tonic_note 10)
-   (extra_authoring disc_update)
 )
 (superfreak
-   (tuning_offset_cents 30)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(superfreakygirl
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 2)
-   (genre popdanceelectronic)
 )
 (superman2
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(superposition
-   (vocal_tonic_note 9)
-)
-(survive
-   (vocal_tonic_note 11)
-)
-(sweaterweather
-   (anim_tempo 64)
-   (vocal_tonic_note 2)
-   (extra_authoring disc_update)
-)
-(sweaterweather2
-   (vocal_tonic_note 7)
-   (extra_authoring disc_update)
-   (upgrade_version 1)
-   (song
-      (tracks
-         (
-            (drum
-               (0 1)
-            )
-            (bass
-               (2 3)
-            )
-            (guitar
-               (4 5)
-            )
-            (vocals
-               (6 7)
-            )
-            (keys
-               (8 9)
-            )
-         )
-      )
-   )
-   (rank
-      (drum 125)
-      (guitar 153)
-      (bass 133)
-      (vocals 295)
-      (keys 102)
-      (real_keys 107)
-      (real_guitar 368)
-      (real_bass 131)
-      (band 167)
-   )
-   (real_guitar_tuning
-      (0 0 0 0 0 0)
-   )
-   (real_bass_tuning
-      (0 0 0 0)
-   )
-   (keys_author
-      "Aloquendiar, Carl Mylo"
-   )
-   (strings_author
-      "Aloquendiar, Carl Mylo, Ruggy"
-   )
-   (version 30)
-)
-(tailspin
-   (vocal_tonic_note 0)
-)
-(takeitoff
-   (vocal_tonic_note 11)
-)
-(takemeaway
-   (vocal_tonic_note 1)
 )
 (takemehomecountry
    (author
@@ -51908,7 +51336,6 @@ missing_song_data
    )
 )
 (takemehomecountryroads2
-   (vocal_tonic_note 9)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -51918,18 +51345,6 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
    (extra_authoring disc_update)
-)
-(takemybreathaway
-   (vocal_tonic_note 2)
-)
-(takeonme2
-   (drum_bank sfx/kit04_bank.milo)
-   (anim_tempo 64)
-   (vocal_tonic_note 9)
-)
-(takewhatyouwant
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 1)
 )
 (takincareofbusiness
    (author
@@ -51942,7 +51357,6 @@ missing_song_data
    )
 )
 (teenagedirtbag
-   (vocal_tonic_note 4)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -51950,35 +51364,10 @@ missing_song_data
       "Written mostly by guitarist and vocalist Brendan B. Brown, \qTeenage Dirtbag\q was recorded in the basement of his mother's house."
    )
 )
-(thankgodforgirls
-   (anim_tempo 16)
-   (vocal_tonic_note 9)
-)
 (thatdontimpressmemuch
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(thatsmykindanight
-   (vocal_tonic_note 4)
-)
-(thebadtouch
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 0)
-   (genre popdanceelectronic)
-)
-(thebest
-   (vocal_tonic_note 2)
-)
-(thebirdandtheworm
-   (vocal_tonic_note 6)
-)
-(thecall
-   (vocal_tonic_note 2)
-)
-(thecomamachine
-   (anim_tempo 64)
-   (vocal_tonic_note 2)
 )
 (thedevilini
    (author
@@ -51990,48 +51379,25 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(theedgeofglory
-   (vocal_tonic_note 10)
-   (genre popdanceelectronic)
-)
 (theendofthegame
-   (vocal_tonic_note 3)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(thefall
-   (vocal_tonic_note 2)
 )
 (thefoundationsofdecay
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(thefuneral
-   (anim_tempo 64)
-   (vocal_tonic_note 2)
-)
 (thegangsallhere
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(thegreatest
-   (vocal_tonic_note 0)
-   (genre popdanceelectronic)
-)
-(theheartfromyourhate
-   (vocal_tonic_note 2)
-)
 (thehills
-   (vocal_tonic_note 0)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(thehills2
-   (vocal_tonic_note 2)
 )
 (theliarsclub
    (author
@@ -52041,6 +51407,29 @@ missing_song_data
 (themanwhosoldtheworld
    (author
       "Harmonix, Rhythm Authors"
+   )
+   (name
+      "The Man Who Sold the World (Unplugged)"
+   )
+   (extra_authoring disc_update)
+   (upgrade_version 1)
+   (rank
+      (drum 155)
+      (guitar 200)
+      (bass 225)
+      (vocals 230)
+      (real_guitar 230)
+      (real_bass 220)
+      (band 225)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (strings_author
+      "Russ T Sprinkler, brandunce"
    )
 )
 (thembones
@@ -52068,21 +51457,7 @@ missing_song_data
       "SquibbleNibs"
    )
 )
-(themiracle
-   (band_fail_cue band_fail_rock.cue)
-   (vocal_tonic_note 9)
-)
-(themotherweshare
-   (drum_bank sfx/kit05_bank.milo)
-   (anim_tempo 16)
-   (vocal_tonic_note 1)
-)
-(thepallbearerwalksalone
-   (anim_tempo 64)
-   (vocal_tonic_note 4)
-)
 (thereason
-   (vocal_tonic_note 4)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -52124,21 +51499,12 @@ missing_song_data
    (version 30)
 )
 (thereflex
-   (band_fail_cue band_fail_rock.cue)
    (author
       "Harmonix, Rhythm Authors"
    )
    (extra_authoring disc_update)
 )
-(thereforeiam
-   (drum_bank sfx/kit05_bank.milo)
-   (anim_tempo 16)
-   (vocal_tonic_note 11)
-   (genre popdanceelectronic)
-)
 (thesign
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 7)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -52191,14 +51557,12 @@ missing_song_data
    (version 30)
 )
 (thesoundofsilence
-   (vocal_tonic_note 9)
    (author
       "Harmonix, Rhythm Authors"
    )
    (extra_authoring disc_update)
 )
 (thestage
-   (vocal_tonic_note 0)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -52209,10 +51573,6 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(thetitletrack
-   (anim_tempo 64)
-   (vocal_tonic_note 10)
-)
 (thetriumph
    (author
       "Harmonix, Rhythm Authors"
@@ -52220,29 +51580,9 @@ missing_song_data
    (extra_authoring disc_update)
 )
 (thevengefulone
-   (vocal_tonic_note 6)
    (author
       "Harmonix, Rhythm Authors"
    )
-   (extra_authoring disc_update)
-)
-(thewayyouusedtodo
-   (anim_tempo 16)
-   (vocal_tonic_note 7)
-)
-(thewind
-   (vocal_tonic_note 6)
-)
-(thinkingemoji
-   (anim_tempo 16)
-   (vocal_tonic_note 6)
-)
-(thiscitymadeus
-   (vocal_tonic_note 4)
-)
-(thisishowwedoit
-   (vocal_tonic_note 5)
-   (genre hiphoprap)
    (extra_authoring disc_update)
 )
 (thisiswhy
@@ -52251,15 +51591,9 @@ missing_song_data
    )
 )
 (thiswillbetheday
-   (vocal_tonic_note 2)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(threelives
-   (anim_tempo 64)
-   (vocal_tonic_note 2)
-   (extra_authoring disc_update)
 )
 (throne
    (author
@@ -52268,8 +51602,6 @@ missing_song_data
    (extra_authoring disc_update)
 )
 (throughthefireandflamesrb4
-   (vocal_tonic_note 0)
-   (song_tonality 1)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -52277,33 +51609,15 @@ missing_song_data
       "Good Luck"
    )
 )
-(throughthenoise
-   (anim_tempo 16)
-   (vocal_tonic_note 2)
-)
 (thunder2
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(thunderandlightning
-   (band_fail_cue band_fail_heavy.cue)
-   (vocal_tonic_note 3)
-   (artist
-      "Motörhead"
-   )
-   (encoding latin1)
-   (extra_authoring disc_update)
-)
 (timeaftertime
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(timeforcrime
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 7)
-   (genre popdanceelectronic)
 )
 (timetosaygoodbye
    (author
@@ -52314,13 +51628,6 @@ missing_song_data
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(tomyromeo
-   (vocal_tonic_note 2)
-   (extra_authoring disc_update)
-)
-(tonight
-   (vocal_tonic_note 4)
 )
 (torn
    (author
@@ -52337,49 +51644,17 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(trainwreck1979
-   (band_fail_cue band_fail_heavy.cue)
-   (vocal_tonic_note 7)
-   (extra_authoring disc_update)
-)
-(treasure
-   (band_fail_cue band_fail_rock.cue)
-   (vocal_tonic_note 0)
-)
 (treatyoubetter
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(trouble
-   (vocal_tonic_note 0)
-)
-(trueconfessions
-   (vocal_tonic_note 2)
-)
 (trust
-   (vocal_tonic_note 5)
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(twilightofthethundergod
-   (anim_tempo 64)
-   (vocal_tonic_note 1)
-)
-(twoshots
-   (vocal_tonic_note 8)
-)
-(ultraviolet
-   (anim_tempo 64)
-   (vocal_tonic_note 0)
-)
-(umathurman
-   (vocal_tonic_note 4)
-)
 (unchained
-   (band_fail_cue band_fail_rock.cue)
-   (vocal_tonic_note 1)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -52392,57 +51667,25 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(unheavenlycreatures
-   (vocal_tonic_note 5)
-)
-(unsainted
-   (vocal_tonic_note 11)
-)
 (untilifoundyou
    (author
       "Harmonix, Rhythm Authors"
    )
 )
 (unwell
-   (vocal_tonic_note 9)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(unwritten
-   (vocal_tonic_note 5)
 )
 (uptowngirl
-   (drum_bank sfx/kit03_bank.milo)
-   (band_fail_cue band_fail_vintage.cue)
-   (vocal_tonic_note 4)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(usedtolike
-   (vocal_tonic_note 8)
 )
 (usesomebody
-   (vocal_tonic_note 2)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(vanhorn
-   (vocal_tonic_note 8)
-)
-(vertigo
-   (band_fail_cue band_fail_rock.cue)
-   (vocal_tonic_note 4)
-)
-(vinyl
-   (drum_bank sfx/kit02_bank.milo)
-   (vocal_tonic_note 3)
-   (genre popdanceelectronic)
-)
-(visitor
-   (vocal_tonic_note 7)
 )
 (voicesinmyhead
    (author
@@ -52455,57 +51698,17 @@ missing_song_data
    )
    (extra_authoring disc_update)
 )
-(wakemeup2
-   (vocal_tonic_note 7)
-   (genre popdanceelectronic)
-)
 (wakingupinvegas
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(wanttowantme
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 3)
-   (genre popdanceelectronic)
-)
-(warrior
-   (vocal_tonic_note 0)
-)
-(wars
-   (vocal_tonic_note 6)
-)
-(wasteamoment
-   (anim_tempo 64)
-   (vocal_tonic_note 2)
-   (extra_authoring disc_update)
 )
 (waylesssad
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(wearebetween
-   (vocal_tonic_note 2)
-)
-(wearefamily
-   (drum_bank sfx/kit03_bank.milo)
-   (tuning_offset_cents -30)
-   (vocal_tonic_note 8)
-   (genre disco)
-)
-(welcomehome2
-   (vocal_tonic_note 7)
-)
-(welcomehome3
-   (anim_tempo 64)
-   (vocal_tonic_note 5)
-)
-(welcometomylife
-   (vocal_tonic_note 1)
-)
 (werenotgonnatakeit
-   (vocal_tonic_note 4)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -52514,93 +51717,16 @@ missing_song_data
       "This was the song that catapulted Twisted Sister to fame. They promoted this single with an innovative video with cartoonish violence featuring a young kid that turns into frontman Dee Snider, telling his father he's 'Not gonna take it!'"
    )
 )
-(whataboutlove
-   (anim_tempo 16)
-   (vocal_tonic_note 2)
-)
-(whatdoyoumean
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 8)
-   (genre popdanceelectronic)
-)
 (whatifiwasnothing
-   (band_fail_cue band_fail_heavy.cue)
    (author
       "Harmonix, Rhythm Authors"
    )
    (extra_authoring disc_update)
 )
 (whatilikeaboutyou
-   (vocal_tonic_note 4)
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(whatmakesyoubeautiful
-   (vocal_tonic_note 4)
-)
-(whatthehell
-   (anim_tempo 64)
-   (vocal_tonic_note 9)
-)
-(whatyouknow
-   (vocal_tonic_note 6)
-   (extra_authoring disc_update)
-   (upgrade_version 1)
-   (song
-      (tracks
-         (
-            (drum
-               (0 1)
-            )
-            (bass
-               (2 3)
-            )
-            (guitar
-               (4 5)
-            )
-            (vocals
-               (6 7)
-            )
-            (keys
-               (8 9)
-            )
-         )
-      )
-   )
-   (rank
-      (band 240)
-      (guitar 215)
-      (drum 175)
-      (bass 230)
-      (vocals 215)
-      (keys 153)
-      (real_keys 153)
-   )
-   (keys_author
-      "Gigakoops"
-   )
-   (song_tonality 1)
-   (version 30)
-)
-(whatyouneed
-   (vocal_tonic_note 6)
-)
-(whenamigonnaloseyou
-   (vocal_tonic_note 8)
-)
-(whenimgone2
-   (vocal_tonic_note 8)
-)
-(whenlegendsrise
-   (vocal_tonic_note 4)
-)
-(whenthecurtainfalls
-   (anim_tempo 16)
-   (vocal_tonic_note 7)
-)
-(whentheseasonschange
-   (vocal_tonic_note 4)
 )
 (whenwewereyoung
    (author
@@ -52608,80 +51734,31 @@ missing_song_data
    )
 )
 (whereibelong
-   (vocal_tonic_note 3)
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(whereismymind
-   (vocal_tonic_note 4)
-)
-(wheretheheartis
-   (vocal_tonic_note 2)
-)
-(wherethestreetshavenoname
-   (vocal_tonic_note 2)
-)
-(whitetrashmillionaire
-   (anim_tempo 64)
-   (vocal_tonic_note 6)
-)
-(whodoyoulove
-   (vocal_tonic_note 4)
-)
-(whosyourlover
-   (anim_tempo 64)
-   (vocal_tonic_note 11)
-)
 (wickedgarden
-   (tuning_offset_cents 25)
-   (vocal_tonic_note 9)
    (author
       "Harmonix, Rhythm Authors"
    )
    (extra_authoring disc_update)
-)
-(wildchild
-   (drum_bank sfx/kit04_bank.milo)
-   (vocal_tonic_note 7)
-)
-(wildthing
-   (vocal_tonic_note 9)
 )
 (witharmswideopen
    (author
       "Harmonix, Rhythm Authors"
    )
 )
-(worstday
-   (drum_bank sfx/kit05_bank.milo)
-   (vocal_tonic_note 2)
-)
 (wouldyoustillbethere
-   (band_fail_cue band_fail_heavy.cue)
    (author
       "Harmonix, Rhythm Authors"
    )
    (extra_authoring disc_update)
 )
-(wreckingmachine
-   (vocal_tonic_note 2)
-)
 (wrongsideofheaven
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(youandme
-   (anim_tempo 64)
-   (vocal_tonic_note 4)
-)
-(youngblood
-   (band_fail_cue band_fail_rock.cue)
-   (vocal_tonic_note 10)
-)
-(youngblood2
-   (vocal_tonic_note 2)
 )
 (youregonnagofarkid
    (author
@@ -52735,8 +51812,6 @@ missing_song_data
    )
 )
 (zombie
-   (tuning_offset_cents 30)
-   (vocal_tonic_note 4)
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -52811,45 +51886,6 @@ missing_song_data
    (author
       "Harmonix, Rhythm Authors"
    )
-)
-(neverletemholdyaback
-   (vocal_tonic_note 2)
-   (album_name
-      "Waylaid in the Melée"
-   )
-   (encoding latin1)
-)
-(noplaceforme
-   (anim_tempo 64)
-   (vocal_tonic_note 7)
-)
-(painkiller2
-   (anim_tempo 16)
-   (vocal_tonic_note 6)
-)
-(rudeboys
-   (vocal_tonic_note 7)
-   (genre hiphoprap)
-)
-(shadow
-   (vocal_tonic_note 2)
-)
-(sink
-   (vocal_tonic_note 7)
-)
-(skydiver
-   (anim_tempo 16)
-   (vocal_tonic_note 2)
-)
-(somp
-   (vocal_tonic_note 4)
-)
-(thesehands
-   (anim_tempo 64)
-   (vocal_tonic_note 7)
-)
-(trueconfession
-   (vocal_tonic_note 2)
 )
 (abbeyroadmedley
    (author
@@ -54414,15 +53450,25 @@ missing_song_data
 )
 (UGC_5000833
    (game_origin ugc1)
+   (vocal_tonic_note 0)
+   (song_tonality 0)
    (author
       "TheMainDrag"
+   )
+   (song
+      (vocal_parts 3)
    )
    (extra_authoring disc_update)
 )
 (UGC_5000836
    (game_origin ugc1)
+   (vocal_tonic_note 4)
+   (song_tonality 0)
    (author
       "TheRockWhisperer"
+   )
+   (song
+      (vocal_parts 2)
    )
    (extra_authoring disc_update)
 )
@@ -54538,10 +53584,15 @@ missing_song_data
 )
 (UGC_5000971
    (game_origin ugc1)
+   (vocal_tonic_note 2)
+   (song_tonality 0)
    (author
       "TheMainDrag"
    )
    (album_track_number 1)
+   (song
+      (vocal_parts 3)
+   )
    (extra_authoring disc_update)
 )
 (UGC_5000972
@@ -54696,6 +53747,8 @@ missing_song_data
 )
 (UGC_5001097
    (game_origin ugc1)
+   (vocal_tonic_note 9)
+   (song_tonality 1)
    (author
       "WaveGroup"
    )
@@ -54705,6 +53758,9 @@ missing_song_data
       (bass 228)
       (vocals 279)
       (band 267)
+   )
+   (song
+      (vocal_parts 2)
    )
    (extra_authoring disc_update)
 )
@@ -54729,8 +53785,13 @@ missing_song_data
 )
 (UGC_5001128
    (game_origin ugc1)
+   (vocal_tonic_note 4)
+   (song_tonality 1)
    (author
       "WaveGroup"
+   )
+   (song
+      (vocal_parts 2)
    )
    (extra_authoring disc_update)
 )
@@ -54798,8 +53859,13 @@ missing_song_data
 )
 (UGC_5001192
    (game_origin ugc1)
+   (vocal_tonic_note 11)
+   (song_tonality 11)
    (author
       "RockGamer"
+   )
+   (song
+      (vocal_parts 3)
    )
    (extra_authoring disc_update)
 )
@@ -54917,6 +53983,8 @@ missing_song_data
 )
 (UGC_5001289
    (game_origin ugc1)
+   (vocal_tonic_note 4)
+   (song_tonality 0)
    (author
       "TheAuthority"
    )
@@ -54926,6 +53994,9 @@ missing_song_data
       (bass 135)
       (vocals 279)
       (band 215)
+   )
+   (song
+      (vocal_parts 2)
    )
    (extra_authoring disc_update)
 )
@@ -55040,8 +54111,40 @@ missing_song_data
    (genre prog)
    (song
       (vocal_parts 2)
+      (tracks
+         (
+            (drum
+               (0 1 2 3 4)
+            )
+            (bass
+               (5)
+            )
+            (guitar
+               (6 7)
+            )
+            (vocals
+               (8 9)
+            )
+            (keys
+               (10 11)
+            )
+         )
+      )
    )
    (extra_authoring disc_update)
+   (rank
+      (drum 401)
+      (guitar 406)
+      (bass 401)
+      (vocals 220)
+      (keys 1)
+      (real_keys 1)
+      (band 454)
+   )
+   (version 30)
+   (keys_author
+      "FujiSkunk"
+   )
 )
 (UGC_5001353
    (game_origin ugc1)
@@ -55146,6 +54249,8 @@ missing_song_data
 )
 (UGC_5001426
    (game_origin ugc1)
+   (vocal_tonic_note 4)
+   (song_tonality 0)
    (author
       "TheAuthority"
    )
@@ -55158,6 +54263,9 @@ missing_song_data
    )
    (album_name
       "Wincing the Night Away"
+   )
+   (song
+      (vocal_parts 3)
    )
    (extra_authoring disc_update)
 )
@@ -55176,10 +54284,15 @@ missing_song_data
 )
 (UGC_5001436
    (game_origin ugc1)
+   (vocal_tonic_note 2)
+   (song_tonality 1)
    (author
       "mc_frontalot"
    )
    (genre hiphoprap)
+   (song
+      (vocal_parts 3)
+   )
    (extra_authoring disc_update)
 )
 (UGC_5001440
@@ -55738,7 +54851,6 @@ missing_song_data
    (album_name
       "Leaves in the River"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5001688
    (game_origin ugc1)
@@ -55844,7 +54956,6 @@ missing_song_data
       (vocals 175)
       (band 230)
    )
-   (extra_authoring disc_update)
 )
 (UGC_5001770
    (game_origin ugc1)
@@ -57400,6 +56511,9 @@ missing_song_data
       (band 292)
    )
    (genre indierock)
+   (song
+      (vocal_parts 2)
+   )
    (extra_authoring disc_update)
 )
 (UGC_5002660
@@ -57971,7 +57085,6 @@ missing_song_data
       (vocals 0)
       (band 345)
    )
-   (extra_authoring disc_update)
 )
 (UGC_5003015
    (game_origin ugc1)
@@ -57995,7 +57108,6 @@ missing_song_data
    (author
       "RockGamer"
    )
-   (genre alternative)
    (extra_authoring disc_update)
 )
 (UGC_5003034
@@ -58047,7 +57159,6 @@ missing_song_data
       (vocals 175)
       (band 292)
    )
-   (genre alternative)
    (song
       (vocal_parts 2)
    )
@@ -58827,14 +57938,12 @@ missing_song_data
       (vocals 279)
       (band 243)
    )
-   (extra_authoring disc_update)
 )
 (UGC_5003421
    (game_origin ugc1)
    (author
       "RockGamer"
    )
-   (genre alternative)
    (extra_authoring disc_update)
 )
 (UGC_5003423
@@ -59009,6 +58118,9 @@ missing_song_data
    (game_origin ugc1)
    (author
       "NoisyPuppet"
+   )
+   (name
+      "Hey Satomi (ft. Justine Skyers)"
    )
    (album_name
       "Rules to Rock By"
@@ -59374,7 +58486,6 @@ missing_song_data
       (vocals 427)
       (band 292)
    )
-   (extra_authoring disc_update)
 )
 (UGC_5003797
    (game_origin ugc1)
@@ -59694,7 +58805,6 @@ missing_song_data
       (band 165)
    )
    (genre indierock)
-   (extra_authoring disc_update)
 )
 (UGC_5003981
    (game_origin ugc1)
@@ -59883,7 +58993,6 @@ missing_song_data
       (vocals 279)
       (band 267)
    )
-   (extra_authoring disc_update)
 )
 (UGC_5004087
    (game_origin ugc1)
@@ -59897,7 +59006,6 @@ missing_song_data
       (vocals 427)
       (band 345)
    )
-   (extra_authoring disc_update)
 )
 (UGC_5004092
    (game_origin ugc1)
@@ -60139,14 +59247,39 @@ missing_song_data
       (bass 135)
       (vocals 218)
       (band 215)
+      (keys 153)
+      (real_keys 153)
    )
    (album_name
       "Of the Blue Colour of the Sky"
    )
    (song
       (vocal_parts 3)
+      (tracks
+         (
+            (drum
+               (0 1 2 3 4 5)
+            )
+            (bass
+               (6 7)
+            )
+            (guitar
+               (8 9)
+            )
+            (vocals
+               (10 11)
+            )
+            (keys
+               (12 13)
+            )
+         )
+      )
    )
    (extra_authoring disc_update)
+   (version 30)
+   (keys_author
+      "FujiSkunk"
+   )
 )
 (UGC_5004235
    (game_origin ugc1)
@@ -60218,6 +59351,40 @@ missing_song_data
       "TheAuthority"
    )
    (extra_authoring disc_update)
+   (song
+      (tracks
+         (
+            (drum
+               (0 1 2 3 4 5)
+            )
+            (bass
+               (6 7)
+            )
+            (guitar
+               (8 9)
+            )
+            (vocals
+               (10 11)
+            )
+            (keys
+               (12 13)
+            )
+         )
+      )
+   )
+   (rank
+      (drum 208)
+      (guitar 194)
+      (bass 166)
+      (vocals 180)
+      (keys 215)
+      (real_keys 215)
+      (band 219)
+   )
+   (version 30)
+   (keys_author
+      "SonicSBL"
+   )
 )
 (UGC_5004298
    (game_origin ugc1)
@@ -60297,6 +59464,10 @@ missing_song_data
       (vocals 175)
       (band 267)
    )
+   (song
+      (vocal_parts 3)
+   )
+   (extra_authoring disc_update)
 )
 (UGC_5004336
    (game_origin ugc1)
@@ -60507,7 +59678,6 @@ missing_song_data
       (vocals 132)
       (band 215)
    )
-   (extra_authoring disc_update)
 )
 (UGC_5004523
    (game_origin ugc1)
@@ -60577,7 +59747,6 @@ missing_song_data
       (band 328)
    )
    (genre rock)
-   (extra_authoring disc_update)
 )
 (UGC_5004583
    (game_origin ugc1)
@@ -60837,7 +60006,6 @@ missing_song_data
       (vocals 139)
       (band 274)
    )
-   (extra_authoring disc_update)
 )
 (UGC_5004767
    (game_origin ugc1)
@@ -61084,6 +60252,9 @@ missing_song_data
    (author
       "weffjebster"
    )
+   (name
+      "The History of Execution (ft. Bluefusion)"
+   )
 )
 (UGC_5004897
    (game_origin ugc1)
@@ -61290,7 +60461,6 @@ missing_song_data
    (author
       "RockGamer"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5004942
    (game_origin ugc1)
@@ -61395,7 +60565,6 @@ missing_song_data
       (band 267)
    )
    (genre popdanceelectronic)
-   (extra_authoring disc_update)
 )
 (UGC_5004995
    (game_origin ugc1)
@@ -61418,6 +60587,10 @@ missing_song_data
    (album_name
       "What Separates Me from You"
    )
+   (song
+      (vocal_parts 3)
+   )
+   (extra_authoring disc_update)
 )
 (UGC_5005000
    (game_origin ugc1)
@@ -61433,6 +60606,9 @@ missing_song_data
    )
    (album_name
       "What Separates Me from You"
+   )
+   (song
+      (vocal_parts 3)
    )
    (extra_authoring disc_update)
 )
@@ -61698,7 +60874,6 @@ missing_song_data
    (author
       "RockGamer"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5005123
    (game_origin ugc1)
@@ -61730,7 +60905,6 @@ missing_song_data
    (author
       "RockGamer"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5005133
    (game_origin ugc1)
@@ -61835,6 +61009,10 @@ missing_song_data
    (author
       "Rhythm Authors"
    )
+   (song
+      (vocal_parts 2)
+   )
+   (extra_authoring disc_update)
 )
 (UGC_5005158
    (game_origin ugc1)
@@ -61963,7 +61141,6 @@ missing_song_data
       (vocals 175)
       (band 292)
    )
-   (extra_authoring disc_update)
 )
 (UGC_5005190
    (game_origin ugc1)
@@ -62034,7 +61211,6 @@ missing_song_data
       (vocals 30)
       (band 345)
    )
-   (extra_authoring disc_update)
 )
 (UGC_5005212
    (game_origin ugc1)
@@ -62057,7 +61233,6 @@ missing_song_data
       (vocals 175)
       (band 292)
    )
-   (extra_authoring disc_update)
 )
 (UGC_5005214
    (game_origin ugc1)
@@ -62127,7 +61302,6 @@ missing_song_data
       (vocals 279)
       (band 345)
    )
-   (extra_authoring disc_update)
 )
 (UGC_5005226
    (game_origin ugc1)
@@ -62155,7 +61329,6 @@ missing_song_data
       (band 267)
    )
    (genre alternative)
-   (extra_authoring disc_update)
 )
 (UGC_5005230
    (game_origin ugc1)
@@ -62244,7 +61417,6 @@ missing_song_data
       (vocals 60)
       (band 345)
    )
-   (extra_authoring disc_update)
 )
 (UGC_5005278
    (game_origin ugc1)
@@ -62643,34 +61815,17 @@ missing_song_data
                (12 13)
             )
          )
-         (
-            (drum
-               (0 1 2 3 4 5)
-            )
-            (bass
-               (6 7)
-            )
-            (guitar
-               (8 9)
-            )
-            (vocals
-               (10 11)
-            )
-            (keys
-               (12 13)
-            )
-         )
       )
    )
    (extra_authoring disc_update)
    (rank
       (drum 169)
-      (guitar 247)
-      (bass 166)
-      (vocals 220)
+      (guitar 1)
+      (bass 1)
+      (vocals 180)
       (keys 153)
       (real_keys 153)
-      (band 219)
+      (band 159)
    )
    (version 30)
    (keys_author
@@ -62924,13 +62079,16 @@ missing_song_data
    (author
       "OzoneEntertainment"
    )
+   (song
+      (vocal_parts 2)
+   )
+   (extra_authoring disc_update)
 )
 (UGC_5005691
    (game_origin ugc2)
    (author
       "RockGamer"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5005693
    (game_origin ugc2)
@@ -63000,7 +62158,6 @@ missing_song_data
    (author
       "RockGamer"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5005751
    (game_origin ugc2)
@@ -63173,8 +62330,10 @@ missing_song_data
    (author
       "RockGamer"
    )
+   (artist
+      "The Acro-brats"
+   )
    (genre rock)
-   (extra_authoring disc_update)
 )
 (UGC_5005903
    (game_origin ugc2)
@@ -63202,7 +62361,6 @@ missing_song_data
    (author
       "Rhythm Authors"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5005933
    (game_origin ugc2)
@@ -63347,7 +62505,6 @@ missing_song_data
    (author
       "RockGamer"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5006022
    (game_origin ugc2)
@@ -63462,7 +62619,6 @@ missing_song_data
    (album_name
       "Identity on Fire"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5006099
    (game_origin ugc2)
@@ -63563,7 +62719,6 @@ missing_song_data
    (author
       "Rhythm Authors"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5006156
    (game_origin ugc2)
@@ -63609,7 +62764,6 @@ missing_song_data
    (author
       "RockGamer"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5006193
    (game_origin ugc2)
@@ -63622,7 +62776,6 @@ missing_song_data
    (author
       "RockGamer"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5006195
    (game_origin ugc2)
@@ -63635,14 +62788,12 @@ missing_song_data
    (author
       "RockGamer"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5006199
    (game_origin ugc2)
    (author
       "RockGamer"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5006200
    (game_origin ugc2)
@@ -63787,12 +62938,13 @@ missing_song_data
       (guitar 176)
       (bass 135)
       (vocals 132)
+      (keys 211)
+      (real_keys 269)
       (band 215)
    )
    (album_name
       "What Separates Me from You"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5006318
    (game_origin ugc2)
@@ -63808,7 +62960,6 @@ missing_song_data
    (name
       "What's Left of Me"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5006327
    (game_origin ugc2)
@@ -64151,6 +63302,9 @@ missing_song_data
    (author
       "Kariodude"
    )
+   (name
+      "Bed Intruder Song (ft. Kelly Dodson)"
+   )
 )
 (UGC_5006565
    (game_origin ugc2)
@@ -64219,7 +63373,6 @@ missing_song_data
    (author
       "Rhythm Authors"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5006623
    (game_origin ugc2)
@@ -64422,10 +63575,11 @@ missing_song_data
       (guitar 176)
       (bass 181)
       (vocals 279)
+      (keys 269)
+      (real_keys 269)
       (band 243)
    )
    (genre alternative)
-   (extra_authoring disc_update)
 )
 (UGC_5006724
    (game_origin ugc2)
@@ -64833,6 +63987,9 @@ missing_song_data
    (author
       "FreenInGreen"
    )
+   (name
+      "Paper (ft. Single White Infidel)"
+   )
 )
 (UGC_5006968
    (game_origin ugc2)
@@ -64900,6 +64057,9 @@ missing_song_data
    (author
       "ChartToppers"
    )
+   (name
+      "Wha-Chow Theme (ft. ShadyVox)"
+   )
 )
 (UGC_5007104
    (game_origin ugc2)
@@ -64924,7 +64084,6 @@ missing_song_data
    (author
       "RockGamer"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5007132
    (game_origin ugc2)
@@ -65056,7 +64215,6 @@ missing_song_data
       "Magnet"
    )
    (genre popdanceelectronic)
-   (extra_authoring disc_update)
 )
 (UGC_5007278
    (game_origin ugc2)
@@ -65358,9 +64516,10 @@ missing_song_data
       (guitar 267)
       (bass 181)
       (vocals 218)
+      (keys 443)
+      (real_keys 443)
       (band 267)
    )
-   (extra_authoring disc_update)
 )
 (UGC_5007487
    (game_origin ugc2)
@@ -65534,7 +64693,6 @@ missing_song_data
    (author
       "OffbeatEntertainment"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5007619
    (game_origin ugc2)
@@ -65936,7 +65094,6 @@ missing_song_data
    (author
       "Rhythm Authors"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5008016
    (game_origin ugc2)
@@ -66134,7 +65291,6 @@ missing_song_data
    (author
       "RockGamer"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5008194
    (game_origin ugc2)
@@ -66153,7 +65309,6 @@ missing_song_data
    (author
       "RockGamer"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5008211
    (game_origin ugc2)
@@ -66614,7 +65769,6 @@ missing_song_data
    (author
       "RockGamer"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5008502
    (game_origin ugc2)
@@ -67267,7 +66421,6 @@ missing_song_data
    (author
       "RockGamer"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5008894
    (game_origin ugc2)
@@ -68073,7 +67226,6 @@ missing_song_data
    (author
       "RockGamer"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5009525
    (game_origin ugc2)
@@ -68402,7 +67554,6 @@ missing_song_data
    (author
       "Rhythm Authors"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5009862
    (game_origin ugc2)
@@ -68524,7 +67675,6 @@ missing_song_data
    (author
       "Rhythm Authors"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5009959
    (game_origin ugc2)
@@ -68883,7 +68033,6 @@ missing_song_data
    (author
       "Rhythm Authors"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5010274
    (game_origin ugc2)
@@ -69162,6 +68311,7 @@ missing_song_data
    (author
       "ThatAuthoringGroup"
    )
+   (extra_authoring disc_update)
    (upgrade_version 1)
    (rank
       (drum 448)
@@ -69196,7 +68346,6 @@ missing_song_data
       "Rhythm Authors"
    )
    (genre punk)
-   (extra_authoring disc_update)
 )
 (UGC_5010564
    (game_origin ugc2)
@@ -69510,7 +68659,6 @@ missing_song_data
    (author
       "Rhythm Authors"
    )
-   (extra_authoring disc_update)
 )
 (UGC_5010850
    (game_origin ugc2)
@@ -70507,7 +69655,7 @@ missing_song_data
       "Rhythm Authors"
    )
    (name
-      "Fire at Well"
+      "Fire at Will"
    )
 )
 (UGC_5011940
@@ -70915,16 +70063,133 @@ missing_song_data
 (reptilla
    (genre indierock)
 )
+(Freedom
+   (genre rock)
+)
 (visionofdivision
    (genre indierock)
 )
 (UGC_5006920
    (genre punk)
 )
-(steviesees
-   (genre hiphoprap)
+(highhopes
+   (artist
+      "Panic! at the Disco"
+   )
+)
+(rescueme2
+   (artist
+      "Thirty Seconds to Mars"
+   )
+)
+(wearefamily
+   (genre disco)
+)
+(highhopes_fnfestival
+   (artist
+      "Panic! at the Disco"
+   )
+)
+(iwritesinsfnf
+   (artist
+      "Panic! at the Disco"
+   )
+)
+(lessthan
+   (genre industrial)
+)
+(marchofthepigsfnf
+   (genre industrial)
+   (loading_phrase
+      "'March of the Pigs' is in 29/8 time signature, one of the most complicated meters ever to appear in a hit song."
+   )
+)
+(thehandthat_fnf
+   (genre industrial)
+)
+(adventureofalifetime
+   (extra_authoring disc_update)
+   (upgrade_version 1)
+   (rank
+      (drum 349)
+      (guitar 319)
+      (bass 251)
+      (vocals 288)
+      (real_guitar 405)
+      (real_bass 281)
+      (band 275)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (strings_author
+      "WarGod"
+   )
+)
+(ayo
+   (extra_authoring disc_update)
+)
+(backwoodsco
+   (extra_authoring disc_update)
+)
+(badcatholics
+   (extra_authoring disc_update)
+)
+(bang
+   (extra_authoring disc_update)
+   (upgrade_version 1)
+   (song
+      (tracks
+         (
+            (drum
+               (0 1)
+            )
+            (bass
+               (2 3)
+            )
+            (guitar
+               (4 5)
+            )
+            (vocals
+               (6 7)
+            )
+            (keys
+               (8 9)
+            )
+         )
+      )
+   )
+   (band_fail_cue band_fail_electro_keys.cue)
+   (rank
+      (drum 242)
+      (guitar 176)
+      (bass 135)
+      (vocals 279)
+      (keys 280)
+      (real_keys 253)
+      (band 243)
+   )
+   (version 30)
+   (keys_author
+      "Aloquendiar, BowlsforRick"
+   )
+)
+(beatsports
+   (extra_authoring disc_update)
+)
+(bestsongever
+   (extra_authoring disc_update)
 )
 (beyondtheflame
+   (extra_authoring disc_update)
+)
+(blackseas
+   (extra_authoring disc_update)
+)
+(breakfastattiffanys
    (extra_authoring disc_update)
 )
 (burnitdown_rbn
@@ -70970,6 +70235,18 @@ missing_song_data
 (chandelier
    (extra_authoring disc_update)
 )
+(cocoon
+   (extra_authoring disc_update)
+)
+(desire
+   (extra_authoring disc_update)
+)
+(dontwannafight
+   (extra_authoring disc_update)
+)
+(downinahole
+   (extra_authoring disc_update)
+)
 (eightbitbeat
    (extra_authoring disc_update)
    (upgrade_version 1)
@@ -71010,13 +70287,46 @@ missing_song_data
 (foreplaylongtime_short
    (extra_authoring disc_update)
 )
+(forgetabouttomorrow
+   (extra_authoring disc_update)
+)
+(foundoutaboutyou
+   (extra_authoring disc_update)
+)
 (greengrass_short
+   (extra_authoring disc_update)
+)
+(happy2
+   (extra_authoring disc_update)
+)
+(heartbreakofthecentury
+   (extra_authoring disc_update)
+)
+(heyjealousy
    (extra_authoring disc_update)
 )
 (higher_rbn
    (extra_authoring disc_update)
 )
+(homegrown
+   (extra_authoring disc_update)
+)
+(honeyimgood
+   (extra_authoring disc_update)
+)
 (i_kendrick
+   (extra_authoring disc_update)
+)
+(irresistible
+   (extra_authoring disc_update)
+)
+(iwillsurvive
+   (extra_authoring disc_update)
+)
+(killingisjustameans
+   (extra_authoring disc_update)
+)
+(kingoftheworld
    (extra_authoring disc_update)
 )
 (knightsofcydonia
@@ -71070,6 +70380,18 @@ missing_song_data
    (vocal_tonic_note 4)
    (version 30)
 )
+(littletalks
+   (extra_authoring disc_update)
+)
+(lovestinks
+   (extra_authoring disc_update)
+)
+(monalisa
+   (extra_authoring disc_update)
+)
+(nevermore
+   (extra_authoring disc_update)
+)
 (sandstorm
    (extra_authoring disc_update)
    (upgrade_version 1)
@@ -71109,6 +70431,47 @@ missing_song_data
    (loading_phrase
       "This was one of the first songs to gain popularity via the internet. It was initially promoted by posting a 60-second clip of the track online, followed by airplay in discos and clubs, before finally being released to an eager audience."
    )
+)
+(sorry_bieber
+   (extra_authoring disc_update)
+)
+(speedofsound2
+   (extra_authoring disc_update)
+   (upgrade_version 1)
+   (song
+      (tracks
+         (
+            (drum
+               (0 1)
+            )
+            (bass
+               (2 3)
+            )
+            (guitar
+               (4 5)
+            )
+            (vocals
+               (6 7)
+            )
+            (keys
+               (8 9)
+            )
+         )
+      )
+   )
+   (rank
+      (drum 151)
+      (guitar 176)
+      (bass 135)
+      (vocals 279)
+      (keys 170)
+      (real_keys 250)
+      (band 215)
+   )
+   (keys_author
+      "Bansheeflyer, BowlsforRick"
+   )
+   (version 30)
 )
 (starlight2
    (extra_authoring disc_update)
@@ -71161,6 +70524,64 @@ missing_song_data
    (vocal_tonic_note 11)
    (version 30)
 )
+(summertimeboy
+   (extra_authoring disc_update)
+)
+(sundaybloodysunday
+   (extra_authoring disc_update)
+)
+(sweaterweather
+   (extra_authoring disc_update)
+)
+(sweaterweather2
+   (extra_authoring disc_update)
+   (upgrade_version 1)
+   (song
+      (tracks
+         (
+            (drum
+               (0 1)
+            )
+            (bass
+               (2 3)
+            )
+            (guitar
+               (4 5)
+            )
+            (vocals
+               (6 7)
+            )
+            (keys
+               (8 9)
+            )
+         )
+      )
+   )
+   (rank
+      (drum 125)
+      (guitar 153)
+      (bass 133)
+      (vocals 295)
+      (keys 102)
+      (real_keys 107)
+      (real_guitar 368)
+      (real_bass 131)
+      (band 167)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (keys_author
+      "Aloquendiar, Carl Mylo"
+   )
+   (strings_author
+      "Aloquendiar, Carl Mylo, Ruggy"
+   )
+   (version 30)
+)
 (tasteslikekevinbacon_rbn
    (extra_authoring disc_update)
 )
@@ -71175,11 +70596,69 @@ missing_song_data
    (game_origin rb1_dlc)
    (rating 1)
 )
+(thisishowwedoit
+   (extra_authoring disc_update)
+)
+(threelives
+   (extra_authoring disc_update)
+)
+(thunderandlightning
+   (extra_authoring disc_update)
+)
+(tomyromeo
+   (extra_authoring disc_update)
+)
 (trainkeptarollin_short
+   (extra_authoring disc_update)
+)
+(trainwreck1979
    (extra_authoring disc_update)
 )
 (UGC_5002223
    (extra_authoring disc_update)
+)
+(wasteamoment
+   (extra_authoring disc_update)
+)
+(whatyouknow
+   (extra_authoring disc_update)
+   (upgrade_version 1)
+   (song
+      (tracks
+         (
+            (drum
+               (0 1)
+            )
+            (bass
+               (2 3)
+            )
+            (guitar
+               (4 5)
+            )
+            (vocals
+               (6 7)
+            )
+            (keys
+               (8 9)
+            )
+         )
+      )
+   )
+   (rank
+      (band 240)
+      (guitar 215)
+      (drum 175)
+      (bass 230)
+      (vocals 215)
+      (keys 153)
+      (real_keys 153)
+   )
+   (keys_author
+      "Gigakoops"
+   )
+   (vocal_tonic_note 6)
+   (song_tonality 1)
+   (version 30)
 )
 (wontgetfooled_short
    (extra_authoring disc_update)
@@ -71264,6 +70743,26 @@ missing_song_data
 (whativedone
    (loading_phrase
       "The album \qMinutes To Midnight\q went to #1 in 28 of the countries in which it was released."
+   )
+)
+(dancingwithmyself
+   (loading_phrase
+      "'Dancing with Myself' was originally released by Billy Idol's band Generation X. The version in GH5 is the more radio-friendly solo effort, but this version is the original."
+   )
+)
+(lustforlife
+   (loading_phrase
+      "A version of \qLust for Life\q with altered lyrics was performed by Bruce Willis on the soundtrack for \qRugrats Go Wild\q, in which Iggy himself voices a newborn baby."
+   )
+)
+(onebigholiday
+   (loading_phrase
+      "The video for \qOne Big Holiday\q is done in the style of wayang kulit, Indonesian shadow puppetry. My Morning Jacket is also known to incorporate puppetry into their stage shows."
+   )
+)
+(shiver
+   (loading_phrase
+      "This was Coldplay's first hit. It was included on Parachutes after it became a hit as a single."
    )
 )
 (thankyou
@@ -71379,11 +70878,6 @@ missing_song_data
 (killinginthenamefnf
    (loading_phrase
       "This incendiary song makes the point that some members of the US police force were, and possibly still are, members of the Ku Klux Klan."
-   )
-)
-(marchofthepigsfnf
-   (loading_phrase
-      "'March of the Pigs' is in 29/8 time signature, one of the most complicated meters ever to appear in a hit song."
    )
 )
 (masterofpuppets

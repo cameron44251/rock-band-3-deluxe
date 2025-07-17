@@ -2,6 +2,56 @@
 #include dx_writer_macros.dta
 #define LOADING_DX_SETTINGS_OPTIONS
 (
+   {if {== {elem $entry 0} {basename dx_song_update_hash_old}}
+      {set $dx_song_update_hash_old
+         {elem {find $entry dx_song_update_hash_old} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_linear_join_order}}
+      {set $dx_linear_join_order
+         {elem {find $entry dx_linear_join_order} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_instruments_slot_1}}
+      {set $dx_instruments_slot_1
+         {elem {find $entry dx_instruments_slot_1} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_instruments_slot_2}}
+      {set $dx_instruments_slot_2
+         {elem {find $entry dx_instruments_slot_2} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_instruments_slot_3}}
+      {set $dx_instruments_slot_3
+         {elem {find $entry dx_instruments_slot_3} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_instruments_slot_4}}
+      {set $dx_instruments_slot_4
+         {elem {find $entry dx_instruments_slot_4} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_instruments_aim_slot_1}}
+      {set $dx_instruments_aim_slot_1
+         {elem {find $entry dx_instruments_aim_slot_1} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_instruments_aim_slot_2}}
+      {set $dx_instruments_aim_slot_2
+         {elem {find $entry dx_instruments_aim_slot_2} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_instruments_aim_slot_3}}
+      {set $dx_instruments_aim_slot_3
+         {elem {find $entry dx_instruments_aim_slot_3} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_instruments_aim_slot_4}}
+      {set $dx_instruments_aim_slot_4
+         {elem {find $entry dx_instruments_aim_slot_4} 1}
+      }
+   }
    {if {== {elem $entry 0} {basename dx_mtv_position}}
       {set $dx_mtv_pos_x
          {elem {elem {find $entry dx_mtv_position} 1} 0}
@@ -11,6 +61,17 @@
       }
       {set $dx_mtv_pos_y
          {elem {elem {find $entry dx_mtv_position} 1} 2}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_score_base}}
+      {set $dx_score_base_0
+         {elem {elem {find $entry dx_score_base} 1} 0}
+      }
+      {set $dx_score_base_1
+         {elem {elem {find $entry dx_score_base} 1} 1}
+      }
+      {set $dx_score_base_2
+         {elem {elem {find $entry dx_score_base} 1} 2}
       }
    }
    ;{if {== {elem $entry 0} {basename dx_mtv_color_rgb}}
@@ -137,6 +198,16 @@
          {elem {find $entry debug_mode} 1}
       }
    }
+   {if {== {elem $entry 0} {basename dx_judgment_dbg}}
+      {set $dx_judgment_dbg
+         {elem {find $entry dx_judgment_dbg} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_admin_mode}}
+      {set $dx_admin_mode
+         {elem {find $entry dx_admin_mode} 1}
+      }
+   }
    {if {== {elem $entry 0} {basename selected_track_theme}}
       {set $dx_track_theme_name
          {elem {find $entry selected_track_theme} 1}
@@ -147,14 +218,49 @@
          {elem {find $entry tracked_themes} 1}
       }
    }
-   {if {== {elem $entry 0} {basename dx_forced_main_menu_bg}}
-      {set $dx_forced_main_menu_bg
-         {elem {find $entry dx_forced_main_menu_bg} 1}
+   {if {== {elem $entry 0} {basename dx_stored_main_menu_bg}}
+      {set $dx_stored_main_menu_bg
+         {elem {find $entry dx_stored_main_menu_bg} 1}
       }
    }
-   {if {== {elem $entry 0} {basename dx_forced_song_select_bg}}
-      {set $dx_forced_song_select_bg
-         {elem {find $entry dx_forced_song_select_bg} 1}
+   {if {== {elem $entry 0} {basename dx_default_main_menu}}
+      {set $dx_default_main_menu
+         {elem {find $entry dx_default_main_menu} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_black_main_menu}}
+      {set $dx_black_main_menu
+         {elem {find $entry dx_black_main_menu} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_stored_song_select_bg}}
+      {set $dx_stored_song_select_bg
+         {elem {find $entry dx_stored_song_select_bg} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_default_song_select}}
+      {set $dx_default_song_select
+         {elem {find $entry dx_default_song_select} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_black_song_select}}
+      {set $dx_black_song_select
+         {elem {find $entry dx_black_song_select} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_stored_practice_bg}}
+      {set $dx_stored_practice_bg
+         {elem {find $entry dx_stored_practice_bg} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_default_practice}}
+      {set $dx_default_practice
+         {elem {find $entry dx_default_practice} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_black_practice}}
+      {set $dx_black_practice
+         {elem {find $entry dx_black_practice} 1}
       }
    }
    {if {== {elem $entry 0} {basename dx_sv8_dx_vers}}
@@ -162,9 +268,19 @@
          {elem {find $entry dx_sv8_dx_vers} 1}
       }
    }
-   {if {== {elem $entry 0} {basename dx_forced_outro_vignette}}
-      {set $dx_forced_outro_vignette
-         {elem {find $entry dx_forced_outro_vignette} 1}
+   {if {== {elem $entry 0} {basename dx_stored_outro_vignette}}
+      {set $dx_stored_outro_vignette
+         {elem {find $entry dx_stored_outro_vignette} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_black_song_transition}}
+      {set $dx_black_song_transition
+         {elem {find $entry dx_black_song_transition} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_default_transitions}}
+      {set $dx_default_transitions
+         {elem {find $entry dx_default_transitions} 1}
       }
    }
    {if {== {elem $entry 0} {basename emulate_fps}}
@@ -215,6 +331,41 @@
    {if {== {elem $entry 0} {basename trackspeed_real_bass}}
       {set $trackspeed_real_bass
          {elem {find $entry trackspeed_real_bass} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename tracklength_guitar}}
+      {set $tracklength_guitar
+         {elem {find $entry tracklength_guitar} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename tracklength_bass}}
+      {set $tracklength_bass
+         {elem {find $entry tracklength_bass} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename tracklength_drum}}
+      {set $tracklength_drum
+         {elem {find $entry tracklength_drum} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename tracklength_keys}}
+      {set $tracklength_keys
+         {elem {find $entry tracklength_keys} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename tracklength_real_keys}}
+      {set $tracklength_real_keys
+         {elem {find $entry tracklength_real_keys} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename tracklength_real_guitar}}
+      {set $tracklength_real_guitar
+         {elem {find $entry tracklength_real_guitar} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename tracklength_real_bass}}
+      {set $tracklength_real_bass
+         {elem {find $entry tracklength_real_bass} 1}
       }
    }
    {if {== {elem $entry 0} {basename dx_multiangle}}
@@ -292,9 +443,9 @@
          {elem {find $entry dx_mtv_line_artist} 1}
       }
    }
-   {if {== {elem $entry 0} {basename dx_mtv_line_year}}
-      {set $dx_mtv_line_year
-         {elem {find $entry dx_mtv_line_year} 1}
+   {if {== {elem $entry 0} {basename dx_mtv_year}}
+      {set $dx_mtv_year
+         {elem {find $entry dx_mtv_year} 1}
       }
    }
    {if {== {elem $entry 0} {basename dx_mtv_line_album}}
@@ -347,11 +498,13 @@
          {elem {find $entry dx_song_select_rings} 1}
       }
    }
+   #ifndef RB3E
    {if {== {elem $entry 0} {basename dx_more_info_toggle}}
       {set $dx_more_info_toggle
          {elem {find $entry dx_more_info_toggle} 1}
       }
    }
+   #endif
    {if {== {elem $entry 0} {basename dx_high_score_report}}
       {set $dx_high_score_report
          {elem {find $entry dx_high_score_report} 1}
@@ -367,11 +520,11 @@
          {elem {find $entry dx_prompt_save} 1}
       }
    }
-   {if {== {elem $entry 0} {basename dx_confirm_song_count}}
-      {set $dx_confirm_song_count
-         {elem {find $entry dx_confirm_song_count} 1}
-      }
-   }
+   ;{if {== {elem $entry 0} {basename dx_confirm_song_count}}
+   ;   {set $dx_confirm_song_count
+   ;      {elem {find $entry dx_confirm_song_count} 1}
+   ;   }
+   ;}
    #ifdef RB3E
    {if {== {elem $entry 0} {basename dx_connected_server}}
       {set $dx_connected_server
@@ -419,6 +572,36 @@
          {elem {find $entry dx_joypad_pad_mapping} 1}
       }
    }
+   {if {== {elem $entry 0} {basename dx_joypad_pad_remap_0}}
+      {set $dx_joypad_pad_remap_0
+         {elem {find $entry dx_joypad_pad_remap_0} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_joypad_pad_remap_1}}
+      {set $dx_joypad_pad_remap_1
+         {elem {find $entry dx_joypad_pad_remap_1} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_joypad_pad_remap_2}}
+      {set $dx_joypad_pad_remap_2
+         {elem {find $entry dx_joypad_pad_remap_2} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_joypad_pad_remap_3}}
+      {set $dx_joypad_pad_remap_3
+         {elem {find $entry dx_joypad_pad_remap_3} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_joypad_pad_remap_4}}
+      {set $dx_joypad_pad_remap_4
+         {elem {find $entry dx_joypad_pad_remap_4} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_joypad_pad_remap_5}}
+      {set $dx_joypad_pad_remap_5
+         {elem {find $entry dx_joypad_pad_remap_5} 1}
+      }
+   }
    {if {== {elem $entry 0} {basename dx_instrument_icons}}
       {set $dx_instrument_icons
          {elem {find $entry dx_instrument_icons} 1}
@@ -437,8 +620,24 @@
    {if {== {elem $entry 0} {basename dx_set_postfx}}
       {dx_set_postfx {elem {find $entry dx_set_postfx} 1}}
    }
+   {if {== {elem $entry 0} {basename dx_lyric_display_enabled}}
+      {set $dx_lyric_display_enabled
+         {elem {find $entry dx_lyric_display_enabled} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_lyric_highlight_color}}
+      {set $dx_lyric_highlight_r
+         {elem {elem {find $entry dx_lyric_highlight_color} 1} 0}
+      }
+      {set $dx_lyric_highlight_g
+         {elem {elem {find $entry dx_lyric_highlight_color} 1} 1}
+      }
+      {set $dx_lyric_highlight_b
+         {elem {elem {find $entry dx_lyric_highlight_color} 1} 2}
+      }
+   }
    {if {== {elem $entry 0} {basename dx_crowd_meter_state}}
-      {set $dx_crowd_meter_state
+      {set $dx_crowd_meter_hud
          {elem {find $entry dx_crowd_meter_state} 1}
       }
    }
@@ -797,9 +996,9 @@
          {elem {find $entry dx_venue_swap} 1}
       }
    }
-   {if {== {elem $entry 0} {basename dx_character_swap}}
-      {set $dx_character_swap
-         {elem {find $entry dx_character_swap} 1}
+   {if {== {elem $entry 0} {basename dx_rotate_backup_band}}
+      {set $dx_rotate_backup_band
+         {elem {find $entry dx_rotate_backup_band} 1}
       }
    }
    {if {== {elem $entry 0} {basename dx_additional_parts}}
@@ -837,6 +1036,16 @@
          {elem {find $entry dx_hd_characters} 1}
       }
    }
+   {if {== {elem $entry 0} {basename dx_ultra_shadows}}
+      {set $dx_ultra_shadows
+         {elem {find $entry dx_ultra_shadows} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_air_guitar}}
+      {set $dx_air_guitar
+         {elem {find $entry dx_air_guitar} 1}
+      }
+   }
    {if {== {elem $entry 0} {basename dx_auto_endgame}}
       {set $dx_auto_endgame
          {elem {find $entry dx_auto_endgame} 1}
@@ -871,6 +1080,11 @@
       }
       {set $dx_chat_preset_7
          {elem {elem {find $entry dx_chat_preset} 1} 7}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_anim_genres}}
+      {set $dx_anim_genres
+         {elem {find $entry dx_anim_genres} 1}
       }
    }
 )
@@ -1003,31 +1217,29 @@
       {set $dx_highway_guitar
          {elem {find $entry highway_guitar} 1}
       }
-      {set $dx_local_highway_guitar
-         {elem {find $entry highway_guitar} 1}
+   }
+   {if {== {elem $entry 0} {basename highway_real_guitar}}
+      {set $dx_highway_real_guitar
+         {elem {find $entry highway_real_guitar} 1}
       }
    }
    {if {== {elem $entry 0} {basename highway_bass}}
       {set $dx_highway_bass
          {elem {find $entry highway_bass} 1}
       }
-      {set $dx_local_highway_bass
-         {elem {find $entry highway_bass} 1}
+   }
+   {if {== {elem $entry 0} {basename highway_real_bass}}
+      {set $dx_highway_real_bass
+         {elem {find $entry highway_real_bass} 1}
       }
    }
    {if {== {elem $entry 0} {basename highway_drums}}
       {set $dx_highway_drum
          {elem {find $entry highway_drums} 1}
       }
-      {set $dx_local_highway_drum
-         {elem {find $entry highway_drums} 1}
-      }
    }
    {if {== {elem $entry 0} {basename highway_keys}}
       {set $dx_highway_keys
-         {elem {find $entry highway_keys} 1}
-      }
-      {set $dx_local_highway_keys
          {elem {find $entry highway_keys} 1}
       }
    }
@@ -1055,23 +1267,24 @@
       {set $dx_streak_guitar
          {elem {find $entry streak_guitar} 1}
       }
-      {set $dx_local_streak_guitar
-         {elem {find $entry streak_guitar} 1}
+   }
+   {if {== {elem $entry 0} {basename streak_real_guitar}}
+      {set $dx_streak_real_guitar
+         {elem {find $entry streak_real_guitar} 1}
       }
    }
    {if {== {elem $entry 0} {basename streak_bass}}
       {set $dx_streak_bass
          {elem {find $entry streak_bass} 1}
       }
-      {set $dx_local_streak_bass
-         {elem {find $entry streak_bass} 1}
+   }
+   {if {== {elem $entry 0} {basename streak_real_bass}}
+      {set $dx_streak_real_bass
+         {elem {find $entry streak_real_bass} 1}
       }
    }
    {if {== {elem $entry 0} {basename streak_drums}}
       {set $dx_streak_drum
-         {elem {find $entry streak_drums} 1}
-      }
-      {set $dx_local_streak_drum
          {elem {find $entry streak_drums} 1}
       }
    }
@@ -1079,15 +1292,9 @@
       {set $dx_streak_keys
          {elem {find $entry streak_keys} 1}
       }
-      {set $dx_local_streak_keys
-         {elem {find $entry streak_keys} 1}
-      }
    }
    {if {== {elem $entry 0} {basename streak_prokeys}}
-      {set $dx_streak_prokeys
-         {elem {find $entry streak_prokeys} 1}
-      }
-      {set $dx_local_streak_prokeys
+      {set $dx_streak_real_keys
          {elem {find $entry streak_prokeys} 1}
       }
    }
@@ -1095,23 +1302,24 @@
       {set $dx_overdrive_guitar
          {elem {find $entry overdrive_guitar} 1}
       }
-      {set $dx_local_overdrive_guitar
-         {elem {find $entry overdrive_guitar} 1}
+   }
+   {if {== {elem $entry 0} {basename overdrive_real_guitar}}
+      {set $dx_overdrive_real_guitar
+         {elem {find $entry overdrive_real_guitar} 1}
       }
    }
    {if {== {elem $entry 0} {basename overdrive_bass}}
       {set $dx_overdrive_bass
          {elem {find $entry overdrive_bass} 1}
       }
-      {set $dx_local_overdrive_bass
-         {elem {find $entry overdrive_bass} 1}
+   }
+   {if {== {elem $entry 0} {basename overdrive_real_bass}}
+      {set $dx_overdrive_real_bass
+         {elem {find $entry overdrive_real_bass} 1}
       }
    }
    {if {== {elem $entry 0} {basename overdrive_drums}}
       {set $dx_overdrive_drum
-         {elem {find $entry overdrive_drums} 1}
-      }
-      {set $dx_local_overdrive_drum
          {elem {find $entry overdrive_drums} 1}
       }
    }
@@ -1119,15 +1327,9 @@
       {set $dx_overdrive_keys
          {elem {find $entry overdrive_keys} 1}
       }
-      {set $dx_local_overdrive_keys
-         {elem {find $entry overdrive_keys} 1}
-      }
    }
    {if {== {elem $entry 0} {basename overdrive_prokeys}}
-      {set $dx_overdrive_prokeys
-         {elem {find $entry overdrive_prokeys} 1}
-      }
-      {set $dx_local_overdrive_prokeys
+      {set $dx_overdrive_real_keys
          {elem {find $entry overdrive_prokeys} 1}
       }
    }
@@ -1165,6 +1367,11 @@
    {if {== {elem $entry 0} {basename gems}}
       {set $dx_gem
          {elem {find $entry gems} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename gem_models}}
+      {set $dx_current_gem_model_theme
+         {elem {find $entry gem_models} 1}
       }
    }
    {if {== {elem $entry 0} {basename animated_gems}}
@@ -1248,10 +1455,7 @@
       }
    }
    {if {== {elem $entry 0} {basename keyboard}}
-      {set $dx_keyboard
-         {elem {find $entry keyboard} 1}
-      }
-      {set $dx_local_keyboard
+      {set $dx_highway_real_keys
          {elem {find $entry keyboard} 1}
       }
    }
@@ -1259,15 +1463,9 @@
       {set $dx_vocal_highway
          {elem {find $entry vocal_highway} 1}
       }
-      {set $dx_local_vocal_highway
-         {elem {find $entry vocal_highway} 1}
-      }
    }
    {if {== {elem $entry 0} {basename vocal_arrows}}
       {set $dx_vocal_arrow
-         {elem {find $entry vocal_arrows} 1}
-      }
-      {set $dx_local_vocal_arrow
          {elem {find $entry vocal_arrows} 1}
       }
    }
@@ -1275,15 +1473,9 @@
       {set $dx_vocal_notes
          {elem {find $entry vocal_notes} 1}
       }
-      {set $dx_local_vocal_notes
-         {elem {find $entry vocal_notes} 1}
-      }
    }
    {if {== {elem $entry 0} {basename vocal_overdrive}}
       {set $dx_vocal_overdrive
-         {elem {find $entry vocal_overdrive} 1}
-      }
-      {set $dx_local_vocal_overdrive
          {elem {find $entry vocal_overdrive} 1}
       }
    }
@@ -1339,6 +1531,11 @@
    {if {== {elem $entry 0} {basename default_diff3}}
       {set $default_diff3
          {elem {find $entry default_diff3} 1}
+      }
+   }
+   {if {== {elem $entry 0} {basename dx_entered_play_a_show}}
+      {set $dx_entered_play_a_show
+         {elem {find $entry dx_entered_play_a_show} 1}
       }
    }
 )

@@ -143,6 +143,40 @@
          dx_splash_141
          dx_splash_142
          dx_splash_143
+         dx_splash_144
+         dx_splash_145
+         dx_splash_146
+         dx_splash_147
+         dx_splash_148
+         dx_splash_149
+         dx_splash_150
+         dx_splash_151
+         dx_splash_152
+         dx_splash_153
+         dx_splash_154
+         dx_splash_155
+         dx_splash_156
+         dx_splash_157
+         dx_splash_158
+         dx_splash_159
+         dx_splash_160
+         dx_splash_161
+         dx_splash_162
+         dx_splash_163
+         dx_splash_164
+         dx_splash_165
+         dx_splash_166
+         dx_splash_167
+         dx_splash_168
+         dx_splash_169
+         dx_splash_170
+         dx_splash_171
+         dx_splash_172
+         dx_splash_173
+         dx_splash_174
+         dx_splash_175
+         dx_splash_176
+         dx_splash_177
       )
    )
 )
@@ -155,21 +189,23 @@
       }
       {saveload_mgr activate} ; dx - load save file early
       #ifdef HX_PS3
-      {content_mgr start_refresh} ; dx - start content enumeration early
+      {content_mgr start_refresh} ; dx - start content enumeration early, this causes cache issues on 360 so ps3 only
       #endif
    )
 )
 #define DX_YELLOW_SPLASH_TEXT
 (
-      {set $array DX_SPLASHTEXT}
-      #ifdef HX_XBOX
-      {push_back $array dx_splash_14}
-      #ifndef RB3E
-      {push_back $array dx_splash_15}
-      #endif
-      #endif
+      {do
+         ($array DX_SPLASHTEXT)
+         #ifdef HX_XBOX
+         {push_back $array dx_splash_14}
+         #ifndef RB3E
+         {push_back $array dx_splash_15}
+         #endif
+         #endif
 
-      {dx_splashtext.btn set text_token {random_elem {elem $array $index}}} ; dx - set a random splash text
+         {dx_splashtext.btn set text_token {random_elem {elem $array $index}}} ; dx - set a random splash text
+      }
       {dx_splashtext.btn set_local_pos 197.5 0 140}
       ;{dx_splashtext.btn set_local_scale 0.75}
       {dx_splashtext.btn set_local_rot 35 12.5 -25} ; dx - set the position of the splash text

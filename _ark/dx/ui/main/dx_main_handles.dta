@@ -13,6 +13,16 @@
          {set $trackspeed_real_bass {dx_fixup_bns $trackspeed_real_bass}}
          {dx_settings_dta_writer}
       }
+      #ifdef HX_XBOX
+      {if {&& {! $dx_cache_warn_seen} {!= $dx_song_update_hash $dx_song_update_hash_old}}
+         {script_task kTaskSeconds
+            (delay 1)
+            (script
+               {ui push_screen dx_cache_warn_screen}
+            )
+         }
+      }
+      #endif
       ;handles for event mode
       {if $dx_event_mode
          {unless $dx_event_type
@@ -46,7 +56,6 @@
          {unless {modifier_mgr is_modifier_active enable_popup_help}
             {modifier_mgr toggle_modifier_enabled enable_popup_help}
          }
-
          ;setup the main menu
          {menu_buttons.grp set_local_pos -350 0 -90}
          {if {! {exists event.lbl}}
@@ -92,7 +101,7 @@
             {dx_sv_menu_logo_set sv3_panel}
             {set $dx_random_number {random_int 0 4096}}
             {if {== $dx_random_number 2112}
-               {dx_passive_messenger you_lost}
+               {dx_passive_messenger you_lost_game}
             }
             {$this dx_check_birthday}
             #ifndef HX_PS3
@@ -101,6 +110,9 @@
             {mb_musicstore.btn set markup TRUE}
             {mb_musicstore.btn set alt_style_enabled TRUE}
             {mb_musicstore.btn set alt_font_resource_name {mb_musicstore.btn get resource_name}}
+            {if $dx_entered_play_a_show
+               {mb_musicstore.btn set text_token dx_play_a_show}
+            }
             {unless $dx_event_mode
                {set $localize_num {random_int 0 100}}
                {if {== $localize_num 42}
@@ -118,6 +130,12 @@
       {dx_build.lbl set width 1000}
       {dx_build.lbl set_token_fmt rb3e_mod_string}
       {dx_build.lbl set_showing TRUE}
+      {dx_admin_mode}
+      {if {modifier_mgr is_modifier_active mod_auto_play}
+         {$this disable qp_fmp.btn}
+         {$this disable tour_fmp.btn}
+         {$this set_focus mb_playnow.btn}
+      }
    )
    (lbl_maker
       ($label $x $y $align $content)
@@ -211,52 +229,19 @@
          )
       }
    )
-   (dx_unlock_pre_orders
-      {switch {{$player get_user} get_slot_num}
-         (0
-            {main_hub_panel unlock_gamestop_award 0}
-            {main_hub_panel unlock_x79_award 0}
-            {main_hub_panel unlock_d2010_award 0}
-         )
-         (1
-            {main_hub_panel unlock_gamestop_award 1}
-            {main_hub_panel unlock_x79_award 1}
-            {main_hub_panel unlock_d2010_award 1}
-         )
-         (2
-            {main_hub_panel unlock_gamestop_award 2}
-            {main_hub_panel unlock_x79_award 2}
-            {main_hub_panel unlock_d2010_award 2}
-         )
-         (3
-            {main_hub_panel unlock_gamestop_award 3}
-            {main_hub_panel unlock_x79_award 3}
-            {main_hub_panel unlock_d2010_award 3}
-         )
+   (dx_check_first_time
+      #ifndef HX_WII
+      {if
+         {&&
+            {! $dx_event_mode}
+            {! {file_exists DX_SETTINGS_FILE_PATH}}
+            {! $dx_welcome_seen}}
+         {profile_mgr set_voice_chat_volume 0}
+         {dx_log_writer info {sprint "Delxue Settings not found, showing welcome screen"}}
+         {ui push_screen dx_welcome_screen}
+         {set $dx_welcome_seen TRUE}
       }
-   )
-   (dx_check_dx
-      {unless $dx_event_mode
-         {unless {file_exists DX_SETTINGS_FILE_PATH}
-            {unless $dxwelcomeseen
-               {profile_mgr set_voice_chat_volume 0}
-               {dx_log_writer info {sprint "Cannot find DX.dta"}}
-               {ui push_screen hint_dx_welcome_screen}
-            }
-         }
-      }
-   )
-   (dx_check_xeniawrites
-      {unless $dx_event_mode
-         {unless {file_exists DX_SETTINGS_FILE_PATH}
-            {if $dxwelcomeseen
-               {unless $dx_settings_error
-                  {dx_log_writer info {sprint "Cannot write DX.dta"}}
-                  {ui push_screen hint_relative_writes_screen}
-               }
-            }
-         }
-      }
+      #endif
    )
    (dx_check_birthday
       {unless $dx_event_mode
@@ -334,6 +319,10 @@
                #endif
             }
             {do
+               {if_else $dx_hardware
+                  {dx_passive_messenger play_a_show_loading_hw}
+                  {dx_passive_messenger play_a_show_loading_emu}
+               }
                {set $dx_in_show_flow TRUE}
                {meta_performer set_song antibodies}
                {if {is_leader_local}

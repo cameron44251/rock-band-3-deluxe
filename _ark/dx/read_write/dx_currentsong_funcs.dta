@@ -1,7 +1,7 @@
 #define DX_CURRENT_SONG_TXT_FILE_PATH
 (
    #ifdef HX_XBOX "GAME:/currentsong.txt" #endif
-   #ifdef HX_WII "currentsong.txt" #endif
+   #ifdef HX_WII "sd:/rb3/currentsong.txt" #endif
    #ifdef HX_PS3
    #ifdef REGION_EUROPE
    "GD:/dev_hdd0/game/BLES00986/USRDIR/currentsong.txt"
@@ -13,7 +13,7 @@
 #define DX_CURRENT_SONG_JSON_FILE_PATH
 (
    #ifdef HX_XBOX "GAME:/currentsong.json" #endif
-   #ifdef HX_WII "currentsong.json" #endif
+   #ifdef HX_WII "sd:/rb3/currentsong.json" #endif
    #ifdef HX_PS3
    #ifdef REGION_EUROPE
    "GD:/dev_hdd0/game/BLES00986/USRDIR/currentsong.json"
@@ -46,7 +46,7 @@
                   {if $dx_mtv_line_song_title
                      {push_back $dx_current_song {sprint "Song: " $song_title}}
                   }
-                  {if_else {&& $dx_mtv_line_year $dx_year_on_one_mtv_line $artistvar $yearvar}
+                  {if_else {&& $dx_mtv_year $dx_year_on_one_mtv_line $artistvar $yearvar}
                      {push_back $dx_current_song {sprint "Artist: " $artistvar ", " $yearvar}}
                      {push_back $dx_current_song {sprint "Artist: " $artistvar}}
                   }
@@ -59,7 +59,7 @@
                   {if {&& $dx_mtv_line_sub_genre $subgenrevar}
                      {push_back $dx_current_song {sprint "Sub Genre: " {localize $subgenrevar}}}
                   }
-                  {if {&& $dx_mtv_line_year {! $dx_year_on_one_mtv_line} $yearvar}
+                  {if {&& $dx_mtv_year {! $dx_year_on_one_mtv_line} $yearvar}
                      {push_back $dx_current_song {sprint "Year: " $yearvar}}
                   }
                   {if {&& $dx_mtv_line_game_origin $sourcevar}
@@ -76,7 +76,7 @@
                   {if {&& $dx_mtv_line_song_title $song_title}
                      {push_back $dx_current_song {sprint "Song: " $song_title}}
                   }
-                  {if_else {&& $dx_mtv_line_year $dx_year_on_one_mtv_line $artistvar $yearvar}
+                  {if_else {&& $dx_mtv_year $dx_year_on_one_mtv_line $artistvar $yearvar}
                      {push_back $dx_current_song {sprint $artistvar ", " $yearvar}}
                      {push_back $dx_current_song $artistvar}
                   }
@@ -89,7 +89,7 @@
                   {if {&& $dx_mtv_line_sub_genre $subgenrevar}
                      {push_back $dx_current_song {localize $subgenrevar}}
                   }
-                  {if {&& $dx_mtv_line_year {! $dx_year_on_one_mtv_line} $yearvar}
+                  {if {&& $dx_mtv_year {! $dx_year_on_one_mtv_line} $yearvar}
                      {push_back $dx_current_song $yearvar}
                   }
                   {if {&& $dx_mtv_line_game_origin $sourcevar}
